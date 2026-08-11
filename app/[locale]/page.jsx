@@ -3,6 +3,7 @@ import { ShieldCheck, Award, Users, Clock, Globe2, ReceiptText, ArrowRight, Star
 import { Link } from "@/i18n/navigation";
 import Reveal from "@/components/Reveal";
 import HomeHero from "@/components/HomeHero";
+import TrustSection from "@/components/TrustSection";
 
 const whyIcons = [Users, ShieldCheck, Award, Clock, Globe2, ReceiptText];
 
@@ -19,19 +20,7 @@ export default async function Home({ params }) {
     <div>
       <HomeHero />
 
-      {/* Stats bar */}
-      <section className="bg-white py-16 lg:py-20">
-        <Reveal className="mx-auto max-w-7xl px-5 lg:px-8">
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-10">
-            {stats.map((s, i) => (
-              <div key={i}>
-                <p className="font-display text-4xl font-semibold gold-text">{s.value}</p>
-                <p className="mt-1 text-sm text-ink-600 font-medium">{s.label}</p>
-              </div>
-            ))}
-          </div>
-        </Reveal>
-      </section>
+      <TrustSection />
 
       {/* ABOUT */}
       <section className="py-24 bg-white">

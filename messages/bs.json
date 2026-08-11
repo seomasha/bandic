@@ -45,6 +45,10 @@
       { "value": "2", "label": "Smjene rada, 07–21h" },
       { "value": "Top 5", "label": "Ocijenjena klinika u BiH" }
     ],
+    "impact": {
+      "words": ["Iskustvo", "Stručnost", "Tehnologija", "Povjerenje"],
+      "dominantText": "Ortodoncija, oralna hirurgija, implantologija i protetika — specijalistička njega na jednom mjestu, ne opći doktori koji pokrivaju sve oblasti."
+    },
     "aboutKicker": "O poliklinici",
     "aboutTitle": "Moderna stomatologija u srcu Sarajeva",
     "aboutText": "Poliklinika Bandić — Dental Ortodont Centar dr Bandić — jedan je od najmodernije opremljenih stomatoloških centara u Bosni i Hercegovini i regiji. Naš tim od preko 20 stručnjaka, uključujući specijaliste oralne hirurgije, implantologije, ortodoncije i protetike, radi u dvije dnevne smjene kako biste termin mogli dobiti rano ujutro ili nakon posla — od ponedjeljka do subote.",

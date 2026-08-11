@@ -45,6 +45,10 @@
       { "value": "2", "label": "Arbeitsschichten, 7–21 Uhr" },
       { "value": "Top 5", "label": "Bestbewertete Klinik in BiH" }
     ],
+    "impact": {
+      "words": ["Erfahrung", "Fachwissen", "Technologie", "Vertrauen"],
+      "dominantText": "Kieferorthopädie, Oralchirurgie, Implantologie und Prothetik — fachärztliche Betreuung unter einem Dach, keine Allgemeinmediziner, die alle Bereiche abdecken."
+    },
     "aboutKicker": "Über die Klinik",
     "aboutTitle": "Moderne Zahnmedizin im Herzen Sarajevos",
     "aboutText": "Poliklinika Bandić — Dental Ortodont Centar dr Bandić — ist eines der modernst ausgestatteten Zahnzentren in Bosnien und Herzegowina und der gesamten Region. Unser Team aus mehr als 20 Experten, darunter Spezialisten für Oralchirurgie, Implantologie, Kieferorthopädie und Prothetik, arbeitet in zwei täglichen Schichten, damit Sie früh morgens oder nach der Arbeit einen Termin bekommen — Montag bis Samstag.",
