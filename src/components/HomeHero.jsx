@@ -124,22 +124,20 @@ export default function HomeHero() {
           className="font-display font-semibold leading-[1.08] text-cream"
         >
           <span className="block text-4xl sm:text-5xl lg:text-6xl">{t("headline1")}</span>
-          <span className="mt-3 flex flex-wrap items-baseline justify-center gap-x-3 text-4xl sm:text-5xl lg:text-6xl">
-            <span>{t("headlineStatic")}</span>
-            <span className="relative inline-block h-[1.15em] overflow-hidden align-baseline">
-              <AnimatePresence mode="wait">
-                <motion.span
-                  key={index}
-                  initial={{ opacity: 0, y: 16 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -16 }}
-                  transition={{ duration: 0.75, ease: EASE }}
-                  className="gold-text inline-block whitespace-nowrap"
-                >
-                  {rotating[index]}
-                </motion.span>
-              </AnimatePresence>
-            </span>
+          <span className="mt-3 block text-4xl sm:text-5xl lg:text-6xl">{t("headlineStatic")}</span>
+          <span className="relative mt-3 block h-[1.15em] overflow-hidden">
+            <AnimatePresence mode="wait">
+              <motion.span
+                key={index}
+                initial={{ opacity: 0, y: 16 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -16 }}
+                transition={{ duration: 0.75, ease: EASE }}
+                className="gold-text block text-4xl sm:text-5xl lg:text-6xl"
+              >
+                {rotating[index]}
+              </motion.span>
+            </AnimatePresence>
           </span>
         </motion.h1>
 
