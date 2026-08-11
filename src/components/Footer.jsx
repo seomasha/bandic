@@ -1,6 +1,6 @@
-import { Link } from "react-router-dom";
-import { useTranslation } from "react-i18next";
+import { useTranslations } from "next-intl";
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
+import { Link } from "../i18n/navigation";
 import Logo from "./Logo";
 
 const Facebook = (props) => (
@@ -18,7 +18,7 @@ const Instagram = (props) => (
 );
 
 export default function Footer() {
-  const { t } = useTranslation();
+  const t = useTranslations();
 
   const links = [
     { to: "/", label: t("nav.home") },
@@ -62,7 +62,7 @@ export default function Footer() {
           <ul className="space-y-3">
             {links.map((l) => (
               <li key={l.to}>
-                <Link to={l.to} className="text-sm text-white/60 hover:text-gold-300 transition-colors">
+                <Link href={l.to} className="text-sm text-white/60 hover:text-gold-300 transition-colors">
                   {l.label}
                 </Link>
               </li>

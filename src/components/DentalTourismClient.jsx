@@ -1,5 +1,7 @@
+"use client";
+
 import { useState } from "react";
-import { useTranslation } from "react-i18next";
+import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
 import {
   PiggyBank,
@@ -13,21 +15,21 @@ import {
   CheckCircle2,
   TrendingDown,
 } from "lucide-react";
-import Reveal from "../components/Reveal";
-import FileDropzone from "../components/FileDropzone";
-import Accordion from "../components/Accordion";
+import Reveal from "@/components/Reveal";
+import FileDropzone from "@/components/FileDropzone";
+import Accordion from "@/components/Accordion";
 
 const whyIcons = [PiggyBank, ShieldCheck, Languages, PlaneTakeoff, Landmark, UserCheck];
 
-export default function DentalTourism() {
-  const { t } = useTranslation();
-  const whyItems = t("tourism.why.items", { returnObjects: true });
-  const rows = t("tourism.comparison.rows", { returnObjects: true });
-  const headers = t("tourism.comparison.headers", { returnObjects: true });
-  const stayItems = t("tourism.stay.items", { returnObjects: true });
-  const steps = t("tourism.process.steps", { returnObjects: true });
-  const treatments = t("tourism.form.treatments", { returnObjects: true });
-  const faqItems = t("tourism.faq.items", { returnObjects: true });
+export default function DentalTourismClient() {
+  const t = useTranslations();
+  const whyItems = t.raw("tourism.why.items");
+  const rows = t.raw("tourism.comparison.rows");
+  const headers = t.raw("tourism.comparison.headers");
+  const stayItems = t.raw("tourism.stay.items");
+  const steps = t.raw("tourism.process.steps");
+  const treatments = t.raw("tourism.form.treatments");
+  const faqItems = t.raw("tourism.faq.items");
 
   const [files, setFiles] = useState([]);
   const [sent, setSent] = useState(false);

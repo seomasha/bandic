@@ -1,3 +1,5 @@
+"use client";
+
 import { useRef, useState } from "react";
 import { UploadCloud, File as FileIcon, X } from "lucide-react";
 

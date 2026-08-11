@@ -1,12 +1,20 @@
-import { useTranslation } from "react-i18next";
-import { Link } from "react-router-dom";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import { ArrowRight, Users2 } from "lucide-react";
-import PageHero from "../components/PageHero";
-import Reveal from "../components/Reveal";
+import { Link } from "@/i18n/navigation";
+import PageHero from "@/components/PageHero";
+import Reveal from "@/components/Reveal";
 
-export default function Team() {
-  const { t } = useTranslation();
-  const doctors = t("team.doctors", { returnObjects: true });
+export async function generateMetadata({ params }) {
+  const { locale } = await params;
+  const t = await getTranslations({ locale });
+  return { title: t("nav.team") };
+}
+
+export default async function Team({ params }) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+  const t = await getTranslations({ locale });
+  const doctors = t.raw("team.doctors");
 
   return (
     <div>
@@ -22,12 +30,16 @@ export default function Team() {
                     <div
                       className="absolute inset-0 opacity-70"
                       style={{
-                        background:
-                          "radial-gradient(60% 60% at 30% 20%, rgba(224,186,108,0.25), transparent 60%)",
+                        background: "radial-gradient(60% 60% at 30% 20%, rgba(224,186,108,0.25), transparent 60%)",
                       }}
                     />
                     <span className="relative font-display text-6xl font-semibold gold-text">
-                      {d.name.split(" ").filter((w) => /^[A-ZČĆŠĐŽ]/.test(w)).map((n) => n[0]).slice(-2).join("")}
+                      {d.name
+                        .split(" ")
+                        .filter((w) => /^[A-ZČĆŠĐŽ]/.test(w))
+                        .map((n) => n[0])
+                        .slice(-2)
+                        .join("")}
                     </span>
                   </div>
                   <div className="p-6">
@@ -56,7 +68,7 @@ export default function Team() {
           <h2 className="font-display text-3xl font-semibold">{t("home.finalCta.title")}</h2>
           <p className="mt-4 text-white/70 leading-relaxed">{t("home.finalCta.text")}</p>
           <Link
-            to="/dental-tourism#quote"
+            href="/dental-tourism#quote"
             className="mt-8 inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-gold-300 to-gold-500 text-ink-950 font-bold px-7 py-4 hover:opacity-90 transition-opacity"
           >
             {t("home.finalCta.cta1")} <ArrowRight size={18} />

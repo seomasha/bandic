@@ -1,12 +1,15 @@
+"use client";
+
 import { useEffect, useState } from "react";
-import { NavLink, Link } from "react-router-dom";
-import { useTranslation } from "react-i18next";
+import { useTranslations } from "next-intl";
 import { Menu, X, Phone } from "lucide-react";
+import { Link, usePathname } from "../i18n/navigation";
 import Logo from "./Logo";
 import LanguageSwitcher from "./LanguageSwitcher";
 
 export default function Navbar() {
-  const { t } = useTranslation();
+  const t = useTranslations();
+  const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
 
@@ -19,7 +22,7 @@ export default function Navbar() {
 
   useEffect(() => {
     setOpen(false);
-  }, []);
+  }, [pathname]);
 
   const links = [
     { to: "/", label: t("nav.home") },
@@ -37,25 +40,25 @@ export default function Navbar() {
       }`}
     >
       <div className="mx-auto max-w-7xl px-5 lg:px-8 flex items-center justify-between h-20">
-        <Link to="/" onClick={() => setOpen(false)}>
+        <Link href="/" onClick={() => setOpen(false)}>
           <Logo />
         </Link>
 
         <nav className="hidden lg:flex items-center gap-8">
-          {links.map((l) => (
-            <NavLink
-              key={l.to}
-              to={l.to}
-              end={l.to === "/"}
-              className={({ isActive }) =>
-                `text-[0.9rem] font-semibold tracking-wide transition-colors ${
+          {links.map((l) => {
+            const isActive = l.to === "/" ? pathname === "/" : pathname.startsWith(l.to);
+            return (
+              <Link
+                key={l.to}
+                href={l.to}
+                className={`text-[0.9rem] font-semibold tracking-wide transition-colors ${
                   isActive ? "text-gold-600" : "text-ink-700 hover:text-gold-600"
-                }`
-              }
-            >
-              {l.label}
-            </NavLink>
-          ))}
+                }`}
+              >
+                {l.label}
+              </Link>
+            );
+          })}
         </nav>
 
         <div className="hidden lg:flex items-center gap-4">
@@ -65,7 +68,7 @@ export default function Navbar() {
           </a>
           <LanguageSwitcher />
           <Link
-            to="/dental-tourism#quote"
+            href="/dental-tourism#quote"
             className="rounded-full bg-ink-900 text-white text-sm font-semibold px-5 py-2.5 hover:bg-gold-600 transition-colors"
           >
             {t("nav.bookNow")}
@@ -83,22 +86,22 @@ export default function Navbar() {
       {open && (
         <div className="lg:hidden bg-white border-t border-ink-900/5 px-5 pb-6 pt-2">
           <nav className="flex flex-col gap-1">
-            {links.map((l) => (
-              <NavLink
-                key={l.to}
-                to={l.to}
-                end={l.to === "/"}
-                onClick={() => setOpen(false)}
-                className={({ isActive }) =>
-                  `py-3 border-b border-ink-900/5 text-base font-semibold ${isActive ? "text-gold-600" : "text-ink-800"}`
-                }
-              >
-                {l.label}
-              </NavLink>
-            ))}
+            {links.map((l) => {
+              const isActive = l.to === "/" ? pathname === "/" : pathname.startsWith(l.to);
+              return (
+                <Link
+                  key={l.to}
+                  href={l.to}
+                  onClick={() => setOpen(false)}
+                  className={`py-3 border-b border-ink-900/5 text-base font-semibold ${isActive ? "text-gold-600" : "text-ink-800"}`}
+                >
+                  {l.label}
+                </Link>
+              );
+            })}
           </nav>
           <Link
-            to="/dental-tourism#quote"
+            href="/dental-tourism#quote"
             onClick={() => setOpen(false)}
             className="mt-4 block text-center rounded-full bg-ink-900 text-white text-sm font-semibold px-5 py-3"
           >

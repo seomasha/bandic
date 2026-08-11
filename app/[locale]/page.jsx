@@ -1,5 +1,4 @@
-import { Link } from "react-router-dom";
-import { useTranslation } from "react-i18next";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import {
   ShieldCheck,
   Award,
@@ -12,16 +11,26 @@ import {
   PlaneTakeoff,
   BadgeEuro,
 } from "lucide-react";
-import Reveal from "../components/Reveal";
+import { Link } from "@/i18n/navigation";
+import Reveal from "@/components/Reveal";
 
 const whyIcons = [Users, ShieldCheck, Award, Clock, Globe2, ReceiptText];
 
-export default function Home() {
-  const { t } = useTranslation();
-  const why = t("home.why", { returnObjects: true });
-  const stats = t("home.stats", { returnObjects: true });
-  const services = t("serviceCategories", { returnObjects: true });
-  const badges = t("home.hero.badges", { returnObjects: true });
+export async function generateMetadata({ params }) {
+  const { locale } = await params;
+  const t = await getTranslations({ locale });
+  return { title: t("home.hero.titleLine1") + " " + t("home.hero.titleLine2") };
+}
+
+export default async function Home({ params }) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+  const t = await getTranslations({ locale });
+  const why = t.raw("home.why");
+  const stats = t.raw("home.stats");
+  const services = t.raw("serviceCategories");
+  const badges = t.raw("home.hero.badges");
+  const doctors = t.raw("team.doctors");
 
   return (
     <div>
@@ -54,14 +63,14 @@ export default function Home() {
             <Reveal delay={0.15}>
               <div className="mt-9 flex flex-wrap gap-4">
                 <Link
-                  to="/dental-tourism#quote"
+                  href="/dental-tourism#quote"
                   className="group inline-flex items-center gap-2 rounded-full bg-ink-950 text-white font-semibold px-7 py-4 hover:bg-gold-600 transition-colors"
                 >
                   {t("home.hero.ctaPrimary")}
                   <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
                 </Link>
                 <Link
-                  to="/dental-tourism"
+                  href="/dental-tourism"
                   className="inline-flex items-center gap-2 rounded-full border-2 border-ink-900/15 text-ink-900 font-semibold px-7 py-4 hover:border-gold-400 transition-colors"
                 >
                   <PlaneTakeoff size={18} className="text-gold-600" />
@@ -115,7 +124,9 @@ export default function Home() {
                     <Star key={i} size={14} fill="currentColor" strokeWidth={0} />
                   ))}
                 </div>
-                <p className="text-white text-sm font-semibold">{stats[3].value} {stats[3].label}</p>
+                <p className="text-white text-sm font-semibold">
+                  {stats[3].value} {stats[3].label}
+                </p>
               </div>
             </div>
             <div className="absolute -top-6 -left-6 hidden sm:flex items-center gap-3 bg-white rounded-2xl shadow-xl shadow-ink-900/10 px-5 py-4 border border-ink-900/5">
@@ -152,7 +163,7 @@ export default function Home() {
             </h2>
             <p className="mt-6 text-ink-600 leading-relaxed text-lg">{t("home.aboutText")}</p>
             <Link
-              to="/team"
+              href="/team"
               className="mt-8 inline-flex items-center gap-2 font-semibold text-gold-700 hover:text-gold-600 gold-underline"
             >
               {t("home.teamCta")} <ArrowRight size={16} />
@@ -211,7 +222,7 @@ export default function Home() {
               <p className="text-xs font-bold tracking-[0.3em] uppercase text-gold-600">{t("home.servicesKicker")}</p>
               <h2 className="mt-4 font-display text-3xl sm:text-4xl font-semibold text-ink-950">{t("home.servicesTitle")}</h2>
             </div>
-            <Link to="/services" className="inline-flex items-center gap-2 font-semibold text-ink-800 hover:text-gold-600 shrink-0">
+            <Link href="/services" className="inline-flex items-center gap-2 font-semibold text-ink-800 hover:text-gold-600 shrink-0">
               {t("common.viewAll")} <ArrowRight size={16} />
             </Link>
           </Reveal>
@@ -219,7 +230,7 @@ export default function Home() {
             {services.map((s, i) => (
               <Reveal key={s.slug} delay={i * 0.05}>
                 <Link
-                  to="/services"
+                  href="/services"
                   className="group block h-full rounded-2xl border border-ink-900/5 p-7 hover:bg-ink-950 transition-colors duration-300"
                 >
                   <span className="text-xs font-bold text-gold-600 group-hover:text-gold-300">0{i + 1}</span>
@@ -254,7 +265,7 @@ export default function Home() {
             <h2 className="mt-4 font-display text-3xl sm:text-4xl font-semibold leading-tight">{t("home.tourism.title")}</h2>
             <p className="mt-6 text-white/70 leading-relaxed text-lg">{t("home.tourism.text")}</p>
             <Link
-              to="/dental-tourism"
+              href="/dental-tourism"
               className="mt-8 inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-gold-300 to-gold-500 text-ink-950 font-bold px-7 py-4 hover:opacity-90 transition-opacity"
             >
               {t("home.tourism.cta")} <ArrowRight size={18} />
@@ -281,27 +292,29 @@ export default function Home() {
             <h2 className="mt-4 font-display text-3xl sm:text-4xl font-semibold text-ink-950">{t("home.teamTitle")}</h2>
           </Reveal>
           <div className="mt-14 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {t("team.doctors", { returnObjects: true })
-              .slice(0, 4)
-              .map((d, i) => (
-                <Reveal key={i} delay={i * 0.06}>
-                  <div className="rounded-2xl bg-white border border-ink-900/5 overflow-hidden group hover:shadow-lg hover:shadow-gold-900/5 transition-shadow">
-                    <div className="aspect-[4/5] bg-gradient-to-br from-gold-100 via-cream to-white flex items-center justify-center relative overflow-hidden">
-                      <span className="font-display text-5xl font-semibold gold-text opacity-80">
-                        {d.name.split(" ").map((n) => n[0]).slice(-2).join("")}
-                      </span>
-                      <div className="absolute inset-0 bg-gradient-to-t from-ink-950/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-                    </div>
-                    <div className="p-5">
-                      <p className="font-display text-lg font-semibold text-ink-950 leading-snug">{d.name}</p>
-                      <p className="mt-1 text-xs font-semibold text-gold-600 leading-snug">{d.title}</p>
-                    </div>
+            {doctors.slice(0, 4).map((d, i) => (
+              <Reveal key={i} delay={i * 0.06}>
+                <div className="rounded-2xl bg-white border border-ink-900/5 overflow-hidden group hover:shadow-lg hover:shadow-gold-900/5 transition-shadow">
+                  <div className="aspect-[4/5] bg-gradient-to-br from-gold-100 via-cream to-white flex items-center justify-center relative overflow-hidden">
+                    <span className="font-display text-5xl font-semibold gold-text opacity-80">
+                      {d.name
+                        .split(" ")
+                        .map((n) => n[0])
+                        .slice(-2)
+                        .join("")}
+                    </span>
+                    <div className="absolute inset-0 bg-gradient-to-t from-ink-950/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
                   </div>
-                </Reveal>
-              ))}
+                  <div className="p-5">
+                    <p className="font-display text-lg font-semibold text-ink-950 leading-snug">{d.name}</p>
+                    <p className="mt-1 text-xs font-semibold text-gold-600 leading-snug">{d.title}</p>
+                  </div>
+                </div>
+              </Reveal>
+            ))}
           </div>
           <Reveal className="mt-10 text-center">
-            <Link to="/team" className="inline-flex items-center gap-2 font-semibold text-ink-800 hover:text-gold-600">
+            <Link href="/team" className="inline-flex items-center gap-2 font-semibold text-ink-800 hover:text-gold-600">
               {t("home.teamCta")} <ArrowRight size={16} />
             </Link>
           </Reveal>
@@ -340,7 +353,7 @@ export default function Home() {
             <p className="mt-5 text-white/70 text-lg leading-relaxed">{t("home.finalCta.text")}</p>
             <div className="mt-9 flex flex-wrap justify-center gap-4">
               <Link
-                to="/dental-tourism#quote"
+                href="/dental-tourism#quote"
                 className="rounded-full bg-gradient-to-r from-gold-300 to-gold-500 text-ink-950 font-bold px-7 py-4 hover:opacity-90 transition-opacity"
               >
                 {t("home.finalCta.cta1")}

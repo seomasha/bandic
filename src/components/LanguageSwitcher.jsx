@@ -1,6 +1,9 @@
-import { useState, useRef, useEffect } from "react";
-import { useTranslation } from "react-i18next";
+"use client";
+
+import { useState, useRef, useEffect, useTransition } from "react";
+import { useLocale } from "next-intl";
 import { ChevronDown, Check } from "lucide-react";
+import { usePathname, useRouter } from "../i18n/navigation";
 
 const LANGS = [
   { code: "en", label: "English", short: "EN" },
@@ -9,10 +12,13 @@ const LANGS = [
 ];
 
 export default function LanguageSwitcher({ dark = false }) {
-  const { i18n } = useTranslation();
+  const locale = useLocale();
+  const pathname = usePathname();
+  const router = useRouter();
+  const [, startTransition] = useTransition();
   const [open, setOpen] = useState(false);
   const ref = useRef(null);
-  const current = LANGS.find((l) => l.code === i18n.language) || LANGS[1];
+  const current = LANGS.find((l) => l.code === locale) || LANGS[1];
 
   useEffect(() => {
     function onClick(e) {
@@ -42,8 +48,10 @@ export default function LanguageSwitcher({ dark = false }) {
             <button
               key={l.code}
               onClick={() => {
-                i18n.changeLanguage(l.code);
                 setOpen(false);
+                startTransition(() => {
+                  router.replace(pathname, { locale: l.code });
+                });
               }}
               className="w-full flex items-center justify-between px-4 py-2.5 text-sm text-ink-800 hover:bg-gold-50 cursor-pointer"
             >

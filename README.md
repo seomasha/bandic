@@ -4,7 +4,7 @@ A modern, multilingual (EN / BS / DE) marketing site for Poliklinika Bandić
 (Dental Ortodont Centar dr Bandić), Sarajevo — built around the clinic's
 dental tourism offering.
 
-Stack: React 19 + Vite + Tailwind CSS v4 + react-router-dom + react-i18next +
+Stack: Next.js 16 (App Router) + React 19 + Tailwind CSS v4 + next-intl +
 framer-motion.
 
 ## Getting started
@@ -12,19 +12,28 @@ framer-motion.
 ```bash
 npm install
 npm run dev      # local dev server
-npm run build    # production build -> dist/
-npm run preview  # preview the production build
+npm run build    # production build
+npm run start    # run the production build
 ```
 
 ## Structure
 
-- `src/i18n/locales/{en,bs,de}.json` — all site copy, per language. Prices,
-  names and structured data live here too (as `returnObjects` arrays), so
-  content edits mostly happen in these three files.
-- `src/pages/` — one file per route (`Home`, `DentalTourism`, `Services`,
-  `Team`, `Prices`, `Contact`).
+- `messages/{en,bs,de}.json` — all site copy, per language. Prices, names
+  and structured data live here too (read via `t.raw(...)`), so content
+  edits mostly happen in these three files.
+- `app/[locale]/` — one route per page (`page.jsx` = Home, plus
+  `dental-tourism/`, `services/`, `team/`, `prices/`, `contact/`). Every
+  page is served under a locale prefix — `/en`, `/bs`, `/de` — via
+  `next-intl` middleware (`proxy.js`), so each language gets its own
+  crawlable, SEO-friendly URL instead of a client-side-only toggle.
 - `src/components/` — shared UI (`Navbar`, `Footer`, `Reveal` scroll
-  animation wrapper, `FileDropzone`, `Accordion`, etc).
+  animation wrapper, `FileDropzone`, `Accordion`, etc). Pages that need
+  interactivity (`Prices`, `Contact`, `DentalTourism`) delegate to a
+  `*Client.jsx` component so the route itself can stay a Server Component
+  and export `generateMetadata`.
+- `src/i18n/` — `next-intl` config: `routing.js` (locales), `navigation.js`
+  (locale-aware `Link`/`useRouter`), `request.js` (loads the right
+  `messages/*.json` per request).
 
 ## Content sourcing & honesty notes
 

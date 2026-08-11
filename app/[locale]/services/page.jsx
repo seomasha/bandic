@@ -1,22 +1,26 @@
-import { Link } from "react-router-dom";
-import { useTranslation } from "react-i18next";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Stethoscope, Scissors, Anchor, Smile, Layers, Sparkles, ArrowRight } from "lucide-react";
-import PageHero from "../components/PageHero";
-import Reveal from "../components/Reveal";
+import { Link } from "@/i18n/navigation";
+import PageHero from "@/components/PageHero";
+import Reveal from "@/components/Reveal";
 
 const icons = [Stethoscope, Scissors, Anchor, Smile, Layers, Sparkles];
 
-export default function Services() {
-  const { t } = useTranslation();
-  const services = t("serviceCategories", { returnObjects: true });
+export async function generateMetadata({ params }) {
+  const { locale } = await params;
+  const t = await getTranslations({ locale });
+  return { title: t("nav.services") };
+}
+
+export default async function Services({ params }) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+  const t = await getTranslations({ locale });
+  const services = t.raw("serviceCategories");
 
   return (
     <div>
-      <PageHero
-        kicker={t("nav.services")}
-        title={t("home.servicesTitle")}
-        subtitle={t("home.aboutText")}
-      />
+      <PageHero kicker={t("nav.services")} title={t("home.servicesTitle")} subtitle={t("home.aboutText")} />
 
       <section className="py-24 bg-white">
         <div className="mx-auto max-w-7xl px-5 lg:px-8 grid gap-8">
@@ -40,7 +44,7 @@ export default function Services() {
                   <div className={reverse ? "lg:order-1" : ""}>
                     <p className="text-ink-600 leading-relaxed text-lg">{s.text}</p>
                     <Link
-                      to="/prices"
+                      href="/prices"
                       className="mt-6 inline-flex items-center gap-2 font-semibold text-gold-700 hover:text-gold-600 gold-underline"
                     >
                       {t("nav.prices")} <ArrowRight size={16} />
@@ -58,7 +62,7 @@ export default function Services() {
           <h2 className="font-display text-3xl font-semibold">{t("prices.cta.title")}</h2>
           <p className="mt-4 text-white/70 leading-relaxed">{t("prices.cta.text")}</p>
           <Link
-            to="/dental-tourism#quote"
+            href="/dental-tourism#quote"
             className="mt-8 inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-gold-300 to-gold-500 text-ink-950 font-bold px-7 py-4 hover:opacity-90 transition-opacity"
           >
             {t("prices.cta.button")} <ArrowRight size={18} />

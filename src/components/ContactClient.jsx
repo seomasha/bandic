@@ -1,11 +1,13 @@
-import { useState } from "react";
-import { useTranslation } from "react-i18next";
-import { MapPin, Phone, Mail, Clock, MessageCircle, Send, CheckCircle2 } from "lucide-react";
-import PageHero from "../components/PageHero";
-import Reveal from "../components/Reveal";
+"use client";
 
-export default function Contact() {
-  const { t } = useTranslation();
+import { useState } from "react";
+import { useTranslations } from "next-intl";
+import { MapPin, Phone, Mail, Clock, MessageCircle, Send, CheckCircle2 } from "lucide-react";
+import PageHero from "@/components/PageHero";
+import Reveal from "@/components/Reveal";
+
+export default function ContactClient() {
+  const t = useTranslations();
   const [sent, setSent] = useState(false);
   const [form, setForm] = useState({ name: "", email: "", phone: "", message: "" });
 

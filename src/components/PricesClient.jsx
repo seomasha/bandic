@@ -1,14 +1,16 @@
+"use client";
+
 import { useState } from "react";
-import { useTranslation } from "react-i18next";
-import { Link } from "react-router-dom";
+import { useTranslations } from "next-intl";
 import { motion, AnimatePresence } from "framer-motion";
 import { ArrowRight, Info } from "lucide-react";
-import PageHero from "../components/PageHero";
-import Reveal from "../components/Reveal";
+import { Link } from "@/i18n/navigation";
+import PageHero from "@/components/PageHero";
+import Reveal from "@/components/Reveal";
 
-export default function Prices() {
-  const { t } = useTranslation();
-  const categories = t("prices.categories", { returnObjects: true });
+export default function PricesClient() {
+  const t = useTranslations();
+  const categories = t.raw("prices.categories");
   const [active, setActive] = useState(0);
 
   return (
@@ -74,7 +76,7 @@ export default function Prices() {
           <h2 className="font-display text-3xl font-semibold">{t("prices.cta.title")}</h2>
           <p className="mt-4 text-white/70 leading-relaxed">{t("prices.cta.text")}</p>
           <Link
-            to="/dental-tourism#quote"
+            href="/dental-tourism#quote"
             className="mt-8 inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-gold-300 to-gold-500 text-ink-950 font-bold px-7 py-4 hover:opacity-90 transition-opacity"
           >
             {t("prices.cta.button")} <ArrowRight size={18} />

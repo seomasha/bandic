@@ -1,8 +1,8 @@
-import { useTranslation } from "react-i18next";
+import { useTranslations } from "next-intl";
 import { MessageCircle } from "lucide-react";
 
 export default function FloatingActions() {
-  const { t } = useTranslation();
+  const t = useTranslations();
   return (
     <a
       href="https://wa.me/38761097008"
