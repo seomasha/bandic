@@ -34,7 +34,7 @@
     "hero": {
       "headline1": "Došli ste u Sarajevo.",
       "headlineStatic": "Otići ćete sa",
-      "rotating": ["osmijehom.", "zdravijim osmijehom.", "novim samopouzdanjem.", "razlogom za osmijeh."],
+      "rotating": ["zdravijim osmijehom.", "novim samopouzdanjem.", "razlogom za osmijeh."],
       "subtitle": "Stručna njega, moderna tehnologija i grad vrijedan posjete — uz povjerenje pacijenata iz cijele Evrope.",
       "ctaPrimary": "Zatražite besplatnu ponudu",
       "ctaSecondary": "Istražite dentalni turizam"

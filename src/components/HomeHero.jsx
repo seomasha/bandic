@@ -22,36 +22,48 @@ function SarajevoSkyline({ className = "" }) {
         d="M0 190 C 160 150, 300 175, 460 155 S 760 140, 900 165 S 1200 150, 1440 180 V220 H0 Z"
         fill="url(#hillsFade)"
       />
-      <g stroke="#e0ba6c" strokeWidth="1.1" strokeLinecap="round" opacity="0.55">
+      <g stroke="url(#goldStroke)" strokeWidth="1.75" strokeLinecap="round" filter="url(#glow)">
         <path d="M120 190 V100" />
         <circle cx="120" cy="90" r="5" />
-        <path d="M112 90a8 8 0 0 0 8 8" opacity="0.7" />
+        <path d="M112 90a8 8 0 0 0 8 8" opacity="0.85" />
 
         <path d="M300 190 V60" />
         <circle cx="300" cy="48" r="6.5" />
-        <path d="M290 48a10 10 0 0 0 10 10" opacity="0.7" />
+        <path d="M290 48a10 10 0 0 0 10 10" opacity="0.85" />
 
         <path d="M960 190 V72" />
         <circle cx="960" cy="60" r="6" />
-        <path d="M951 60a9 9 0 0 0 9 9" opacity="0.7" />
+        <path d="M951 60a9 9 0 0 0 9 9" opacity="0.85" />
 
         <path d="M1230 190 V105" />
         <circle cx="1230" cy="95" r="5" />
-        <path d="M1222 95a8 8 0 0 0 8 8" opacity="0.7" />
+        <path d="M1222 95a8 8 0 0 0 8 8" opacity="0.85" />
       </g>
       <path
         d="M560 190 V128 C560 108 578 92 610 92 S660 108 660 128 V190"
-        stroke="#e0ba6c"
-        strokeWidth="1.1"
-        opacity="0.6"
+        stroke="url(#goldStroke)"
+        strokeWidth="1.75"
         fill="none"
+        filter="url(#glow)"
       />
-      <circle cx="610" cy="80" r="4.5" stroke="#e0ba6c" strokeWidth="1.1" opacity="0.6" />
+      <circle cx="610" cy="80" r="4.5" stroke="url(#goldStroke)" strokeWidth="1.75" filter="url(#glow)" />
       <defs>
         <linearGradient id="hillsFade" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0" stopColor="#b8903f" stopOpacity="0.08" />
+          <stop offset="0" stopColor="#b8903f" stopOpacity="0.16" />
           <stop offset="1" stopColor="#b8903f" stopOpacity="0" />
         </linearGradient>
+        <linearGradient id="goldStroke" x1="0" y1="0" x2="1440" y2="0" gradientUnits="userSpaceOnUse">
+          <stop offset="0" stopColor="#e0ba6c" />
+          <stop offset="0.5" stopColor="#f5d99a" />
+          <stop offset="1" stopColor="#e0ba6c" />
+        </linearGradient>
+        <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+          <feGaussianBlur stdDeviation="2.2" result="blur" />
+          <feMerge>
+            <feMergeNode in="blur" />
+            <feMergeNode in="SourceGraphic" />
+          </feMerge>
+        </filter>
       </defs>
     </svg>
   );
@@ -77,7 +89,7 @@ export default function HomeHero() {
         <motion.div
           className="absolute -top-1/4 left-1/2 h-[70vh] w-[70vh] -translate-x-1/2 rounded-full"
           style={{
-            background: "radial-gradient(circle, rgba(224,186,108,0.16) 0%, rgba(224,186,108,0) 70%)",
+            background: "radial-gradient(circle, rgba(224,186,108,0.38) 0%, rgba(224,186,108,0) 70%)",
           }}
           animate={
             reduceMotion
@@ -89,7 +101,7 @@ export default function HomeHero() {
         <motion.div
           className="absolute bottom-0 right-0 h-[55vh] w-[55vh] rounded-full"
           style={{
-            background: "radial-gradient(circle, rgba(184,144,63,0.14) 0%, rgba(184,144,63,0) 70%)",
+            background: "radial-gradient(circle, rgba(224,186,108,0.32) 0%, rgba(224,186,108,0) 70%)",
           }}
           animate={
             reduceMotion
@@ -98,9 +110,9 @@ export default function HomeHero() {
           }
           transition={{ duration: 32, repeat: Infinity, ease: "easeInOut" }}
         />
-        <SarajevoSkyline className="absolute bottom-0 left-0 w-full h-[28vh] opacity-70" />
-        <div className="absolute inset-0 bg-gradient-to-t from-black via-black/10 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
         <div className="absolute inset-0 noise-overlay" />
+        <SarajevoSkyline className="absolute bottom-0 left-0 w-full h-[28vh]" />
       </div>
 
       {/* content */}
