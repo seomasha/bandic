@@ -9,7 +9,7 @@ import { Link } from "@/i18n/navigation";
 const ROTATE_MS = 3200;
 const EASE = [0.16, 1, 0.3, 1];
 
-function HeroVideoPanel({ reduceMotion }) {
+function HeroVideoBackground({ reduceMotion }) {
   const videoRef = useRef(null);
 
   useEffect(() => {
@@ -20,110 +20,23 @@ function HeroVideoPanel({ reduceMotion }) {
   }, [reduceMotion]);
 
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 24, scale: 0.97 }}
-      animate={{ opacity: 1, y: 0, scale: 1 }}
-      transition={{ duration: 1.2, delay: 0.3, ease: EASE }}
-      className="relative mx-auto w-full max-w-[300px] lg:ml-auto lg:mr-0 lg:max-w-[360px]"
-    >
-      {/* ambient glow */}
-      <motion.div
-        aria-hidden
-        className="absolute -inset-8 -z-10 rounded-[3rem] blur-3xl"
-        style={{ background: "radial-gradient(60% 60% at 50% 40%, rgba(224,186,108,0.32) 0%, rgba(224,186,108,0) 72%)" }}
-        animate={reduceMotion ? undefined : { opacity: [0.6, 1, 0.6] }}
-        transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+    <div className="absolute inset-0">
+      <video
+        ref={videoRef}
+        className="absolute inset-0 h-full w-full object-cover"
+        src="/hero1.MP4"
+        autoPlay
+        muted
+        loop
+        playsInline
+        preload="auto"
+        aria-hidden="true"
       />
-
-      <div className="relative aspect-[9/16] overflow-hidden rounded-[2rem] border border-gold-300/25 bg-ink-900 shadow-2xl shadow-black/40">
-        <video
-          ref={videoRef}
-          className="h-full w-full object-cover"
-          src="/hero1.MP4"
-          autoPlay
-          muted
-          loop
-          playsInline
-          preload="auto"
-          aria-hidden="true"
-        />
-        <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-ink-950/70 via-transparent to-ink-950/10" />
-        <div className="pointer-events-none absolute inset-0 noise-overlay opacity-40" />
-
-        {/* corner brackets */}
-        <svg aria-hidden viewBox="0 0 48 48" className="pointer-events-none absolute left-3 top-3 h-8 w-8 opacity-80">
-          <path d="M2 18 V6 a4 4 0 0 1 4-4 H18" fill="none" stroke="#f5d99a" strokeWidth="1.75" strokeLinecap="round" />
-        </svg>
-        <svg aria-hidden viewBox="0 0 48 48" className="pointer-events-none absolute bottom-3 right-3 h-8 w-8 opacity-80">
-          <path d="M46 30 V42 a4 4 0 0 1 -4 4 H30" fill="none" stroke="#f5d99a" strokeWidth="1.75" strokeLinecap="round" />
-        </svg>
-
-        <div className="pointer-events-none absolute inset-x-5 bottom-5">
-          <span className="block h-px w-10 bg-gradient-to-r from-gold-300 to-transparent" />
-          <p className="mt-2.5 text-xs font-semibold uppercase tracking-[0.2em] text-white/70">Sarajevo, BiH</p>
-        </div>
-      </div>
-    </motion.div>
-  );
-}
-
-function SarajevoSkyline({ className = "" }) {
-  return (
-    <svg
-      className={className}
-      viewBox="0 0 1440 220"
-      preserveAspectRatio="none"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path
-        d="M0 190 C 160 150, 300 175, 460 155 S 760 140, 900 165 S 1200 150, 1440 180 V220 H0 Z"
-        fill="url(#hillsFade)"
-      />
-      <g stroke="url(#goldStroke)" strokeWidth="1.75" strokeLinecap="round" filter="url(#glow)">
-        <path d="M120 190 V100" />
-        <circle cx="120" cy="90" r="5" />
-        <path d="M112 90a8 8 0 0 0 8 8" opacity="0.85" />
-
-        <path d="M300 190 V60" />
-        <circle cx="300" cy="48" r="6.5" />
-        <path d="M290 48a10 10 0 0 0 10 10" opacity="0.85" />
-
-        <path d="M960 190 V72" />
-        <circle cx="960" cy="60" r="6" />
-        <path d="M951 60a9 9 0 0 0 9 9" opacity="0.85" />
-
-        <path d="M1230 190 V105" />
-        <circle cx="1230" cy="95" r="5" />
-        <path d="M1222 95a8 8 0 0 0 8 8" opacity="0.85" />
-      </g>
-      <path
-        d="M560 190 V128 C560 108 578 92 610 92 S660 108 660 128 V190"
-        stroke="url(#goldStroke)"
-        strokeWidth="1.75"
-        fill="none"
-        filter="url(#glow)"
-      />
-      <circle cx="610" cy="80" r="4.5" stroke="url(#goldStroke)" strokeWidth="1.75" filter="url(#glow)" />
-      <defs>
-        <linearGradient id="hillsFade" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0" stopColor="#b8903f" stopOpacity="0.16" />
-          <stop offset="1" stopColor="#b8903f" stopOpacity="0" />
-        </linearGradient>
-        <linearGradient id="goldStroke" x1="0" y1="0" x2="1440" y2="0" gradientUnits="userSpaceOnUse">
-          <stop offset="0" stopColor="#e0ba6c" />
-          <stop offset="0.5" stopColor="#f5d99a" />
-          <stop offset="1" stopColor="#e0ba6c" />
-        </linearGradient>
-        <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
-          <feGaussianBlur stdDeviation="2.2" result="blur" />
-          <feMerge>
-            <feMergeNode in="blur" />
-            <feMergeNode in="SourceGraphic" />
-          </feMerge>
-        </filter>
-      </defs>
-    </svg>
+      <div className="absolute inset-0 bg-ink-950/60" />
+      <div className="absolute inset-0 bg-gradient-to-b from-ink-950/85 via-ink-950/45 to-ink-950/90" />
+      <div className="absolute inset-0 bg-[radial-gradient(60%_55%_at_50%_45%,rgba(0,0,0,0.15)_0%,rgba(0,0,0,0.65)_100%)]" />
+      <div className="absolute inset-0 noise-overlay" />
+    </div>
   );
 }
 
@@ -141,100 +54,64 @@ export default function HomeHero() {
 
   return (
     <section className="relative min-h-[92vh] flex items-center overflow-hidden bg-ink-950">
-      {/* cinematic background */}
-      <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-gradient-to-b from-ink-950 via-ink-950 to-black" />
-        <motion.div
-          className="absolute -top-1/4 left-1/2 h-[70vh] w-[70vh] -translate-x-1/2 rounded-full"
-          style={{
-            background: "radial-gradient(circle, rgba(224,186,108,0.38) 0%, rgba(224,186,108,0) 70%)",
-          }}
-          animate={
-            reduceMotion
-              ? undefined
-              : { x: ["-6%", "6%", "-6%"], y: ["-4%", "3%", "-4%"] }
-          }
-          transition={{ duration: 26, repeat: Infinity, ease: "easeInOut" }}
-        />
-        <motion.div
-          className="absolute bottom-0 right-0 h-[55vh] w-[55vh] rounded-full"
-          style={{
-            background: "radial-gradient(circle, rgba(224,186,108,0.32) 0%, rgba(224,186,108,0) 70%)",
-          }}
-          animate={
-            reduceMotion
-              ? undefined
-              : { x: ["4%", "-4%", "4%"], y: ["2%", "-2%", "2%"] }
-          }
-          transition={{ duration: 32, repeat: Infinity, ease: "easeInOut" }}
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
-        <div className="absolute inset-0 noise-overlay" />
-        <SarajevoSkyline className="absolute bottom-0 left-0 w-full h-[28vh]" />
-      </div>
+      <HeroVideoBackground reduceMotion={reduceMotion} />
 
       {/* content */}
-      <div className="relative mx-auto max-w-6xl px-5 lg:px-8">
-        <div className="grid grid-cols-1 items-center gap-16 lg:grid-cols-[1.1fr_0.8fr] lg:gap-12">
-          <div className="text-center lg:text-left">
-            <motion.h1
-              initial={{ opacity: 0, y: 34 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1.1, ease: EASE }}
-              className="font-display font-semibold leading-[1.08] text-cream"
-            >
-              <span className="block text-4xl sm:text-5xl lg:text-5xl xl:text-6xl">{t("headline1")}</span>
-              <span className="mt-3 block text-4xl sm:text-5xl lg:text-5xl xl:text-6xl">{t("headlineStatic")}</span>
-              <span className="relative mt-3 block h-[1.15em] overflow-hidden text-4xl sm:text-5xl lg:text-5xl xl:text-6xl">
-                <AnimatePresence mode="wait">
-                  <motion.span
-                    key={index}
-                    initial={{ opacity: 0, y: 16 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: -16 }}
-                    transition={{ duration: 0.75, ease: EASE }}
-                    className="gold-text block"
-                  >
-                    {rotating[index]}
-                  </motion.span>
-                </AnimatePresence>
-              </span>
-            </motion.h1>
-
-            <motion.p
-              initial={{ opacity: 0, y: 18 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.55, ease: EASE }}
-              className="mx-auto mt-8 max-w-xl font-sans text-base sm:text-lg leading-relaxed text-white/60 lg:mx-0"
-            >
-              {t("subtitle")}
-            </motion.p>
-
-            <motion.div
-              initial={{ opacity: 0, y: 18 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.85, ease: EASE }}
-              className="mt-10 flex flex-wrap items-center justify-center gap-4 lg:justify-start"
-            >
-              <Link
-                href="/dental-tourism#quote"
-                className="group inline-flex items-center gap-2 rounded-full bg-cream text-ink-950 font-semibold px-7 py-4 hover:bg-white transition-colors"
+      <div className="relative mx-auto max-w-5xl px-5 lg:px-8 text-center">
+        <motion.h1
+          initial={{ opacity: 0, y: 34 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1.1, ease: EASE }}
+          className="font-display font-semibold leading-[1.08] text-cream drop-shadow-[0_2px_20px_rgba(0,0,0,0.55)]"
+        >
+          <span className="block text-4xl sm:text-5xl lg:text-6xl">{t("headline1")}</span>
+          <span className="mt-3 block text-4xl sm:text-5xl lg:text-6xl">{t("headlineStatic")}</span>
+          <span className="relative mt-3 block h-[1.15em] overflow-hidden text-4xl sm:text-5xl lg:text-6xl">
+            <AnimatePresence mode="wait">
+              <motion.span
+                key={index}
+                initial={{ opacity: 0, y: 16 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -16 }}
+                transition={{ duration: 0.75, ease: EASE }}
+                className="gold-text block"
               >
-                {t("ctaPrimary")}
-                <ArrowRight size={18} className="text-gold-600 group-hover:translate-x-1 transition-transform" />
-              </Link>
-              <Link
-                href="/dental-tourism"
-                className="inline-flex items-center gap-2 rounded-full border border-white/20 text-white/85 font-semibold px-7 py-4 hover:border-gold-300/70 hover:text-white transition-colors"
-              >
-                <PlaneTakeoff size={16} className="text-gold-300" />
-                {t("ctaSecondary")}
-              </Link>
-            </motion.div>
-          </div>
+                {rotating[index]}
+              </motion.span>
+            </AnimatePresence>
+          </span>
+        </motion.h1>
 
-          <HeroVideoPanel reduceMotion={reduceMotion} />
-        </div>
+        <motion.p
+          initial={{ opacity: 0, y: 18 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.55, ease: EASE }}
+          className="mx-auto mt-8 max-w-xl font-sans text-base sm:text-lg leading-relaxed text-white/70 drop-shadow-[0_1px_12px_rgba(0,0,0,0.5)]"
+        >
+          {t("subtitle")}
+        </motion.p>
+
+        <motion.div
+          initial={{ opacity: 0, y: 18 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.85, ease: EASE }}
+          className="mt-10 flex flex-wrap items-center justify-center gap-4"
+        >
+          <Link
+            href="/dental-tourism#quote"
+            className="group inline-flex items-center gap-2 rounded-full bg-cream text-ink-950 font-semibold px-7 py-4 hover:bg-white transition-colors"
+          >
+            {t("ctaPrimary")}
+            <ArrowRight size={18} className="text-gold-600 group-hover:translate-x-1 transition-transform" />
+          </Link>
+          <Link
+            href="/dental-tourism"
+            className="inline-flex items-center gap-2 rounded-full border border-white/30 text-white font-semibold px-7 py-4 hover:border-gold-300/70 hover:bg-white/10 transition-colors"
+          >
+            <PlaneTakeoff size={16} className="text-gold-300" />
+            {t("ctaSecondary")}
+          </Link>
+        </motion.div>
       </div>
 
       {/* scroll indicator */}
