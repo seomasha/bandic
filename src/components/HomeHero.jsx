@@ -66,11 +66,7 @@ export default function HomeHero() {
         >
           <span className="block text-4xl sm:text-5xl lg:text-6xl">{t("headline1")}</span>
           <span className="mt-3 block text-4xl sm:text-5xl lg:text-6xl">{t("headlineStatic")}</span>
-          <motion.span
-            layout
-            transition={{ layout: { duration: 0.5, ease: EASE } }}
-            className="relative mt-3 block overflow-hidden text-4xl sm:text-5xl lg:text-6xl"
-          >
+          <span className="relative mt-3 block text-4xl sm:text-5xl lg:text-6xl">
             <AnimatePresence mode="wait">
               <motion.span
                 key={index}
@@ -83,7 +79,7 @@ export default function HomeHero() {
                 {rotating[index]}
               </motion.span>
             </AnimatePresence>
-          </motion.span>
+          </span>
         </motion.h1>
 
         <motion.p
