@@ -17,14 +17,7 @@ const ORIGINS = [
 
 function RouteMap({ caption }) {
   return (
-    <div className="relative aspect-[4/5] w-full overflow-hidden rounded-3xl border border-ink-900/10 bg-white shadow-sm shadow-ink-900/5 lg:aspect-auto lg:h-full lg:min-h-[560px]">
-      <div
-        className="absolute inset-0 opacity-90"
-        style={{
-          background:
-            "radial-gradient(65% 60% at 85% 78%, rgba(184,144,63,0.16), transparent 65%), radial-gradient(45% 40% at 10% 10%, rgba(184,144,63,0.08), transparent 60%)",
-        }}
-      />
+    <div className="relative aspect-[4/5] w-full lg:aspect-auto lg:h-full lg:min-h-[560px]">
       <svg viewBox="0 0 420 420" className="absolute inset-0 h-full w-full">
         {ORIGINS.map((o, i) => (
           <motion.path

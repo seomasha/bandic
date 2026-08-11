@@ -16,23 +16,9 @@ export default function FinalCtaSection() {
       <div
         className="absolute inset-0"
         style={{
-          background:
-            "radial-gradient(50% 55% at 50% 0%, rgba(224,186,108,0.22), transparent 65%), radial-gradient(35% 40% at 15% 100%, rgba(184,144,63,0.14), transparent 60%)",
+          background: "radial-gradient(45% 50% at 50% 0%, rgba(224,186,108,0.16), transparent 65%)",
         }}
       />
-      <svg
-        aria-hidden
-        viewBox="0 0 200 80"
-        className="pointer-events-none absolute left-1/2 top-10 h-16 w-40 -translate-x-1/2 opacity-[0.14] sm:top-14"
-      >
-        <path
-          d="M10 20c25 40 60 40 90 0s65-40 90 0"
-          fill="none"
-          stroke="#e0ba6c"
-          strokeWidth="2.5"
-          strokeLinecap="round"
-        />
-      </svg>
 
       <div className="relative mx-auto max-w-3xl px-5 lg:px-8">
         <motion.div

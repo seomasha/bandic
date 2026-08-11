@@ -7,13 +7,17 @@ import { Link } from "@/i18n/navigation";
 
 const EASE = [0.16, 1, 0.3, 1];
 
-function initials(name) {
-  return name
-    .split(" ")
-    .filter((w) => /^[A-ZČĆŠĐŽ]/.test(w))
-    .map((n) => n[0])
-    .slice(-2)
-    .join("");
+function GoldLine({ className = "", delay = 0 }) {
+  return (
+    <motion.span
+      initial={{ scaleX: 0 }}
+      whileInView={{ scaleX: 1 }}
+      viewport={{ once: true, margin: "-80px 0px" }}
+      transition={{ duration: 0.9, delay, ease: EASE }}
+      style={{ transformOrigin: "left" }}
+      className={`block h-px bg-gradient-to-r from-gold-500 to-transparent ${className}`}
+    />
+  );
 }
 
 export default function TeamSection() {
@@ -40,65 +44,45 @@ export default function TeamSection() {
           </Link>
         </motion.div>
 
-        <div className="mt-14 grid gap-10 lg:grid-cols-12 lg:gap-8">
-          {/* featured — director */}
-          <motion.div
-            initial={{ opacity: 0, x: -24 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, margin: "-60px 0px" }}
-            transition={{ duration: 0.8, ease: EASE }}
-            className="group relative overflow-hidden rounded-3xl lg:col-span-5"
-          >
-            <div className="relative aspect-[3/4] overflow-hidden rounded-3xl bg-gradient-to-br from-ink-900 via-ink-950 to-black">
-              <div
-                className="absolute inset-0 opacity-90 transition-opacity duration-500 group-hover:opacity-100"
-                style={{
-                  background: "radial-gradient(65% 55% at 30% 20%, rgba(224,186,108,0.3), transparent 65%)",
-                }}
-              />
-              <div className="absolute inset-0 flex items-center justify-center">
-                <span className="font-display text-8xl font-semibold text-gold-300/25">{initials(featured.name)}</span>
-              </div>
-              <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent p-7">
-                <p className="font-display text-2xl font-semibold text-white">{featured.name}</p>
-                <p className="mt-1 text-sm font-semibold text-gold-300">{featured.title}</p>
-                <p className="mt-3 max-w-sm text-sm leading-relaxed text-white/60">{featured.text}</p>
-              </div>
-            </div>
-          </motion.div>
+        {/* featured — director */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-60px 0px" }}
+          transition={{ duration: 0.8, delay: 0.1, ease: EASE }}
+          className="mt-16 grid gap-8 border-t border-ink-900/10 pt-12 lg:grid-cols-12"
+        >
+          <div className="lg:col-span-3">
+            <GoldLine className="w-16" />
+            <p className="mt-5 font-display text-4xl font-semibold leading-tight text-ink-950">{featured.name}</p>
+            <p className="mt-2 text-sm font-semibold uppercase tracking-[0.15em] text-gold-600">{featured.title}</p>
+          </div>
+          <p className="max-w-2xl text-lg leading-relaxed text-ink-600 lg:col-span-8 lg:col-start-5">{featured.text}</p>
+        </motion.div>
 
-          {/* horizontally scrollable rest of the team */}
-          <motion.div
-            initial={{ opacity: 0, x: 24 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, margin: "-60px 0px" }}
-            transition={{ duration: 0.8, delay: 0.1, ease: EASE }}
-            className="lg:col-span-7"
-          >
-            <div className="scrollbar-thin flex snap-x snap-mandatory gap-5 overflow-x-auto pb-4">
-              {rest.map((d, i) => (
-                <div
-                  key={d.name}
-                  className="group relative w-52 shrink-0 snap-start overflow-hidden rounded-2xl border border-ink-900/10 transition-all duration-300 hover:-translate-y-1 hover:border-gold-300 hover:shadow-lg hover:shadow-gold-900/10 sm:w-56"
-                >
-                  <div className="relative aspect-[3/4] overflow-hidden bg-gradient-to-br from-cream via-gold-50 to-white">
-                    <span className="absolute inset-0 flex items-center justify-center font-display text-4xl font-semibold gold-text opacity-80">
-                      {initials(d.name)}
-                    </span>
-                    <div className="absolute inset-0 bg-gradient-to-t from-ink-950/75 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
-                  </div>
-                  <div className="p-4">
-                    <p className="font-display text-base font-semibold leading-snug text-ink-950">{d.name}</p>
-                    <p className="mt-1 text-xs font-semibold leading-snug text-gold-600">{d.title}</p>
-                  </div>
-                  <span className="pointer-events-none absolute left-4 top-4 font-display text-sm font-semibold text-white/70">
-                    0{i + 2}
-                  </span>
-                </div>
-              ))}
-            </div>
-          </motion.div>
-        </div>
+        {/* rest of the team — horizontally scrollable typographic list */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-60px 0px" }}
+          transition={{ duration: 0.8, delay: 0.15, ease: EASE }}
+          className="mt-4"
+        >
+          <div className="scrollbar-thin flex snap-x snap-mandatory gap-px overflow-x-auto">
+            {rest.map((d, i) => (
+              <div
+                key={d.name}
+                className="group flex w-56 shrink-0 snap-start flex-col border-t border-ink-900/10 py-8 pr-8 sm:w-64"
+              >
+                <span className="font-display text-sm font-semibold text-ink-900/25 transition-colors duration-300 group-hover:text-gold-400">
+                  0{i + 2}
+                </span>
+                <p className="mt-5 font-display text-xl font-semibold leading-snug text-ink-950">{d.name}</p>
+                <p className="mt-1.5 text-xs font-semibold uppercase tracking-[0.12em] text-gold-600">{d.title}</p>
+              </div>
+            ))}
+          </div>
+        </motion.div>
       </div>
     </section>
   );
