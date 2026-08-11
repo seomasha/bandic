@@ -32,9 +32,9 @@ function HeroVideoBackground({ reduceMotion }) {
         preload="auto"
         aria-hidden="true"
       />
-      <div className="absolute inset-0 bg-ink-950/60" />
-      <div className="absolute inset-0 bg-gradient-to-b from-ink-950/85 via-ink-950/45 to-ink-950/90" />
-      <div className="absolute inset-0 bg-[radial-gradient(60%_55%_at_50%_45%,rgba(0,0,0,0.15)_0%,rgba(0,0,0,0.65)_100%)]" />
+      <div className="absolute inset-0 bg-ink-950/45" />
+      <div className="absolute inset-0 bg-gradient-to-b from-ink-950/75 via-ink-950/30 to-ink-950/80" />
+      <div className="absolute inset-0 bg-[radial-gradient(60%_55%_at_50%_45%,rgba(0,0,0,0.08)_0%,rgba(0,0,0,0.5)_100%)]" />
       <div className="absolute inset-0 noise-overlay" />
     </div>
   );
@@ -66,7 +66,11 @@ export default function HomeHero() {
         >
           <span className="block text-4xl sm:text-5xl lg:text-6xl">{t("headline1")}</span>
           <span className="mt-3 block text-4xl sm:text-5xl lg:text-6xl">{t("headlineStatic")}</span>
-          <span className="relative mt-3 block h-[1.15em] overflow-hidden text-4xl sm:text-5xl lg:text-6xl">
+          <motion.span
+            layout
+            transition={{ layout: { duration: 0.5, ease: EASE } }}
+            className="relative mt-3 block overflow-hidden text-4xl sm:text-5xl lg:text-6xl"
+          >
             <AnimatePresence mode="wait">
               <motion.span
                 key={index}
@@ -79,7 +83,7 @@ export default function HomeHero() {
                 {rotating[index]}
               </motion.span>
             </AnimatePresence>
-          </span>
+          </motion.span>
         </motion.h1>
 
         <motion.p
