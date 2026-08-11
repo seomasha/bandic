@@ -47,7 +47,12 @@
     ],
     "impact": {
       "words": ["Erfahrung", "Fachwissen", "Technologie", "Vertrauen"],
-      "dominantText": "Kieferorthopädie, Oralchirurgie, Implantologie und Prothetik — fachärztliche Betreuung unter einem Dach, keine Allgemeinmediziner, die alle Bereiche abdecken."
+      "dominantLabel": "Zahnmedizinische Fachkräfte",
+      "dominantText": "Kieferorthopädie, Oralchirurgie, Implantologie und Prothetik — fachärztliche Betreuung unter einem Dach, keine Allgemeinmediziner, die alle Bereiche abdecken.",
+      "specialistsLabel": "Spezialisten",
+      "shiftsLabel": "Schichten täglich",
+      "daysValue": "6 Tage",
+      "daysLabel": "Geöffnet Montag–Samstag"
     },
     "aboutKicker": "Über die Klinik",
     "aboutTitle": "Moderne Zahnmedizin im Herzen Sarajevos",

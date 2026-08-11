@@ -47,7 +47,12 @@
     ],
     "impact": {
       "words": ["Experience", "Expertise", "Technology", "Trust"],
-      "dominantText": "Orthodontics, oral surgery, implantology and prosthetics — specialist care under one roof, not general practitioners covering every field."
+      "dominantLabel": "Dental professionals",
+      "dominantText": "Orthodontics, oral surgery, implantology and prosthetics — specialist care under one roof, not general practitioners covering every field.",
+      "specialistsLabel": "Specialists",
+      "shiftsLabel": "Daily shifts",
+      "daysValue": "6 days",
+      "daysLabel": "Open Monday–Saturday"
     },
     "aboutKicker": "About the clinic",
     "aboutTitle": "Modern dentistry, in the heart of Sarajevo",

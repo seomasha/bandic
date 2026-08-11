@@ -47,7 +47,12 @@
     ],
     "impact": {
       "words": ["Iskustvo", "Stručnost", "Tehnologija", "Povjerenje"],
-      "dominantText": "Ortodoncija, oralna hirurgija, implantologija i protetika — specijalistička njega na jednom mjestu, ne opći doktori koji pokrivaju sve oblasti."
+      "dominantLabel": "Dentalnih stručnjaka",
+      "dominantText": "Ortodoncija, oralna hirurgija, implantologija i protetika — specijalistička njega na jednom mjestu, ne opći doktori koji pokrivaju sve oblasti.",
+      "specialistsLabel": "Specijalista",
+      "shiftsLabel": "Smjene dnevno",
+      "daysValue": "6 dana",
+      "daysLabel": "Otvoreno ponedjeljak–subota"
     },
     "aboutKicker": "O poliklinici",
     "aboutTitle": "Moderna stomatologija u srcu Sarajeva",
