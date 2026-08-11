@@ -40,7 +40,10 @@ export async function generateMetadata({ params }) {
     alternates: {
       languages: { en: "/en", bs: "/bs", de: "/de" },
     },
-    icons: { icon: "/favicon.svg" },
+    icons: {
+      icon: "/favicon.png",
+      apple: "/apple-touch-icon.png",
+    },
   };
 }
 

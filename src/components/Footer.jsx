@@ -28,7 +28,7 @@ export default function Footer() {
     <footer className="bg-ink-950 text-white/80 noise-overlay">
       <div className="mx-auto max-w-7xl px-5 lg:px-8 py-16 grid gap-12 md:grid-cols-2 lg:grid-cols-4">
         <div>
-          <Logo dark />
+          <Logo variant="footer" />
           <p className="mt-5 text-sm leading-relaxed text-white/60 max-w-xs">{t("footer.tagline")}</p>
           <div className="mt-6 flex flex-wrap items-center gap-3">
             {SOCIALS.map(({ label, href, Icon }) => (
