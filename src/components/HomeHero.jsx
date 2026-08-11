@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useTranslations } from "next-intl";
 import { motion, AnimatePresence, useReducedMotion } from "framer-motion";
 import { ArrowRight, PlaneTakeoff } from "lucide-react";
@@ -8,6 +8,64 @@ import { Link } from "@/i18n/navigation";
 
 const ROTATE_MS = 3200;
 const EASE = [0.16, 1, 0.3, 1];
+
+function HeroVideoPanel({ reduceMotion }) {
+  const videoRef = useRef(null);
+
+  useEffect(() => {
+    const v = videoRef.current;
+    if (!v) return;
+    if (reduceMotion) v.pause();
+    else v.play().catch(() => {});
+  }, [reduceMotion]);
+
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 24, scale: 0.97 }}
+      animate={{ opacity: 1, y: 0, scale: 1 }}
+      transition={{ duration: 1.2, delay: 0.3, ease: EASE }}
+      className="relative mx-auto w-full max-w-[300px] lg:ml-auto lg:mr-0 lg:max-w-[360px]"
+    >
+      {/* ambient glow */}
+      <motion.div
+        aria-hidden
+        className="absolute -inset-8 -z-10 rounded-[3rem] blur-3xl"
+        style={{ background: "radial-gradient(60% 60% at 50% 40%, rgba(224,186,108,0.32) 0%, rgba(224,186,108,0) 72%)" }}
+        animate={reduceMotion ? undefined : { opacity: [0.6, 1, 0.6] }}
+        transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+      />
+
+      <div className="relative aspect-[9/16] overflow-hidden rounded-[2rem] border border-gold-300/25 bg-ink-900 shadow-2xl shadow-black/40">
+        <video
+          ref={videoRef}
+          className="h-full w-full object-cover"
+          src="/hero1.MP4"
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="auto"
+          aria-hidden="true"
+        />
+        <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-ink-950/70 via-transparent to-ink-950/10" />
+        <div className="pointer-events-none absolute inset-0 noise-overlay opacity-40" />
+
+        {/* corner brackets */}
+        <svg aria-hidden viewBox="0 0 48 48" className="pointer-events-none absolute left-3 top-3 h-8 w-8 opacity-80">
+          <path d="M2 18 V6 a4 4 0 0 1 4-4 H18" fill="none" stroke="#f5d99a" strokeWidth="1.75" strokeLinecap="round" />
+        </svg>
+        <svg aria-hidden viewBox="0 0 48 48" className="pointer-events-none absolute bottom-3 right-3 h-8 w-8 opacity-80">
+          <path d="M46 30 V42 a4 4 0 0 1 -4 4 H30" fill="none" stroke="#f5d99a" strokeWidth="1.75" strokeLinecap="round" />
+        </svg>
+
+        <div className="pointer-events-none absolute inset-x-5 bottom-5">
+          <span className="block h-px w-10 bg-gradient-to-r from-gold-300 to-transparent" />
+          <p className="mt-2.5 text-xs font-semibold uppercase tracking-[0.2em] text-white/70">Sarajevo, BiH</p>
+        </div>
+      </div>
+    </motion.div>
+  );
+}
 
 function SarajevoSkyline({ className = "" }) {
   return (
@@ -116,61 +174,67 @@ export default function HomeHero() {
       </div>
 
       {/* content */}
-      <div className="relative mx-auto max-w-5xl px-5 lg:px-8 text-center">
-        <motion.h1
-          initial={{ opacity: 0, y: 34 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1.1, ease: EASE }}
-          className="font-display font-semibold leading-[1.08] text-cream"
-        >
-          <span className="block text-4xl sm:text-5xl lg:text-6xl">{t("headline1")}</span>
-          <span className="mt-3 block text-4xl sm:text-5xl lg:text-6xl">{t("headlineStatic")}</span>
-          <span className="relative mt-3 block h-[1.15em] overflow-hidden">
-            <AnimatePresence mode="wait">
-              <motion.span
-                key={index}
-                initial={{ opacity: 0, y: 16 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -16 }}
-                transition={{ duration: 0.75, ease: EASE }}
-                className="gold-text block text-4xl sm:text-5xl lg:text-6xl"
+      <div className="relative mx-auto max-w-6xl px-5 lg:px-8">
+        <div className="grid grid-cols-1 items-center gap-16 lg:grid-cols-[1.1fr_0.8fr] lg:gap-12">
+          <div className="text-center lg:text-left">
+            <motion.h1
+              initial={{ opacity: 0, y: 34 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1.1, ease: EASE }}
+              className="font-display font-semibold leading-[1.08] text-cream"
+            >
+              <span className="block text-4xl sm:text-5xl lg:text-5xl xl:text-6xl">{t("headline1")}</span>
+              <span className="mt-3 block text-4xl sm:text-5xl lg:text-5xl xl:text-6xl">{t("headlineStatic")}</span>
+              <span className="relative mt-3 block h-[1.15em] overflow-hidden text-4xl sm:text-5xl lg:text-5xl xl:text-6xl">
+                <AnimatePresence mode="wait">
+                  <motion.span
+                    key={index}
+                    initial={{ opacity: 0, y: 16 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -16 }}
+                    transition={{ duration: 0.75, ease: EASE }}
+                    className="gold-text block"
+                  >
+                    {rotating[index]}
+                  </motion.span>
+                </AnimatePresence>
+              </span>
+            </motion.h1>
+
+            <motion.p
+              initial={{ opacity: 0, y: 18 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.55, ease: EASE }}
+              className="mx-auto mt-8 max-w-xl font-sans text-base sm:text-lg leading-relaxed text-white/60 lg:mx-0"
+            >
+              {t("subtitle")}
+            </motion.p>
+
+            <motion.div
+              initial={{ opacity: 0, y: 18 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.85, ease: EASE }}
+              className="mt-10 flex flex-wrap items-center justify-center gap-4 lg:justify-start"
+            >
+              <Link
+                href="/dental-tourism#quote"
+                className="group inline-flex items-center gap-2 rounded-full bg-cream text-ink-950 font-semibold px-7 py-4 hover:bg-white transition-colors"
               >
-                {rotating[index]}
-              </motion.span>
-            </AnimatePresence>
-          </span>
-        </motion.h1>
+                {t("ctaPrimary")}
+                <ArrowRight size={18} className="text-gold-600 group-hover:translate-x-1 transition-transform" />
+              </Link>
+              <Link
+                href="/dental-tourism"
+                className="inline-flex items-center gap-2 rounded-full border border-white/20 text-white/85 font-semibold px-7 py-4 hover:border-gold-300/70 hover:text-white transition-colors"
+              >
+                <PlaneTakeoff size={16} className="text-gold-300" />
+                {t("ctaSecondary")}
+              </Link>
+            </motion.div>
+          </div>
 
-        <motion.p
-          initial={{ opacity: 0, y: 18 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.55, ease: EASE }}
-          className="mx-auto mt-8 max-w-xl font-sans text-base sm:text-lg leading-relaxed text-white/60"
-        >
-          {t("subtitle")}
-        </motion.p>
-
-        <motion.div
-          initial={{ opacity: 0, y: 18 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.85, ease: EASE }}
-          className="mt-10 flex flex-wrap items-center justify-center gap-4"
-        >
-          <Link
-            href="/dental-tourism#quote"
-            className="group inline-flex items-center gap-2 rounded-full bg-cream text-ink-950 font-semibold px-7 py-4 hover:bg-white transition-colors"
-          >
-            {t("ctaPrimary")}
-            <ArrowRight size={18} className="text-gold-600 group-hover:translate-x-1 transition-transform" />
-          </Link>
-          <Link
-            href="/dental-tourism"
-            className="inline-flex items-center gap-2 rounded-full border border-white/20 text-white/85 font-semibold px-7 py-4 hover:border-gold-300/70 hover:text-white transition-colors"
-          >
-            <PlaneTakeoff size={16} className="text-gold-300" />
-            {t("ctaSecondary")}
-          </Link>
-        </motion.div>
+          <HeroVideoPanel reduceMotion={reduceMotion} />
+        </div>
       </div>
 
       {/* scroll indicator */}

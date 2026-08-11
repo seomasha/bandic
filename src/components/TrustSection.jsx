@@ -9,7 +9,7 @@ const EASE = [0.16, 1, 0.3, 1];
 
 function CountUp({ value, suffix = "", duration = 1.4 }) {
   const reduceMotion = useReducedMotion();
-  const [display, setDisplay] = useState(reduceMotion ? value : 0);
+  const [display, setDisplay] = useState(0);
   const startedRef = useRef(false);
 
   const start = () => {
