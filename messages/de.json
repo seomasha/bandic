@@ -54,6 +54,18 @@
       "daysValue": "6 Tage",
       "daysLabel": "Geöffnet Montag–Samstag"
     },
+    "whyBandic": {
+      "kicker": "Warum Bandić",
+      "headlineLine1": "Nicht nur Zahnmedizin.",
+      "headlineLine2": "Ein vollständiges Erlebnis.",
+      "text": "Von fortschrittlicher Diagnostik und fachärztlicher Betreuung bis zur transparenten Behandlungsplanung — alles für Ihr Lächeln, unter einem Dach.",
+      "reasons": [
+        { "title": "Spezialisten", "text": "11 Spezialisten aus verschiedenen Bereichen der Zahnmedizin." },
+        { "title": "Fortschrittliche Technologie", "text": "Moderne Diagnostik, Radiologie und zeitgemäße Zahntechnologie." },
+        { "title": "Transparente Betreuung", "text": "Klare Behandlungsplanung und transparente Preise." },
+        { "title": "Internationale Patienten", "text": "Ein vollständiges Zahntourismus-Erlebnis für Patienten aus dem Ausland." }
+      ]
+    },
     "aboutKicker": "Über die Klinik",
     "aboutTitle": "Moderne Zahnmedizin im Herzen Sarajevos",
     "aboutText": "Poliklinika Bandić — Dental Ortodont Centar dr Bandić — ist eines der modernst ausgestatteten Zahnzentren in Bosnien und Herzegowina und der gesamten Region. Unser Team aus mehr als 20 Experten, darunter Spezialisten für Oralchirurgie, Implantologie, Kieferorthopädie und Prothetik, arbeitet in zwei täglichen Schichten, damit Sie früh morgens oder nach der Arbeit einen Termin bekommen — Montag bis Samstag.",

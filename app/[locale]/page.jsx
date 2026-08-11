@@ -4,6 +4,7 @@ import { Link } from "@/i18n/navigation";
 import Reveal from "@/components/Reveal";
 import HomeHero from "@/components/HomeHero";
 import TrustSection from "@/components/TrustSection";
+import WhyBandicSection from "@/components/WhyBandicSection";
 
 const whyIcons = [Users, ShieldCheck, Award, Clock, Globe2, ReceiptText];
 
@@ -21,6 +22,8 @@ export default async function Home({ params }) {
       <HomeHero />
 
       <TrustSection />
+
+      <WhyBandicSection />
 
       {/* ABOUT */}
       <section className="py-24 bg-white">

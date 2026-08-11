@@ -54,6 +54,18 @@
       "daysValue": "6 dana",
       "daysLabel": "Otvoreno ponedjeljak–subota"
     },
+    "whyBandic": {
+      "kicker": "Zašto Bandić",
+      "headlineLine1": "Ne samo stomatologija.",
+      "headlineLine2": "Kompletno iskustvo.",
+      "text": "Od napredne dijagnostike i specijalističke njege do transparentnog planiranja terapije — sve što vam treba za osmijeh, na jednom mjestu.",
+      "reasons": [
+        { "title": "Specijalisti", "text": "11 specijalista iz različitih oblasti stomatologije." },
+        { "title": "Napredna tehnologija", "text": "Moderna dijagnostika, radiologija i savremena stomatološka tehnologija." },
+        { "title": "Transparentna njega", "text": "Jasno planiranje terapije i transparentne cijene." },
+        { "title": "Međunarodni pacijenti", "text": "Kompletno iskustvo dentalnog turizma za pacijente koji dolaze iz inostranstva." }
+      ]
+    },
     "aboutKicker": "O poliklinici",
     "aboutTitle": "Moderna stomatologija u srcu Sarajeva",
     "aboutText": "Poliklinika Bandić — Dental Ortodont Centar dr Bandić — jedan je od najmodernije opremljenih stomatoloških centara u Bosni i Hercegovini i regiji. Naš tim od preko 20 stručnjaka, uključujući specijaliste oralne hirurgije, implantologije, ortodoncije i protetike, radi u dvije dnevne smjene kako biste termin mogli dobiti rano ujutro ili nakon posla — od ponedjeljka do subote.",
