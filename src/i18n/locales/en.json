@@ -1,0 +1,313 @@
+{
+  "meta": { "clinicName": "Poliklinika Bandić", "clinicFullName": "Dental Ortodont Centar dr Bandić" },
+  "nav": {
+    "home": "Home",
+    "tourism": "Dental Tourism",
+    "services": "Services",
+    "team": "Our Team",
+    "prices": "Price List",
+    "contact": "Contact",
+    "bookNow": "Get Free Quote",
+    "callUs": "Call Us"
+  },
+  "common": {
+    "readMore": "Read more",
+    "learnMore": "Learn more",
+    "viewAll": "View all",
+    "getQuote": "Get your free quote",
+    "km": "KM",
+    "from": "from",
+    "address": "Antuna Branka Šimića br. 2, 71000 Sarajevo, Bosnia and Herzegovina",
+    "phone": "+387 33 642 648",
+    "mobile": "+387 61 097 008",
+    "email": "info@doc-bandic.com",
+    "hoursWeek": "Mon – Fri: 07:00 – 21:00",
+    "hoursSat": "Saturday: 08:00 – 16:00",
+    "workingHours": "Working Hours",
+    "sarajevo": "Sarajevo, Bosnia and Herzegovina",
+    "whatsapp": "WhatsApp / Viber",
+    "sendMessage": "Send message",
+    "sending": "Sending…",
+    "required": "required"
+  },
+  "home": {
+    "hero": {
+      "kicker": "Poliklinika Bandić · Sarajevo",
+      "titleLine1": "A confident smile,",
+      "titleLine2": "engineered in gold standard care.",
+      "subtitle": "One of Bosnia and Herzegovina's leading dental polyclinics — 20+ specialists, modern technology and two working shifts, trusted by patients across Europe for high-quality treatment at a fraction of Western prices.",
+      "ctaPrimary": "Get your free quote",
+      "ctaSecondary": "Explore dental tourism",
+      "badges": ["Top 5 rated clinic in BiH", "20+ specialists", "Open 2 shifts, 6 days a week"]
+    },
+    "stats": [
+      { "value": "20+", "label": "Doctors & specialists" },
+      { "value": "11", "label": "Dental specialists on staff" },
+      { "value": "2", "label": "Working shifts, 7am–9pm" },
+      { "value": "Top 5", "label": "Rated dental clinic in BiH" }
+    ],
+    "aboutKicker": "About the clinic",
+    "aboutTitle": "Modern dentistry, in the heart of Sarajevo",
+    "aboutText": "Poliklinika Bandić — Dental Ortodont Centar dr Bandić — is one of the most modernly equipped dental centers in Bosnia and Herzegovina and the wider region. Our team of more than 20 experts, including specialists in oral surgery, implantology, orthodontics and prosthetics, works across two daily shifts so you can be seen early in the morning or after work — Monday to Saturday.",
+    "whyKicker": "Why patients choose us",
+    "whyTitle": "Care built around precision and trust",
+    "why": [
+      { "title": "Specialist-led team", "text": "11 in-house specialists spanning orthodontics, oral surgery, implantology and prosthetics — not general practitioners covering every field." },
+      { "title": "Registered, traceable implants", "text": "Every implant we place is registered with the FBiH Agency for Medicines and Medical Devices. Patients receive an international implant passport." },
+      { "title": "World-recognised brands", "text": "We work with globally trusted implant systems including Straumann, Neodent and Bredent." },
+      { "title": "Two shifts, six days a week", "text": "Open Monday–Friday 07:00–21:00 and Saturday 08:00–16:00, built for people who can't take time off during standard hours." },
+      { "title": "Genuinely international", "text": "English and German spoken throughout the clinic, with a workflow designed for patients travelling from abroad." },
+      { "title": "Transparent pricing", "text": "A clear, published price list and a free personalised quote before you ever book a flight." }
+    ],
+    "servicesKicker": "What we treat",
+    "servicesTitle": "Comprehensive dental care under one roof",
+    "tourism": {
+      "kicker": "Dental Tourism",
+      "title": "Same expertise. A fraction of the price.",
+      "text": "Patients from Germany, Austria, Switzerland, the UK and Scandinavia travel to Sarajevo every month for treatment at Poliklinika Bandić — combining specialist-level dentistry with real savings and a short city break.",
+      "point1": "Save significantly vs. Western European price lists",
+      "point2": "Free treatment plan from your OPG / X-ray before you travel",
+      "point3": "One coordinator, from first email to your flight home",
+      "cta": "See prices & plan your visit"
+    },
+    "teamKicker": "Meet the specialists",
+    "teamTitle": "The team behind every smile",
+    "teamCta": "Meet the full team",
+    "trustKicker": "Reputation",
+    "trustTitle": "Trusted by patients, recognised by peers",
+    "trustText": "Poliklinika Bandić is consistently ranked among the top 5 best-rated dental polyclinics in Bosnia and Herzegovina. Read verified patient reviews on our Google and Facebook pages.",
+    "trustCta": "Read reviews on Facebook",
+    "finalCta": {
+      "title": "Ready to talk about your smile?",
+      "text": "Send us a photo, an X-ray, or just a question. Our team replies with a real answer — not a sales script.",
+      "cta1": "Get a free quote",
+      "cta2": "Call +387 33 642 648"
+    }
+  },
+  "serviceCategories": [
+    {
+      "slug": "conservative",
+      "title": "Conservative Dentistry",
+      "short": "Examinations, fillings, root canal treatment and everyday dental care.",
+      "text": "The foundation of good oral health: thorough examinations, cavity treatment and aesthetic fillings performed with modern composite materials, plus emergency care when a toothache won't wait."
+    },
+    {
+      "slug": "oral-surgery",
+      "title": "Oral Surgery",
+      "short": "Tooth extractions, wisdom teeth and minor surgical procedures.",
+      "text": "Our oral surgery specialists handle everything from routine extractions to complex wisdom tooth removal and pre-prosthetic surgery, using local anaesthesia and a careful, low-anxiety approach."
+    },
+    {
+      "slug": "implantology",
+      "title": "Implantology",
+      "short": "Straumann, Neodent and Bredent implant systems, fully documented.",
+      "text": "Missing teeth replaced with registered, world-recognised implant systems. Every patient receives a written treatment plan after the first assessment and an international implant passport once treatment is complete."
+    },
+    {
+      "slug": "orthodontics",
+      "title": "Orthodontics",
+      "short": "Fixed and removable braces for children and adults.",
+      "text": "From removable plates and functional appliances for growing jaws to fixed metal, aesthetic ceramic and self-ligating braces for teenagers and adults, planned by our specialists in jaw orthopedics."
+    },
+    {
+      "slug": "prosthetics",
+      "title": "Prosthetics",
+      "short": "Zirconia and metal-ceramic crowns, bridges, fixed and removable dentures.",
+      "text": "Fixed prosthetics (crowns and bridges in zirconia, Emax or metal-ceramic) and mobile prosthetics for patients missing several or all teeth, restoring both function and appearance."
+    },
+    {
+      "slug": "aesthetic",
+      "title": "Aesthetic Dentistry",
+      "short": "Professional whitening and smile design.",
+      "text": "In-office lamp and power whitening for a brighter smile in a single visit, plus aesthetic restorations designed to look completely natural."
+    }
+  ],
+  "tourism": {
+    "hero": {
+      "kicker": "Dental Tourism in Sarajevo",
+      "title": "Expert dental care, without the Western European price tag",
+      "subtitle": "Sarajevo is a two-hour flight from most European capitals — and Poliklinika Bandić has spent years building a workflow specifically for patients who travel for treatment: free remote quotes, specialist care, and a clear plan for how long you'll need to stay.",
+      "cta": "Send your X-ray for a free quote"
+    },
+    "why": {
+      "title": "Why patients fly to Sarajevo for dental care",
+      "items": [
+        { "title": "Real savings", "text": "Typically 50–75% less than equivalent private treatment in Germany, Austria, Switzerland or the UK — see the comparison below." },
+        { "title": "EU-recognised materials", "text": "Implants and ceramics from internationally certified brands (Straumann, Neodent, Bredent), registered with the FBiH Agency for Medicines and Medical Devices." },
+        { "title": "No language barrier", "text": "Consultations available in English and German, with all documentation explained clearly before you commit to anything." },
+        { "title": "Short, easy trip", "text": "Direct or one-stop flights from most major European hubs; visa-free entry for EU, UK, US, CH and most European citizens." },
+        { "title": "A city worth visiting", "text": "Sarajevo pairs Ottoman old-town charm, Austro-Hungarian architecture and genuinely low living costs — many patients turn treatment into a short holiday." },
+        { "title": "One point of contact", "text": "A dedicated coordinator handles your quote, scheduling and questions from your first email to your flight home." }
+      ]
+    },
+    "comparison": {
+      "kicker": "Price Comparison",
+      "title": "Sarajevo vs. Western Europe",
+      "subtitle": "Indicative prices for common treatments. Your exact cost depends on individual diagnosis — request a free personalised quote for an exact figure.",
+      "headers": { "treatment": "Treatment", "sarajevo": "Poliklinika Bandić (Sarajevo)", "europe": "Western Europe (avg.)*", "savings": "You save up to" },
+      "rows": [
+        { "treatment": "Dental examination & consultation", "sarajevo": "30 KM (~€15)", "europe": "€50 – €80", "savings": "70%" },
+        { "treatment": "Single dental implant (from)", "sarajevo": "800 KM (~€410)", "europe": "€1,400 – €3,500", "savings": "75%" },
+        { "treatment": "Non-metal ceramic crown (Emax)", "sarajevo": "450 KM (~€230)", "europe": "€500 – €900", "savings": "60%" },
+        { "treatment": "Fixed metal-ceramic braces, full treatment", "sarajevo": "~2,000 KM (~€1,020)", "europe": "€2,500 – €5,000", "savings": "70%" },
+        { "treatment": "Professional in-office teeth whitening", "sarajevo": "300 – 400 KM (~€155 – €205)", "europe": "€400 – €900", "savings": "60%" }
+      ],
+      "footnote": "* Sarajevo prices are taken from the current Poliklinika Bandić price list (2026). Western Europe figures are indicative market averages compiled from published industry sources for Germany, Austria and the UK, shown for general reference only — actual clinic prices vary. Converted at the fixed rate 1 EUR = 1.95583 KM."
+    },
+    "stay": {
+      "kicker": "Plan your visit",
+      "title": "How long should you stay?",
+      "subtitle": "A general guide — your dentist will confirm exact timing once your treatment plan is ready.",
+      "items": [
+        { "title": "Check-up, cleaning & small fillings", "duration": "1 – 2 days", "visits": "1 visit", "text": "Diagnosis and treatment can usually be completed in a single short trip." },
+        { "title": "Teeth whitening", "duration": "1 day", "visits": "1 visit", "text": "In-office whitening is completed in a single appointment." },
+        { "title": "Crowns, bridges & veneers", "duration": "5 – 7 days", "visits": "1 visit", "text": "Time needed for preparation, precise fitting and any laboratory work between appointments." },
+        { "title": "Dental implants", "duration": "3 – 5 days, then 3 – 6 months healing, then 3 – 5 days", "visits": "2 visits", "text": "First visit: assessment and implant placement. After the bone heals at home, a short second visit completes the final crown or bridge." },
+        { "title": "Full mouth rehabilitation", "duration": "7 – 10 days, plus a 5 – 7 day follow-up", "visits": "2 visits", "text": "Complex, multi-tooth cases are planned across two visits with healing time in between." },
+        { "title": "Orthodontics (braces)", "duration": "2 – 3 days to fit, then periodic check-ins", "visits": "Ongoing, every 6 – 10 weeks", "text": "Best suited to patients who can visit regularly, or combined with remote monitoring between check-ups." }
+      ]
+    },
+    "process": {
+      "kicker": "How it works",
+      "title": "From first message to your new smile",
+      "steps": [
+        { "title": "Send your X-ray & photos", "text": "Upload your OPG / panoramic X-ray, any CT scans, and a few photos of your smile using the form below — no appointment needed yet." },
+        { "title": "Get your free treatment plan", "text": "Our specialists review your case and reply with a written plan, timeline and price — usually within 1–2 business days." },
+        { "title": "Book your dates", "text": "Once you're happy with the plan, we help you choose travel dates and share practical tips on flights and accommodation." },
+        { "title": "Treatment in Sarajevo", "text": "Your coordinator meets you at the clinic, guides you through every appointment, and makes sure nothing feels unfamiliar." },
+        { "title": "Aftercare, wherever you are", "text": "You leave with full documentation, an implant passport where relevant, and a direct line to your dentist for any follow-up questions." }
+      ]
+    },
+    "form": {
+      "kicker": "Free, no-obligation quote",
+      "title": "Tell us about your case",
+      "subtitle": "Fill in the form and, if you have them, attach your OPG / panoramic X-ray, CT scan or recent photos. Our specialists will review everything and send you a written treatment plan and price.",
+      "fields": {
+        "name": "Full name",
+        "email": "Email address",
+        "phone": "Phone (with country code)",
+        "country": "Country you're travelling from",
+        "treatment": "Treatment you're interested in",
+        "treatmentPlaceholder": "Select a treatment",
+        "dates": "Preferred travel dates (optional)",
+        "message": "Tell us about your case",
+        "messagePlaceholder": "E.g. missing tooth on lower left, had a crown break, want a full smile makeover…",
+        "upload": "Upload OPG / X-ray / scans / photos",
+        "uploadHint": "JPG, PNG, PDF or DICOM — up to 10 files, 15 MB each",
+        "uploadDrag": "Drag & drop files here, or click to browse",
+        "consent": "I agree to be contacted by Poliklinika Bandić about my enquiry and consent to my data and files being processed for this purpose only.",
+        "submit": "Send my case for a free quote"
+      },
+      "treatments": ["Dental implants", "Crowns / bridges / veneers", "Orthodontics / braces", "Full mouth rehabilitation", "Teeth whitening", "General check-up", "Not sure yet"],
+      "success": "Thank you — your enquiry has been received. A specialist will get back to you within 1–2 business days.",
+      "error": "Something went wrong sending your enquiry. Please try again or email us directly at info@doc-bandic.com."
+    },
+    "faq": {
+      "title": "Frequently asked questions",
+      "items": [
+        { "q": "Is the initial quote really free?", "a": "Yes. Send your X-ray, scans or photos and our specialists will review your case and send a written treatment plan with pricing at no cost and no obligation to book." },
+        { "q": "What if I don't have an OPG or X-ray yet?", "a": "That's fine — describe your situation as best you can in the message field, or plan for an in-person examination and X-ray on your first day at the clinic." },
+        { "q": "Do you speak English or German?", "a": "Yes, both are spoken at the clinic, and all treatment plans and documentation can be provided in English or German." },
+        { "q": "Can you help with accommodation or transport?", "a": "Our coordinator shares recommendations for hotels near the clinic and can advise on airport transfers, though bookings are made directly by the patient." },
+        { "q": "How do I pay?", "a": "Card and cash payments are accepted at the clinic. Payment details for your specific treatment plan will be confirmed with your quote." }
+      ]
+    }
+  },
+  "team": {
+    "hero": {
+      "kicker": "Our Team",
+      "title": "20+ specialists, one standard of care",
+      "subtitle": "Poliklinika Bandić brings together specialists in orthodontics, oral surgery, implantology and prosthetics — working across two daily shifts so specialist care is never far away."
+    },
+    "doctors": [
+      { "name": "Amela Bandić", "title": "Director · Specialist in Jaw Orthopedics & Orthodontics", "text": "Leads the clinic's orthodontic programme, from early jaw-growth correction in children to fixed and aesthetic braces for adults." },
+      { "name": "Prim. mr. sc. dr. Slobodan Trninić", "title": "Specialist in Oral Surgery", "text": "Senior oral surgeon handling complex extractions, wisdom teeth and pre-implant surgical care." },
+      { "name": "Jasmin Neimarlija", "title": "Specialist in Oral Surgery & Implantology", "text": "Focuses on implant placement and surgical planning, working with Straumann, Neodent and Bredent systems." },
+      { "name": "Olivera Popović", "title": "Specialist in Dental Prosthetics", "text": "Designs fixed and removable prosthetic solutions, from single crowns to full-mouth restorations." },
+      { "name": "Nermana Mašić", "title": "Specialist in Dental Prosthetics", "text": "Works closely with the implantology team to deliver precise, natural-looking crowns and bridges." },
+      { "name": "Jasmina Kozadra", "title": "Specialist in Orthodontics", "text": "Plans and monitors orthodontic treatment for both younger patients and adults." },
+      { "name": "Srđan Dizdarević", "title": "Dentist", "text": "Provides everyday conservative and general dental care for patients of all ages." }
+    ],
+    "note": "Our full team includes 11 dental specialists and more than 20 professionals in total, including specialised dental assistants and clinic coordinators, working across two shifts to keep appointments available early in the morning and into the evening."
+  },
+  "prices": {
+    "hero": {
+      "kicker": "Price List",
+      "title": "Transparent pricing, published in full",
+      "subtitle": "A selection of prices from our official price list, in convertible marks (KM) with an approximate euro equivalent. This is not an exhaustive list — for an exact quote based on your own diagnosis, use our free quote form."
+    },
+    "note": "1 EUR ≈ 1.95583 KM (fixed exchange rate). Final prices are always confirmed after clinical examination.",
+    "categories": [
+      {
+        "title": "Conservative Dentistry",
+        "items": [
+          { "name": "Examination & consultation", "price": "30 KM", "eur": "~€15" },
+          { "name": "Specialist consultation", "price": "80 KM", "eur": "~€41" },
+          { "name": "Local anaesthesia", "price": "10 KM", "eur": "~€5" },
+          { "name": "Emergency dental intervention", "price": "30 KM", "eur": "~€15" },
+          { "name": "One-surface filling", "price": "50 KM", "eur": "~€26" },
+          { "name": "Two-surface filling", "price": "60 KM", "eur": "~€31" }
+        ]
+      },
+      {
+        "title": "Orthodontics",
+        "items": [
+          { "name": "Specialist exam & orthodontic consultation", "price": "50 KM", "eur": "~€26" },
+          { "name": "Removable appliance (active plate)", "price": "400 KM", "eur": "~€205" },
+          { "name": "Functional appliance", "price": "350 KM", "eur": "~€179" },
+          { "name": "Conventional fixed braces (per arch)", "price": "1,000 KM", "eur": "~€511" },
+          { "name": "Mini-bracket fixed braces (per arch)", "price": "1,500 KM", "eur": "~€767" },
+          { "name": "Aesthetic ceramic braces (per arch)", "price": "1,750 KM", "eur": "~€895" },
+          { "name": "Self-ligating braces (per arch)", "price": "2,000 KM", "eur": "~€1,023" },
+          { "name": "Self-ligating aesthetic braces (per arch)", "price": "2,250 KM", "eur": "~€1,150" },
+          { "name": "Severe functional irregularities (both arches)", "price": "6,000 KM", "eur": "~€3,068" }
+        ]
+      },
+      {
+        "title": "Implantology",
+        "items": [
+          { "name": "First exam & written treatment plan", "price": "50 KM", "eur": "~€26" },
+          { "name": "Dental implant — standard", "price": "800 KM", "eur": "~€410" },
+          { "name": "Dental implant — advanced", "price": "1,000 KM", "eur": "~€511" },
+          { "name": "Dental implant — premium", "price": "1,200 KM", "eur": "~€613" },
+          { "name": "Implant suprastructure", "price": "from 200 KM", "eur": "~€102" }
+        ]
+      },
+      {
+        "title": "Prosthetics",
+        "items": [
+          { "name": "Non-metal ceramic crown (Emax)", "price": "450 KM", "eur": "~€230" }
+        ]
+      },
+      {
+        "title": "Aesthetic Dentistry",
+        "items": [
+          { "name": "Office (power) whitening", "price": "300 KM", "eur": "~€153", "note": "promotional price, regularly 500 KM" },
+          { "name": "Flash-lamp whitening", "price": "400 KM", "eur": "~€205", "note": "promotional price, regularly 700 KM" }
+        ]
+      }
+    ],
+    "cta": { "title": "Don't see your treatment listed?", "text": "Prices vary by case complexity and materials used. Send us your details for a free, personalised quote.", "button": "Request a free quote" }
+  },
+  "contact": {
+    "hero": { "kicker": "Contact", "title": "Let's talk about your smile", "subtitle": "Call, message us on WhatsApp/Viber, or send an enquiry — our team replies quickly." },
+    "form": {
+      "title": "Send us a message",
+      "name": "Full name",
+      "email": "Email",
+      "phone": "Phone",
+      "message": "Message",
+      "submit": "Send message"
+    },
+    "infoTitle": "Clinic information",
+    "getDirections": "Get directions"
+  },
+  "footer": {
+    "tagline": "Modern dental care in Sarajevo — trusted by patients across Bosnia and Herzegovina and beyond.",
+    "quickLinks": "Quick Links",
+    "getInTouch": "Get in Touch",
+    "followUs": "Follow Us",
+    "rights": "All rights reserved.",
+    "disclaimer": "Content, prices and staff information reflect Poliklinika Bandić's published materials and are provided for general information. Please confirm exact pricing and availability directly with the clinic."
+  }
+}

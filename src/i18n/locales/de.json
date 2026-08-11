@@ -1,0 +1,313 @@
+{
+  "meta": { "clinicName": "Poliklinika Bandić", "clinicFullName": "Dental Ortodont Centar dr Bandić" },
+  "nav": {
+    "home": "Startseite",
+    "tourism": "Zahntourismus",
+    "services": "Leistungen",
+    "team": "Unser Team",
+    "prices": "Preisliste",
+    "contact": "Kontakt",
+    "bookNow": "Kostenloses Angebot",
+    "callUs": "Rufen Sie uns an"
+  },
+  "common": {
+    "readMore": "Mehr lesen",
+    "learnMore": "Mehr erfahren",
+    "viewAll": "Alle anzeigen",
+    "getQuote": "Kostenloses Angebot anfordern",
+    "km": "KM",
+    "from": "ab",
+    "address": "Antuna Branka Šimića br. 2, 71000 Sarajevo, Bosnien und Herzegowina",
+    "phone": "+387 33 642 648",
+    "mobile": "+387 61 097 008",
+    "email": "info@doc-bandic.com",
+    "hoursWeek": "Mo – Fr: 07:00 – 21:00 Uhr",
+    "hoursSat": "Samstag: 08:00 – 16:00 Uhr",
+    "workingHours": "Öffnungszeiten",
+    "sarajevo": "Sarajevo, Bosnien und Herzegowina",
+    "whatsapp": "WhatsApp / Viber",
+    "sendMessage": "Nachricht senden",
+    "sending": "Wird gesendet…",
+    "required": "erforderlich"
+  },
+  "home": {
+    "hero": {
+      "kicker": "Poliklinika Bandić · Sarajevo",
+      "titleLine1": "Ein selbstbewusstes Lächeln,",
+      "titleLine2": "gepflegt nach Goldstandard.",
+      "subtitle": "Eine der führenden Zahnkliniken Bosnien und Herzegowinas — über 20 Spezialisten, moderne Technologie und Zweischichtbetrieb, das Vertrauen von Patienten aus ganz Europa für erstklassige Behandlung zu einem Bruchteil westeuropäischer Preise.",
+      "ctaPrimary": "Kostenloses Angebot anfordern",
+      "ctaSecondary": "Zahntourismus entdecken",
+      "badges": ["Top-5-Klinik in Bosnien und Herzegowina", "20+ Spezialisten", "2 Schichten, 6 Tage die Woche geöffnet"]
+    },
+    "stats": [
+      { "value": "20+", "label": "Ärzte & Spezialisten" },
+      { "value": "11", "label": "Zahnärztliche Spezialisten im Team" },
+      { "value": "2", "label": "Arbeitsschichten, 7–21 Uhr" },
+      { "value": "Top 5", "label": "Bestbewertete Klinik in BiH" }
+    ],
+    "aboutKicker": "Über die Klinik",
+    "aboutTitle": "Moderne Zahnmedizin im Herzen Sarajevos",
+    "aboutText": "Poliklinika Bandić — Dental Ortodont Centar dr Bandić — ist eines der modernst ausgestatteten Zahnzentren in Bosnien und Herzegowina und der gesamten Region. Unser Team aus mehr als 20 Experten, darunter Spezialisten für Oralchirurgie, Implantologie, Kieferorthopädie und Prothetik, arbeitet in zwei täglichen Schichten, damit Sie früh morgens oder nach der Arbeit einen Termin bekommen — Montag bis Samstag.",
+    "whyKicker": "Warum Patienten uns wählen",
+    "whyTitle": "Behandlung, die auf Präzision und Vertrauen baut",
+    "why": [
+      { "title": "Von Spezialisten geführtes Team", "text": "11 hauseigene Spezialisten für Kieferorthopädie, Oralchirurgie, Implantologie und Prothetik — keine Allgemeinmediziner, die alle Bereiche abdecken." },
+      { "title": "Registrierte, rückverfolgbare Implantate", "text": "Jedes von uns gesetzte Implantat ist bei der Arzneimittelbehörde der FBiH registriert. Patienten erhalten einen internationalen Implantatpass." },
+      { "title": "Weltweit anerkannte Marken", "text": "Wir arbeiten mit global anerkannten Implantatsystemen, darunter Straumann, Neodent und Bredent." },
+      { "title": "Zwei Schichten, sechs Tage die Woche", "text": "Geöffnet Montag–Freitag 07:00–21:00 Uhr und Samstag 08:00–16:00 Uhr — ideal für alle, die während der üblichen Arbeitszeiten keine Zeit haben." },
+      { "title": "Wirklich international ausgerichtet", "text": "In der Klinik wird Englisch und Deutsch gesprochen, mit Abläufen, die speziell auf Patienten aus dem Ausland zugeschnitten sind." },
+      { "title": "Transparente Preise", "text": "Eine klare, veröffentlichte Preisliste und ein kostenloses persönliches Angebot, bevor Sie überhaupt einen Flug buchen." }
+    ],
+    "servicesKicker": "Unsere Leistungen",
+    "servicesTitle": "Umfassende Zahnmedizin unter einem Dach",
+    "tourism": {
+      "kicker": "Zahntourismus",
+      "title": "Gleiche Expertise. Ein Bruchteil des Preises.",
+      "text": "Patienten aus Deutschland, Österreich, der Schweiz, Großbritannien und Skandinavien reisen jeden Monat nach Sarajevo, um sich in der Poliklinika Bandić behandeln zu lassen — Zahnmedizin auf Spezialistenniveau kombiniert mit echter Ersparnis und einem kurzen Städtetrip.",
+      "point1": "Deutliche Ersparnis gegenüber westeuropäischen Preislisten",
+      "point2": "Kostenloser Behandlungsplan anhand Ihres OPG- / Röntgenbilds vor der Anreise",
+      "point3": "Ein Koordinator, von der ersten E-Mail bis zum Rückflug",
+      "cta": "Preise ansehen & Besuch planen"
+    },
+    "teamKicker": "Lernen Sie unsere Spezialisten kennen",
+    "teamTitle": "Das Team hinter jedem Lächeln",
+    "teamCta": "Ganzes Team ansehen",
+    "trustKicker": "Ruf & Vertrauen",
+    "trustTitle": "Von Patienten vertraut, von Kollegen anerkannt",
+    "trustText": "Poliklinika Bandić zählt durchgehend zu den 5 bestbewerteten Zahnkliniken in Bosnien und Herzegowina. Lesen Sie verifizierte Patientenbewertungen auf unserer Google- und Facebook-Seite.",
+    "trustCta": "Bewertungen auf Facebook lesen",
+    "finalCta": {
+      "title": "Bereit, über Ihr Lächeln zu sprechen?",
+      "text": "Schicken Sie uns ein Foto, ein Röntgenbild oder einfach eine Frage. Unser Team antwortet Ihnen persönlich — nicht mit einem Verkaufsskript.",
+      "cta1": "Kostenloses Angebot anfordern",
+      "cta2": "Anrufen: +387 33 642 648"
+    }
+  },
+  "serviceCategories": [
+    {
+      "slug": "conservative",
+      "title": "Konservierende Zahnheilkunde",
+      "short": "Untersuchungen, Füllungen, Wurzelbehandlungen und tägliche Zahnpflege.",
+      "text": "Die Grundlage guter Mundgesundheit: gründliche Untersuchungen, Kariesbehandlung und ästhetische Füllungen mit modernen Komposit-Materialien, sowie Notfallversorgung, wenn Zahnschmerzen nicht warten können."
+    },
+    {
+      "slug": "oral-surgery",
+      "title": "Oralchirurgie",
+      "short": "Zahnextraktionen, Weisheitszähne und kleinere chirurgische Eingriffe.",
+      "text": "Unsere Oralchirurgie-Spezialisten übernehmen alles von Routineextraktionen bis zur komplexen Weisheitszahnentfernung und präprothetischer Chirurgie — mit örtlicher Betäubung und einem ruhigen, angstfreien Ansatz."
+    },
+    {
+      "slug": "implantology",
+      "title": "Implantologie",
+      "short": "Implantatsysteme von Straumann, Neodent und Bredent, vollständig dokumentiert.",
+      "text": "Fehlende Zähne werden mit registrierten, weltweit anerkannten Implantatsystemen ersetzt. Jeder Patient erhält nach der ersten Untersuchung einen schriftlichen Behandlungsplan und nach Abschluss der Behandlung einen internationalen Implantatpass."
+    },
+    {
+      "slug": "orthodontics",
+      "title": "Kieferorthopädie",
+      "short": "Feste und herausnehmbare Zahnspangen für Kinder und Erwachsene.",
+      "text": "Von herausnehmbaren Platten und Funktionsgeräten für wachsende Kiefer bis hin zu festen Metall-, ästhetischen Keramik- und selbstligierenden Brackets für Jugendliche und Erwachsene — geplant von unseren Kieferorthopädie-Spezialisten."
+    },
+    {
+      "slug": "prosthetics",
+      "title": "Prothetik",
+      "short": "Zirkon- und Metallkeramik-Kronen, Brücken, festsitzender und herausnehmbarer Zahnersatz.",
+      "text": "Festsitzender Zahnersatz (Kronen und Brücken aus Zirkon, Emax oder Metallkeramik) sowie herausnehmbarer Zahnersatz für Patienten, denen mehrere oder alle Zähne fehlen — für die Wiederherstellung von Funktion und Ästhetik."
+    },
+    {
+      "slug": "aesthetic",
+      "title": "Ästhetische Zahnheilkunde",
+      "short": "Professionelles Bleaching und Smile Design.",
+      "text": "Praxis-Bleaching mit Lampe oder Power-Whitening für ein strahlenderes Lächeln in nur einem Termin, sowie ästhetische Restaurationen, die völlig natürlich aussehen."
+    }
+  ],
+  "tourism": {
+    "hero": {
+      "kicker": "Zahntourismus in Sarajevo",
+      "title": "Zahnmedizinische Expertise – ohne westeuropäischen Preis",
+      "subtitle": "Sarajevo ist von den meisten europäischen Hauptstädten nur zwei Flugstunden entfernt — und die Poliklinika Bandić hat über Jahre einen Ablauf speziell für Patienten entwickelt, die für eine Behandlung anreisen: kostenlose Ferndiagnosen, fachärztliche Betreuung und ein klarer Plan, wie lange Ihr Aufenthalt dauern wird.",
+      "cta": "Röntgenbild für kostenloses Angebot senden"
+    },
+    "why": {
+      "title": "Warum Patienten für die Zahnbehandlung nach Sarajevo fliegen",
+      "items": [
+        { "title": "Echte Ersparnis", "text": "In der Regel 50–75 % günstiger als eine vergleichbare Privatbehandlung in Deutschland, Österreich, der Schweiz oder Großbritannien — siehe Vergleich unten." },
+        { "title": "EU-anerkannte Materialien", "text": "Implantate und Keramik von international zertifizierten Marken (Straumann, Neodent, Bredent), registriert bei der Arzneimittelbehörde der FBiH." },
+        { "title": "Keine Sprachbarriere", "text": "Beratung auf Englisch und Deutsch möglich, mit klar erklärter Dokumentation, bevor Sie sich zu irgendetwas verpflichten." },
+        { "title": "Kurze, unkomplizierte Reise", "text": "Direkt- oder Umsteigeflüge von den meisten europäischen Drehkreuzen; visumfreie Einreise für Bürger der EU, Großbritanniens, der USA, der Schweiz und der meisten europäischen Länder." },
+        { "title": "Eine Stadt, die einen Besuch wert ist", "text": "Sarajevo vereint den Charme der osmanischen Altstadt, österreichisch-ungarische Architektur und wirklich niedrige Lebenshaltungskosten — viele Patienten verbinden die Behandlung mit einem kurzen Urlaub." },
+        { "title": "Ein fester Ansprechpartner", "text": "Ein persönlicher Koordinator kümmert sich von der ersten E-Mail bis zu Ihrem Rückflug um Angebot, Terminplanung und alle Fragen." }
+      ]
+    },
+    "comparison": {
+      "kicker": "Preisvergleich",
+      "title": "Sarajevo im Vergleich zu Westeuropa",
+      "subtitle": "Richtwerte für gängige Behandlungen. Ihr genauer Preis hängt von der individuellen Diagnose ab — fordern Sie ein kostenloses persönliches Angebot für einen exakten Betrag an.",
+      "headers": { "treatment": "Behandlung", "sarajevo": "Poliklinika Bandić (Sarajevo)", "europe": "Westeuropa (Ø)*", "savings": "Ersparnis bis zu" },
+      "rows": [
+        { "treatment": "Zahnärztliche Untersuchung & Beratung", "sarajevo": "30 KM (~15 €)", "europe": "50 – 80 €", "savings": "70%" },
+        { "treatment": "Ein Zahnimplantat (ab)", "sarajevo": "800 KM (~410 €)", "europe": "1.400 – 3.500 €", "savings": "75%" },
+        { "treatment": "Metallfreie Keramikkrone (Emax)", "sarajevo": "450 KM (~230 €)", "europe": "500 – 900 €", "savings": "60%" },
+        { "treatment": "Feste Metallkeramik-Zahnspange, komplette Behandlung", "sarajevo": "~2.000 KM (~1.020 €)", "europe": "2.500 – 5.000 €", "savings": "70%" },
+        { "treatment": "Professionelles Praxis-Bleaching", "sarajevo": "300 – 400 KM (~155 – 205 €)", "europe": "400 – 900 €", "savings": "60%" }
+      ],
+      "footnote": "* Die Preise für Sarajevo stammen aus der aktuellen Preisliste der Poliklinika Bandić (2026). Die Werte für Westeuropa sind Richtwerte aus veröffentlichten Marktquellen für Deutschland, Österreich und Großbritannien und dienen nur zur allgemeinen Orientierung — die tatsächlichen Praxispreise variieren. Umgerechnet zum festen Kurs 1 EUR = 1,95583 KM."
+    },
+    "stay": {
+      "kicker": "Ihren Aufenthalt planen",
+      "title": "Wie lange sollten Sie bleiben?",
+      "subtitle": "Eine allgemeine Orientierung — Ihr Zahnarzt bestätigt den genauen Zeitrahmen, sobald Ihr Behandlungsplan steht.",
+      "items": [
+        { "title": "Kontrolle, Reinigung & kleine Füllungen", "duration": "1 – 2 Tage", "visits": "1 Besuch", "text": "Diagnose und Behandlung lassen sich meist in einer kurzen Reise erledigen." },
+        { "title": "Zahnaufhellung", "duration": "1 Tag", "visits": "1 Besuch", "text": "Das Praxis-Bleaching wird in einem einzigen Termin abgeschlossen." },
+        { "title": "Kronen, Brücken & Veneers", "duration": "5 – 7 Tage", "visits": "1 Besuch", "text": "Zeit für Vorbereitung, präzise Anpassung und eventuelle Laborarbeit zwischen den Terminen." },
+        { "title": "Zahnimplantate", "duration": "3 – 5 Tage, dann 3 – 6 Monate Einheilzeit, dann 3 – 5 Tage", "visits": "2 Besuche", "text": "Erster Besuch: Untersuchung und Implantatsetzung. Nachdem der Knochen zu Hause eingeheilt ist, folgt ein kurzer zweiter Besuch für die finale Krone oder Brücke." },
+        { "title": "Vollständige Mundrehabilitation", "duration": "7 – 10 Tage, plus 5 – 7 Tage Nachkontrolle", "visits": "2 Besuche", "text": "Komplexe Fälle mit mehreren Zähnen werden über zwei Besuche mit Einheilzeit dazwischen geplant." },
+        { "title": "Kieferorthopädie (Zahnspangen)", "duration": "2 – 3 Tage zum Einsetzen, danach regelmäßige Kontrollen", "visits": "Laufend, alle 6 – 10 Wochen", "text": "Am besten für Patienten geeignet, die regelmäßig anreisen können, oder kombiniert mit Fernüberwachung zwischen den Kontrollen." }
+      ]
+    },
+    "process": {
+      "kicker": "So funktioniert es",
+      "title": "Von der ersten Nachricht bis zum neuen Lächeln",
+      "steps": [
+        { "title": "Röntgenbild & Fotos senden", "text": "Laden Sie Ihr OPG- / Panoramaröntgenbild, eventuelle CT-Scans und ein paar Fotos Ihres Lächelns über das Formular unten hoch — ein Termin ist dafür noch nicht nötig." },
+        { "title": "Kostenlosen Behandlungsplan erhalten", "text": "Unsere Spezialisten prüfen Ihren Fall und antworten mit einem schriftlichen Plan, Zeitrahmen und Preis — in der Regel innerhalb von 1–2 Werktagen." },
+        { "title": "Reisetermin buchen", "text": "Sobald Sie mit dem Plan zufrieden sind, helfen wir Ihnen bei der Wahl der Reisetermine und geben praktische Tipps zu Flügen und Unterkunft." },
+        { "title": "Behandlung in Sarajevo", "text": "Ihr Koordinator empfängt Sie in der Klinik, begleitet Sie zu jedem Termin und sorgt dafür, dass sich nichts fremd anfühlt." },
+        { "title": "Nachsorge, egal wo Sie sind", "text": "Sie reisen mit vollständiger Dokumentation, gegebenenfalls einem Implantatpass, und einer direkten Verbindung zu Ihrem Zahnarzt für alle weiteren Fragen ab." }
+      ]
+    },
+    "form": {
+      "kicker": "Kostenloses, unverbindliches Angebot",
+      "title": "Erzählen Sie uns von Ihrem Fall",
+      "subtitle": "Füllen Sie das Formular aus und fügen Sie, falls vorhanden, Ihr OPG- / Panoramaröntgenbild, einen CT-Scan oder aktuelle Fotos bei. Unsere Spezialisten prüfen alles und senden Ihnen einen schriftlichen Behandlungsplan mit Preis.",
+      "fields": {
+        "name": "Vollständiger Name",
+        "email": "E-Mail-Adresse",
+        "phone": "Telefon (mit Ländervorwahl)",
+        "country": "Land, aus dem Sie anreisen",
+        "treatment": "Gewünschte Behandlung",
+        "treatmentPlaceholder": "Behandlung auswählen",
+        "dates": "Bevorzugter Reisezeitraum (optional)",
+        "message": "Erzählen Sie uns von Ihrem Fall",
+        "messagePlaceholder": "Z. B. fehlender Zahn unten links, Krone abgebrochen, komplette Lächeln-Erneuerung gewünscht…",
+        "upload": "OPG / Röntgenbild / Scans / Fotos hochladen",
+        "uploadHint": "JPG, PNG, PDF oder DICOM — bis zu 10 Dateien, je 15 MB",
+        "uploadDrag": "Dateien hierher ziehen oder klicken zum Auswählen",
+        "consent": "Ich stimme zu, von der Poliklinika Bandić bezüglich meiner Anfrage kontaktiert zu werden, und willige ein, dass meine Daten und Dateien ausschließlich zu diesem Zweck verarbeitet werden.",
+        "submit": "Fall für kostenloses Angebot senden"
+      },
+      "treatments": ["Zahnimplantate", "Kronen / Brücken / Veneers", "Kieferorthopädie / Zahnspangen", "Vollständige Mundrehabilitation", "Zahnaufhellung", "Allgemeine Kontrolluntersuchung", "Noch unsicher"],
+      "success": "Vielen Dank — Ihre Anfrage ist eingegangen. Ein Spezialist meldet sich innerhalb von 1–2 Werktagen bei Ihnen.",
+      "error": "Beim Senden Ihrer Anfrage ist ein Fehler aufgetreten. Bitte versuchen Sie es erneut oder schreiben Sie uns direkt an info@doc-bandic.com."
+    },
+    "faq": {
+      "title": "Häufig gestellte Fragen",
+      "items": [
+        { "q": "Ist das erste Angebot wirklich kostenlos?", "a": "Ja. Senden Sie Ihr Röntgenbild, Scans oder Fotos, und unsere Spezialisten prüfen Ihren Fall und senden Ihnen kostenlos und unverbindlich einen schriftlichen Behandlungsplan mit Preis." },
+        { "q": "Was, wenn ich noch kein OPG oder Röntgenbild habe?", "a": "Kein Problem — beschreiben Sie Ihre Situation im Nachrichtenfeld so gut wie möglich, oder planen Sie eine Untersuchung mit Röntgenaufnahme am ersten Tag in der Klinik ein." },
+        { "q": "Wird Englisch oder Deutsch gesprochen?", "a": "Ja, beide Sprachen werden in der Klinik gesprochen, und alle Behandlungspläne und Unterlagen können auf Englisch oder Deutsch bereitgestellt werden." },
+        { "q": "Helfen Sie bei Unterkunft oder Transport?", "a": "Unser Koordinator empfiehlt Ihnen Hotels in der Nähe der Klinik und berät zu Flughafentransfers, die Buchung erfolgt jedoch direkt durch den Patienten." },
+        { "q": "Wie erfolgt die Bezahlung?", "a": "In der Klinik werden Karten- und Barzahlungen akzeptiert. Die Zahlungsdetails für Ihren konkreten Behandlungsplan werden zusammen mit dem Angebot bestätigt." }
+      ]
+    }
+  },
+  "team": {
+    "hero": {
+      "kicker": "Unser Team",
+      "title": "20+ Spezialisten, ein einheitlicher Qualitätsstandard",
+      "subtitle": "Die Poliklinika Bandić vereint Spezialisten für Kieferorthopädie, Oralchirurgie, Implantologie und Prothetik — im Zweischichtbetrieb, damit fachärztliche Betreuung nie weit entfernt ist."
+    },
+    "doctors": [
+      { "name": "Amela Bandić", "title": "Direktorin · Spezialistin für Kieferorthopädie", "text": "Leitet das kieferorthopädische Programm der Klinik — von der frühen Kieferwachstumslenkung bei Kindern bis zu festen und ästhetischen Zahnspangen für Erwachsene." },
+      { "name": "Prim. mr. sc. dr. Slobodan Trninić", "title": "Spezialist für Oralchirurgie", "text": "Erfahrener Oralchirurg für komplexe Extraktionen, Weisheitszähne und chirurgische Vorbereitung vor Implantationen." },
+      { "name": "Jasmin Neimarlija", "title": "Spezialist für Oralchirurgie & Implantologie", "text": "Schwerpunkt auf Implantatsetzung und chirurgischer Planung, Arbeit mit den Systemen Straumann, Neodent und Bredent." },
+      { "name": "Olivera Popović", "title": "Spezialistin für Zahnprothetik", "text": "Entwickelt festsitzende und herausnehmbare prothetische Lösungen, von der Einzelkrone bis zur vollständigen Mundrehabilitation." },
+      { "name": "Nermana Mašić", "title": "Spezialistin für Zahnprothetik", "text": "Arbeitet eng mit dem Implantologie-Team zusammen, um präzise, natürlich wirkende Kronen und Brücken zu liefern." },
+      { "name": "Jasmina Kozadra", "title": "Spezialistin für Kieferorthopädie", "text": "Plant und begleitet kieferorthopädische Behandlungen bei jüngeren Patienten und Erwachsenen." },
+      { "name": "Srđan Dizdarević", "title": "Zahnarzt", "text": "Bietet konservierende und allgemeine zahnmedizinische Versorgung für Patienten jeden Alters." }
+    ],
+    "note": "Unser gesamtes Team umfasst 11 zahnmedizinische Spezialisten und insgesamt mehr als 20 Fachkräfte, einschließlich spezialisierter Zahnarzthelferinnen und Klinikkoordinatoren, die im Zweischichtbetrieb arbeiten, damit Termine von früh morgens bis abends verfügbar sind."
+  },
+  "prices": {
+    "hero": {
+      "kicker": "Preisliste",
+      "title": "Transparente Preise, vollständig veröffentlicht",
+      "subtitle": "Eine Auswahl an Preisen aus unserer offiziellen Preisliste, in konvertibler Mark (KM) mit ungefährem Euro-Gegenwert. Dies ist keine vollständige Liste — für ein genaues Angebot auf Basis Ihrer eigenen Diagnose nutzen Sie unser kostenloses Angebotsformular."
+    },
+    "note": "1 EUR ≈ 1,95583 KM (fester Wechselkurs). Der endgültige Preis wird stets nach der klinischen Untersuchung bestätigt.",
+    "categories": [
+      {
+        "title": "Konservierende Zahnheilkunde",
+        "items": [
+          { "name": "Untersuchung & Beratung", "price": "30 KM", "eur": "~15 €" },
+          { "name": "Fachärztliche Beratung", "price": "80 KM", "eur": "~41 €" },
+          { "name": "Örtliche Betäubung", "price": "10 KM", "eur": "~5 €" },
+          { "name": "Zahnmedizinischer Notfalleingriff", "price": "30 KM", "eur": "~15 €" },
+          { "name": "Einflächige Füllung", "price": "50 KM", "eur": "~26 €" },
+          { "name": "Zweiflächige Füllung", "price": "60 KM", "eur": "~31 €" }
+        ]
+      },
+      {
+        "title": "Kieferorthopädie",
+        "items": [
+          { "name": "Fachärztliche Untersuchung & kieferorthopädische Beratung", "price": "50 KM", "eur": "~26 €" },
+          { "name": "Herausnehmbare Zahnspange (aktive Platte)", "price": "400 KM", "eur": "~205 €" },
+          { "name": "Funktionskieferorthopädisches Gerät", "price": "350 KM", "eur": "~179 €" },
+          { "name": "Konventionelle feste Zahnspange (pro Kieferbogen)", "price": "1.000 KM", "eur": "~511 €" },
+          { "name": "Mini-Bracket feste Zahnspange (pro Kieferbogen)", "price": "1.500 KM", "eur": "~767 €" },
+          { "name": "Ästhetische Keramik-Zahnspange (pro Kieferbogen)", "price": "1.750 KM", "eur": "~895 €" },
+          { "name": "Selbstligierende Zahnspange (pro Kieferbogen)", "price": "2.000 KM", "eur": "~1.023 €" },
+          { "name": "Selbstligierende ästhetische Zahnspange (pro Kieferbogen)", "price": "2.250 KM", "eur": "~1.150 €" },
+          { "name": "Schwere Funktionsanomalien (beide Kieferbögen)", "price": "6.000 KM", "eur": "~3.068 €" }
+        ]
+      },
+      {
+        "title": "Implantologie",
+        "items": [
+          { "name": "Erstuntersuchung & schriftlicher Behandlungsplan", "price": "50 KM", "eur": "~26 €" },
+          { "name": "Zahnimplantat — Standard", "price": "800 KM", "eur": "~410 €" },
+          { "name": "Zahnimplantat — Advanced", "price": "1.000 KM", "eur": "~511 €" },
+          { "name": "Zahnimplantat — Premium", "price": "1.200 KM", "eur": "~613 €" },
+          { "name": "Implantat-Suprakonstruktion", "price": "ab 200 KM", "eur": "~102 €" }
+        ]
+      },
+      {
+        "title": "Prothetik",
+        "items": [
+          { "name": "Metallfreie Keramikkrone (Emax)", "price": "450 KM", "eur": "~230 €" }
+        ]
+      },
+      {
+        "title": "Ästhetische Zahnheilkunde",
+        "items": [
+          { "name": "Praxis-(Power-)Bleaching", "price": "300 KM", "eur": "~153 €", "note": "Aktionspreis, regulär 500 KM" },
+          { "name": "Lampen-Bleaching", "price": "400 KM", "eur": "~205 €", "note": "Aktionspreis, regulär 700 KM" }
+        ]
+      }
+    ],
+    "cta": { "title": "Ihre Behandlung nicht aufgeführt?", "text": "Die Preise variieren je nach Komplexität des Falls und verwendeten Materialien. Senden Sie uns Ihre Angaben für ein kostenloses, persönliches Angebot.", "button": "Kostenloses Angebot anfordern" }
+  },
+  "contact": {
+    "hero": { "kicker": "Kontakt", "title": "Lassen Sie uns über Ihr Lächeln sprechen", "subtitle": "Rufen Sie an, schreiben Sie uns über WhatsApp/Viber oder senden Sie eine Anfrage — unser Team antwortet schnell." },
+    "form": {
+      "title": "Senden Sie uns eine Nachricht",
+      "name": "Vollständiger Name",
+      "email": "E-Mail",
+      "phone": "Telefon",
+      "message": "Nachricht",
+      "submit": "Nachricht senden"
+    },
+    "infoTitle": "Klinikinformationen",
+    "getDirections": "Route anzeigen"
+  },
+  "footer": {
+    "tagline": "Moderne Zahnmedizin in Sarajevo — das Vertrauen von Patienten aus Bosnien und Herzegowina und darüber hinaus.",
+    "quickLinks": "Schnellzugriff",
+    "getInTouch": "Kontakt aufnehmen",
+    "followUs": "Folgen Sie uns",
+    "rights": "Alle Rechte vorbehalten.",
+    "disclaimer": "Inhalte, Preise und Personalangaben basieren auf veröffentlichten Materialien der Poliklinika Bandić und dienen der allgemeinen Information. Bitte bestätigen Sie genaue Preise und Verfügbarkeit direkt mit der Klinik."
+  }
+}

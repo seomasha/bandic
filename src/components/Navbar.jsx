@@ -1,0 +1,111 @@
+import { useEffect, useState } from "react";
+import { NavLink, Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
+import { Menu, X, Phone } from "lucide-react";
+import Logo from "./Logo";
+import LanguageSwitcher from "./LanguageSwitcher";
+
+export default function Navbar() {
+  const { t } = useTranslation();
+  const [scrolled, setScrolled] = useState(false);
+  const [open, setOpen] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 24);
+    onScroll();
+    window.addEventListener("scroll", onScroll);
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  useEffect(() => {
+    setOpen(false);
+  }, []);
+
+  const links = [
+    { to: "/", label: t("nav.home") },
+    { to: "/dental-tourism", label: t("nav.tourism") },
+    { to: "/services", label: t("nav.services") },
+    { to: "/team", label: t("nav.team") },
+    { to: "/prices", label: t("nav.prices") },
+    { to: "/contact", label: t("nav.contact") },
+  ];
+
+  return (
+    <header
+      className={`fixed top-0 inset-x-0 z-40 transition-all duration-300 ${
+        scrolled || open ? "bg-white/90 backdrop-blur-lg shadow-sm shadow-ink-900/5" : "bg-transparent"
+      }`}
+    >
+      <div className="mx-auto max-w-7xl px-5 lg:px-8 flex items-center justify-between h-20">
+        <Link to="/" onClick={() => setOpen(false)}>
+          <Logo />
+        </Link>
+
+        <nav className="hidden lg:flex items-center gap-8">
+          {links.map((l) => (
+            <NavLink
+              key={l.to}
+              to={l.to}
+              end={l.to === "/"}
+              className={({ isActive }) =>
+                `text-[0.9rem] font-semibold tracking-wide transition-colors ${
+                  isActive ? "text-gold-600" : "text-ink-700 hover:text-gold-600"
+                }`
+              }
+            >
+              {l.label}
+            </NavLink>
+          ))}
+        </nav>
+
+        <div className="hidden lg:flex items-center gap-4">
+          <a href="tel:+38733642648" className="flex items-center gap-2 text-sm font-semibold text-ink-700 hover:text-gold-600">
+            <Phone size={16} />
+            {t("common.phone")}
+          </a>
+          <LanguageSwitcher />
+          <Link
+            to="/dental-tourism#quote"
+            className="rounded-full bg-ink-900 text-white text-sm font-semibold px-5 py-2.5 hover:bg-gold-600 transition-colors"
+          >
+            {t("nav.bookNow")}
+          </Link>
+        </div>
+
+        <div className="flex items-center gap-3 lg:hidden">
+          <LanguageSwitcher />
+          <button onClick={() => setOpen((o) => !o)} className="p-2 text-ink-900" aria-label="Menu">
+            {open ? <X size={24} /> : <Menu size={24} />}
+          </button>
+        </div>
+      </div>
+
+      {open && (
+        <div className="lg:hidden bg-white border-t border-ink-900/5 px-5 pb-6 pt-2">
+          <nav className="flex flex-col gap-1">
+            {links.map((l) => (
+              <NavLink
+                key={l.to}
+                to={l.to}
+                end={l.to === "/"}
+                onClick={() => setOpen(false)}
+                className={({ isActive }) =>
+                  `py-3 border-b border-ink-900/5 text-base font-semibold ${isActive ? "text-gold-600" : "text-ink-800"}`
+                }
+              >
+                {l.label}
+              </NavLink>
+            ))}
+          </nav>
+          <Link
+            to="/dental-tourism#quote"
+            onClick={() => setOpen(false)}
+            className="mt-4 block text-center rounded-full bg-ink-900 text-white text-sm font-semibold px-5 py-3"
+          >
+            {t("nav.bookNow")}
+          </Link>
+        </div>
+      )}
+    </header>
+  );
+}
