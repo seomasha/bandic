@@ -2,6 +2,7 @@ import { useTranslations } from "next-intl";
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
 import { Link } from "../i18n/navigation";
 import Logo from "./Logo";
+import LanguageSwitcher from "./LanguageSwitcher";
 import { Facebook, Instagram, Threads, LinkedIn, TikTok } from "./SocialIcons";
 
 const SOCIALS = [
@@ -26,7 +27,7 @@ export default function Footer() {
 
   return (
     <footer className="bg-ink-950 text-white/80 noise-overlay">
-      <div className="mx-auto max-w-7xl px-5 lg:px-8 py-16 grid gap-12 md:grid-cols-2 lg:grid-cols-4">
+      <div className="mx-auto max-w-7xl px-5 lg:px-8 py-20 grid gap-12 md:grid-cols-2 lg:grid-cols-[1.3fr_1fr_1fr_1fr] lg:gap-8">
         <div>
           <Logo variant="footer" />
           <p className="mt-5 text-sm leading-relaxed text-white/60 max-w-xs">{t("footer.tagline")}</p>
@@ -96,9 +97,14 @@ export default function Footer() {
       </div>
 
       <div className="border-t border-white/10">
-        <div className="mx-auto max-w-7xl px-5 lg:px-8 py-6 flex flex-col md:flex-row gap-3 items-center justify-between text-xs text-white/40">
-          <p>© {new Date().getFullYear()} Poliklinika Bandić. {t("footer.rights")}</p>
-          <p className="max-w-xl text-center md:text-right">{t("footer.disclaimer")}</p>
+        <div className="mx-auto max-w-7xl px-5 lg:px-8 py-6 flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
+          <p className="text-xs text-white/40 order-2 lg:order-1">
+            © {new Date().getFullYear()} Poliklinika Bandić. {t("footer.rights")}
+          </p>
+          <p className="max-w-xl text-xs text-white/40 order-3 lg:order-2">{t("footer.disclaimer")}</p>
+          <div className="order-1 lg:order-3 shrink-0">
+            <LanguageSwitcher dark />
+          </div>
         </div>
       </div>
     </footer>

@@ -15,13 +15,14 @@ const ORIGINS = [
   { x: 152, y: 202, path: "M152,202 Q262,244 338,298" },
 ];
 
-function RouteMap() {
+function RouteMap({ caption }) {
   return (
-    <div className="relative aspect-[4/5] w-full max-w-sm overflow-hidden rounded-3xl border border-ink-900/10 bg-white shadow-sm shadow-ink-900/5">
+    <div className="relative aspect-[4/5] w-full overflow-hidden rounded-3xl border border-ink-900/10 bg-white shadow-sm shadow-ink-900/5 lg:aspect-auto lg:h-full lg:min-h-[560px]">
       <div
-        className="absolute inset-0 opacity-70"
+        className="absolute inset-0 opacity-90"
         style={{
-          background: "radial-gradient(60% 55% at 85% 75%, rgba(184,144,63,0.12), transparent 65%)",
+          background:
+            "radial-gradient(65% 60% at 85% 78%, rgba(184,144,63,0.16), transparent 65%), radial-gradient(45% 40% at 10% 10%, rgba(184,144,63,0.08), transparent 60%)",
         }}
       />
       <svg viewBox="0 0 420 420" className="absolute inset-0 h-full w-full">
@@ -94,7 +95,33 @@ function RouteMap() {
             SARAJEVO
           </text>
         </motion.g>
+
+        {/* → your smile: the story's final beat */}
+        <motion.g
+          initial={{ opacity: 0, scale: 0.7 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true, margin: "-100px 0px" }}
+          transition={{ duration: 0.7, delay: 1.7, ease: EASE }}
+        >
+          <path
+            d="M300 340 c14 22 34 22 48 6"
+            fill="none"
+            stroke="url(#destGrad)"
+            strokeWidth="2.4"
+            strokeLinecap="round"
+          />
+        </motion.g>
       </svg>
+
+      <motion.p
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true, margin: "-100px 0px" }}
+        transition={{ duration: 0.6, delay: 2, ease: EASE }}
+        className="absolute bottom-6 left-1/2 -translate-x-1/2 whitespace-nowrap text-center text-[0.65rem] font-bold uppercase tracking-[0.2em] text-gold-600"
+      >
+        {caption}
+      </motion.p>
     </div>
   );
 }
@@ -186,9 +213,9 @@ export default function TourismSection() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, margin: "-80px 0px" }}
               transition={{ duration: 0.85, delay: 0.15, ease: EASE }}
-              className="flex justify-center lg:mt-16 lg:justify-end lg:rotate-1"
+              className="flex h-full justify-center lg:justify-end"
             >
-              <RouteMap />
+              <RouteMap caption={t("routeCaption")} />
             </motion.div>
           </div>
         </div>

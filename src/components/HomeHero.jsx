@@ -5,6 +5,7 @@ import { useTranslations } from "next-intl";
 import { motion, AnimatePresence, useReducedMotion } from "framer-motion";
 import { ArrowRight, PlaneTakeoff } from "lucide-react";
 import { Link } from "@/i18n/navigation";
+import ToothCrownVisual from "./ToothCrownVisual";
 
 const ROTATE_MS = 3200;
 const EASE = [0.16, 1, 0.3, 1];
@@ -116,62 +117,73 @@ export default function HomeHero() {
       </div>
 
       {/* content */}
-      <div className="relative mx-auto max-w-5xl px-5 lg:px-8 text-center">
-        <motion.h1
-          initial={{ opacity: 0, y: 34 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1.1, ease: EASE }}
-          className="font-display font-semibold leading-[1.08] text-cream"
-        >
-          <span className="block text-4xl sm:text-5xl lg:text-6xl">{t("headline1")}</span>
-          <span className="mt-3 flex flex-wrap items-baseline justify-center gap-x-3 text-4xl sm:text-5xl lg:text-6xl">
-            <span>{t("headlineStatic")}</span>
-            <span className="relative inline-block h-[1.15em] overflow-hidden align-baseline">
-              <AnimatePresence mode="wait">
-                <motion.span
-                  key={index}
-                  initial={{ opacity: 0, y: 16 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -16 }}
-                  transition={{ duration: 0.75, ease: EASE }}
-                  className="gold-text inline-block whitespace-nowrap"
-                >
-                  {rotating[index]}
-                </motion.span>
-              </AnimatePresence>
+      <div className="relative mx-auto grid max-w-7xl grid-cols-1 items-center gap-12 px-5 py-10 lg:grid-cols-[1.05fr_0.95fr] lg:gap-8 lg:px-8">
+        <div className="text-center lg:text-left">
+          <motion.h1
+            initial={{ opacity: 0, y: 34 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1.1, ease: EASE }}
+            className="font-display font-semibold leading-[1.08] text-cream"
+          >
+            <span className="block text-4xl sm:text-5xl lg:text-6xl">{t("headline1")}</span>
+            <span className="mt-3 flex flex-wrap items-baseline justify-center gap-x-3 text-4xl sm:text-5xl lg:text-6xl lg:justify-start">
+              <span>{t("headlineStatic")}</span>
+              <span className="relative inline-block h-[1.15em] overflow-hidden align-baseline">
+                <AnimatePresence mode="wait">
+                  <motion.span
+                    key={index}
+                    initial={{ opacity: 0, y: 16 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -16 }}
+                    transition={{ duration: 0.75, ease: EASE }}
+                    className="gold-text inline-block whitespace-nowrap"
+                  >
+                    {rotating[index]}
+                  </motion.span>
+                </AnimatePresence>
+              </span>
             </span>
-          </span>
-        </motion.h1>
+          </motion.h1>
 
-        <motion.p
-          initial={{ opacity: 0, y: 18 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.55, ease: EASE }}
-          className="mx-auto mt-8 max-w-xl font-sans text-base sm:text-lg leading-relaxed text-white/60"
-        >
-          {t("subtitle")}
-        </motion.p>
+          <motion.p
+            initial={{ opacity: 0, y: 18 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.55, ease: EASE }}
+            className="mx-auto mt-8 max-w-xl font-sans text-base sm:text-lg leading-relaxed text-white/60 lg:mx-0"
+          >
+            {t("subtitle")}
+          </motion.p>
+
+          <motion.div
+            initial={{ opacity: 0, y: 18 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.85, ease: EASE }}
+            className="mt-10 flex flex-wrap items-center justify-center gap-4 lg:justify-start"
+          >
+            <Link
+              href="/dental-tourism#quote"
+              className="group inline-flex items-center gap-2 rounded-full bg-cream text-ink-950 font-semibold px-7 py-4 hover:bg-white transition-colors"
+            >
+              {t("ctaPrimary")}
+              <ArrowRight size={18} className="text-gold-600 group-hover:translate-x-1 transition-transform" />
+            </Link>
+            <Link
+              href="/dental-tourism"
+              className="inline-flex items-center gap-2 rounded-full border border-white/20 text-white/85 font-semibold px-7 py-4 hover:border-gold-300/70 hover:text-white transition-colors"
+            >
+              <PlaneTakeoff size={16} className="text-gold-300" />
+              {t("ctaSecondary")}
+            </Link>
+          </motion.div>
+        </div>
 
         <motion.div
-          initial={{ opacity: 0, y: 18 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.85, ease: EASE }}
-          className="mt-10 flex flex-wrap items-center justify-center gap-4"
+          initial={{ opacity: 0, scale: 0.94 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 1, delay: 0.3, ease: EASE }}
+          className="mx-auto w-full max-w-md lg:max-w-none"
         >
-          <Link
-            href="/dental-tourism#quote"
-            className="group inline-flex items-center gap-2 rounded-full bg-cream text-ink-950 font-semibold px-7 py-4 hover:bg-white transition-colors"
-          >
-            {t("ctaPrimary")}
-            <ArrowRight size={18} className="text-gold-600 group-hover:translate-x-1 transition-transform" />
-          </Link>
-          <Link
-            href="/dental-tourism"
-            className="inline-flex items-center gap-2 rounded-full border border-white/20 text-white/85 font-semibold px-7 py-4 hover:border-gold-300/70 hover:text-white transition-colors"
-          >
-            <PlaneTakeoff size={16} className="text-gold-300" />
-            {t("ctaSecondary")}
-          </Link>
+          <ToothCrownVisual />
         </motion.div>
       </div>
 
