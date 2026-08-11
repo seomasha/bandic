@@ -2,20 +2,15 @@ import { useTranslations } from "next-intl";
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
 import { Link } from "../i18n/navigation";
 import Logo from "./Logo";
+import { Facebook, Instagram, Threads, LinkedIn, TikTok } from "./SocialIcons";
 
-const Facebook = (props) => (
-  <svg viewBox="0 0 24 24" fill="currentColor" {...props}>
-    <path d="M13.5 21v-7.5h2.5l.4-3H13.5V8.4c0-.87.24-1.46 1.5-1.46h1.6V4.34C16.3 4.24 15.4 4.15 14.35 4.15c-2.4 0-4.05 1.47-4.05 4.16v2.34H7.8v3h2.5V21h3.2Z" />
-  </svg>
-);
-
-const Instagram = (props) => (
-  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" {...props}>
-    <rect x="3.5" y="3.5" width="17" height="17" rx="4.5" />
-    <circle cx="12" cy="12" r="4" />
-    <circle cx="17.2" cy="6.8" r="1.1" fill="currentColor" stroke="none" />
-  </svg>
-);
+const SOCIALS = [
+  { label: "Facebook", href: "https://www.facebook.com/profile.php?id=100064060389558", Icon: Facebook },
+  { label: "Instagram", href: "https://www.instagram.com/poliklinika.bandic", Icon: Instagram },
+  { label: "Threads", href: "https://www.threads.com/@poliklinika.bandic", Icon: Threads },
+  { label: "TikTok", href: "https://www.tiktok.com/@poliklinika_bandic", Icon: TikTok },
+  { label: "LinkedIn", href: "https://www.linkedin.com/in/poliklinikabandic", Icon: LinkedIn },
+];
 
 export default function Footer() {
   const t = useTranslations();
@@ -35,25 +30,19 @@ export default function Footer() {
         <div>
           <Logo dark />
           <p className="mt-5 text-sm leading-relaxed text-white/60 max-w-xs">{t("footer.tagline")}</p>
-          <div className="mt-6 flex items-center gap-3">
-            <a
-              href="https://www.facebook.com/profile.php?id=100064060389558"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-10 h-10 rounded-full border border-white/15 flex items-center justify-center hover:border-gold-400 hover:text-gold-300 transition-colors"
-              aria-label="Facebook"
-            >
-              <Facebook size={17} />
-            </a>
-            <a
-              href="https://www.instagram.com/poliklinika.bandic"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-10 h-10 rounded-full border border-white/15 flex items-center justify-center hover:border-gold-400 hover:text-gold-300 transition-colors"
-              aria-label="Instagram"
-            >
-              <Instagram size={17} />
-            </a>
+          <div className="mt-6 flex flex-wrap items-center gap-3">
+            {SOCIALS.map(({ label, href, Icon }) => (
+              <a
+                key={label}
+                href={href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 rounded-full border border-white/15 flex items-center justify-center hover:border-gold-400 hover:text-gold-300 transition-colors"
+                aria-label={label}
+              >
+                <Icon size={17} />
+              </a>
+            ))}
           </div>
         </div>
 
