@@ -33,8 +33,8 @@
   "home": {
     "hero": {
       "headline1": "Sie kamen nach Sarajevo.",
-      "headlineStatic": "Sie gehen mit",
-      "rotating": ["einem gesünderen Lächeln.", "neuem Selbstvertrauen.", "einem Grund zu lächeln."],
+      "headlineStatic": "Sie gehen",
+      "rotating": ["mit einem gesünderen Lächeln.", "mit neuem Selbstvertrauen.", "mit einem Grund zu lächeln."],
       "subtitle": "Fachärztliche Betreuung, moderne Technologie und eine Stadt, die die Reise wert ist — das Vertrauen von Patienten aus ganz Europa.",
       "ctaPrimary": "Kostenloses Angebot anfordern",
       "ctaSecondary": "Zahntourismus entdecken"

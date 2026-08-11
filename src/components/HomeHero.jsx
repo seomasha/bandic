@@ -180,15 +180,29 @@ export default function HomeHero() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1, delay: 1.4, ease: EASE }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2"
+        className="absolute bottom-7 left-1/2 -translate-x-1/2"
       >
-        <span className="h-9 w-px bg-gradient-to-b from-white/0 via-white/30 to-white/0 overflow-hidden">
+        <div className="relative h-[34px] w-[26px]">
+          <svg width="26" height="34" viewBox="0 0 26 34" fill="none" className="absolute inset-0">
+            <path
+              d="M1.5 34 V13.5 C1.5 6.3 6.9 1 13 1 S24.5 6.3 24.5 13.5 V34"
+              stroke="url(#archGradScroll)"
+              strokeWidth="1.3"
+              strokeLinecap="round"
+            />
+            <defs>
+              <linearGradient id="archGradScroll" x1="0" y1="0" x2="26" y2="34" gradientUnits="userSpaceOnUse">
+                <stop stopColor="#f5d99a" />
+                <stop offset="1" stopColor="#b8903f" />
+              </linearGradient>
+            </defs>
+          </svg>
           <motion.span
-            className="block h-3 w-px bg-gold-300"
-            animate={reduceMotion ? undefined : { y: [0, 22, 0] }}
-            transition={{ duration: 2.4, repeat: Infinity, ease: "easeInOut" }}
+            className="absolute left-1/2 top-[10px] h-1.5 w-1.5 -translate-x-1/2 rounded-full bg-gold-300"
+            animate={reduceMotion ? undefined : { y: [0, 16, 0], opacity: [1, 0.15, 1] }}
+            transition={{ duration: 2.2, repeat: Infinity, ease: "easeInOut" }}
           />
-        </span>
+        </div>
       </motion.div>
     </section>
   );

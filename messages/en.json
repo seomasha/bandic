@@ -33,8 +33,8 @@
   "home": {
     "hero": {
       "headline1": "You came to Sarajevo.",
-      "headlineStatic": "You'll leave with",
-      "rotating": ["a healthier smile.", "a new confidence.", "a reason to smile."],
+      "headlineStatic": "You'll leave",
+      "rotating": ["with a healthier smile.", "with a new confidence.", "with a reason to smile."],
       "subtitle": "Specialist care, modern technology and a city worth the trip — trusted by patients from across Europe.",
       "ctaPrimary": "Get your free quote",
       "ctaSecondary": "Explore dental tourism"
