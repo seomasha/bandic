@@ -1,26 +1,10 @@
 import { getTranslations, setRequestLocale } from "next-intl/server";
-import {
-  ShieldCheck,
-  Award,
-  Users,
-  Clock,
-  Globe2,
-  ReceiptText,
-  ArrowRight,
-  Star,
-  PlaneTakeoff,
-  BadgeEuro,
-} from "lucide-react";
+import { ShieldCheck, Award, Users, Clock, Globe2, ReceiptText, ArrowRight, Star } from "lucide-react";
 import { Link } from "@/i18n/navigation";
 import Reveal from "@/components/Reveal";
+import HomeHero from "@/components/HomeHero";
 
 const whyIcons = [Users, ShieldCheck, Award, Clock, Globe2, ReceiptText];
-
-export async function generateMetadata({ params }) {
-  const { locale } = await params;
-  const t = await getTranslations({ locale });
-  return { title: t("home.hero.titleLine1") + " " + t("home.hero.titleLine2") };
-}
 
 export default async function Home({ params }) {
   const { locale } = await params;
@@ -29,126 +13,22 @@ export default async function Home({ params }) {
   const why = t.raw("home.why");
   const stats = t.raw("home.stats");
   const services = t.raw("serviceCategories");
-  const badges = t.raw("home.hero.badges");
   const doctors = t.raw("team.doctors");
 
   return (
     <div>
-      {/* HERO */}
-      <section className="relative overflow-hidden bg-white pt-36 pb-20 lg:pt-44 lg:pb-28">
-        <div
-          className="absolute inset-0 -z-10"
-          style={{
-            background:
-              "radial-gradient(55% 45% at 82% 8%, rgba(184,144,63,0.14), transparent 60%), radial-gradient(40% 40% at 5% 90%, rgba(184,144,63,0.10), transparent 60%)",
-          }}
-        />
-        <div className="mx-auto max-w-7xl px-5 lg:px-8 grid lg:grid-cols-[1.1fr_0.9fr] gap-16 items-center">
-          <div>
-            <Reveal>
-              <p className="inline-flex items-center gap-2 text-xs font-bold tracking-[0.25em] uppercase text-gold-600 bg-gold-50 border border-gold-200 rounded-full px-4 py-2">
-                {t("home.hero.kicker")}
-              </p>
-            </Reveal>
-            <Reveal delay={0.05}>
-              <h1 className="mt-6 font-display text-5xl sm:text-6xl lg:text-[4.2rem] font-semibold leading-[1.05] text-ink-950">
-                {t("home.hero.titleLine1")}
-                <br />
-                <span className="gold-text">{t("home.hero.titleLine2")}</span>
-              </h1>
-            </Reveal>
-            <Reveal delay={0.1}>
-              <p className="mt-7 text-lg text-ink-600 leading-relaxed max-w-xl">{t("home.hero.subtitle")}</p>
-            </Reveal>
-            <Reveal delay={0.15}>
-              <div className="mt-9 flex flex-wrap gap-4">
-                <Link
-                  href="/dental-tourism#quote"
-                  className="group inline-flex items-center gap-2 rounded-full bg-ink-950 text-white font-semibold px-7 py-4 hover:bg-gold-600 transition-colors"
-                >
-                  {t("home.hero.ctaPrimary")}
-                  <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
-                </Link>
-                <Link
-                  href="/dental-tourism"
-                  className="inline-flex items-center gap-2 rounded-full border-2 border-ink-900/15 text-ink-900 font-semibold px-7 py-4 hover:border-gold-400 transition-colors"
-                >
-                  <PlaneTakeoff size={18} className="text-gold-600" />
-                  {t("home.hero.ctaSecondary")}
-                </Link>
-              </div>
-            </Reveal>
-            <Reveal delay={0.2}>
-              <div className="mt-10 flex flex-wrap gap-x-8 gap-y-3">
-                {badges.map((b, i) => (
-                  <div key={i} className="flex items-center gap-2 text-sm font-semibold text-ink-700">
-                    <span className="w-1.5 h-1.5 rounded-full bg-gold-500" />
-                    {b}
-                  </div>
-                ))}
-              </div>
-            </Reveal>
-          </div>
+      <HomeHero />
 
-          <Reveal delay={0.15} className="relative">
-            <div className="relative aspect-[4/5] rounded-[2rem] bg-gradient-to-br from-ink-900 via-ink-950 to-black overflow-hidden shadow-2xl shadow-ink-950/30">
-              <div
-                className="absolute inset-0 opacity-70"
-                style={{
-                  background:
-                    "radial-gradient(60% 50% at 30% 20%, rgba(224,186,108,0.35), transparent 60%), radial-gradient(50% 40% at 80% 80%, rgba(184,144,63,0.25), transparent 60%)",
-                }}
-              />
-              <svg
-                className="absolute inset-0 w-full h-full opacity-90 animate-float"
-                viewBox="0 0 200 200"
-                fill="none"
-              >
-                <path
-                  d="M100 46c-13 0-21.5 7-28 7-6.5 0-13-6-21.5-6-13.5 0-28 11-28 34.5 0 21 16.5 62 29.5 62 7.5 0 10-5 19-5s11.5 5 19 5c13.5 0 29-35.5 29-54.5-13-5-17.5-17-17.5-17"
-                  transform="translate(0 -2) scale(1.05)"
-                  stroke="url(#toothGrad)"
-                  strokeWidth="2.5"
-                  fill="rgba(255,255,255,0.04)"
-                />
-                <defs>
-                  <linearGradient id="toothGrad" x1="30" y1="40" x2="170" y2="160" gradientUnits="userSpaceOnUse">
-                    <stop stopColor="#f5e8c8" />
-                    <stop offset="1" stopColor="#b8903f" />
-                  </linearGradient>
-                </defs>
-              </svg>
-              <div className="absolute bottom-6 left-6 right-6 rounded-2xl bg-white/10 backdrop-blur-md border border-white/15 px-5 py-4 flex items-center gap-3">
-                <div className="flex text-gold-300">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} size={14} fill="currentColor" strokeWidth={0} />
-                  ))}
-                </div>
-                <p className="text-white text-sm font-semibold">
-                  {stats[3].value} {stats[3].label}
-                </p>
+      {/* Stats bar */}
+      <section className="bg-white py-16 lg:py-20">
+        <Reveal className="mx-auto max-w-7xl px-5 lg:px-8">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-10">
+            {stats.map((s, i) => (
+              <div key={i}>
+                <p className="font-display text-4xl font-semibold gold-text">{s.value}</p>
+                <p className="mt-1 text-sm text-ink-600 font-medium">{s.label}</p>
               </div>
-            </div>
-            <div className="absolute -top-6 -left-6 hidden sm:flex items-center gap-3 bg-white rounded-2xl shadow-xl shadow-ink-900/10 px-5 py-4 border border-ink-900/5">
-              <BadgeEuro className="text-gold-500" size={26} />
-              <div>
-                <p className="text-xs text-ink-500 font-medium">{t("home.tourism.point1")}</p>
-              </div>
-            </div>
-          </Reveal>
-        </div>
-
-        {/* Stats bar */}
-        <Reveal delay={0.1}>
-          <div className="mx-auto max-w-7xl px-5 lg:px-8 mt-20">
-            <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-10 border-t border-ink-900/10 pt-10">
-              {stats.map((s, i) => (
-                <div key={i}>
-                  <p className="font-display text-4xl font-semibold gold-text">{s.value}</p>
-                  <p className="mt-1 text-sm text-ink-600 font-medium">{s.label}</p>
-                </div>
-              ))}
-            </div>
+            ))}
           </div>
         </Reveal>
       </section>

@@ -32,13 +32,12 @@
   },
   "home": {
     "hero": {
-      "kicker": "Poliklinika Bandić · Sarajevo",
-      "titleLine1": "Ein selbstbewusstes Lächeln,",
-      "titleLine2": "gepflegt nach Goldstandard.",
-      "subtitle": "Eine der führenden Zahnkliniken Bosnien und Herzegowinas — über 20 Spezialisten, moderne Technologie und Zweischichtbetrieb, das Vertrauen von Patienten aus ganz Europa für erstklassige Behandlung zu einem Bruchteil westeuropäischer Preise.",
+      "headline1": "Sie kamen nach Sarajevo.",
+      "headlineStatic": "Sie gehen mit",
+      "rotating": ["einem Lächeln.", "einem gesünderen Lächeln.", "neuem Selbstvertrauen.", "einem Grund zu lächeln."],
+      "subtitle": "Fachärztliche Betreuung, moderne Technologie und eine Stadt, die die Reise wert ist — das Vertrauen von Patienten aus ganz Europa.",
       "ctaPrimary": "Kostenloses Angebot anfordern",
-      "ctaSecondary": "Zahntourismus entdecken",
-      "badges": ["Top-5-Klinik in Bosnien und Herzegowina", "20+ Spezialisten", "2 Schichten, 6 Tage die Woche geöffnet"]
+      "ctaSecondary": "Zahntourismus entdecken"
     },
     "stats": [
       { "value": "20+", "label": "Ärzte & Spezialisten" },

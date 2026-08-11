@@ -32,13 +32,12 @@
   },
   "home": {
     "hero": {
-      "kicker": "Poliklinika Bandić · Sarajevo",
-      "titleLine1": "Siguran osmijeh,",
-      "titleLine2": "njegovan po zlatnom standardu.",
-      "subtitle": "Jedna od vodećih stomatoloških poliklinika u Bosni i Hercegovini — 20+ stručnjaka, moderna tehnologija i rad u dvije smjene, uz povjerenje pacijenata širom Evrope za vrhunsko liječenje po znatno nižoj cijeni.",
+      "headline1": "Došli ste u Sarajevo.",
+      "headlineStatic": "Otići ćete sa",
+      "rotating": ["osmijehom.", "zdravijim osmijehom.", "novim samopouzdanjem.", "razlogom za osmijeh."],
+      "subtitle": "Stručna njega, moderna tehnologija i grad vrijedan posjete — uz povjerenje pacijenata iz cijele Evrope.",
       "ctaPrimary": "Zatražite besplatnu ponudu",
-      "ctaSecondary": "Istražite dentalni turizam",
-      "badges": ["Top 5 ocijenjena klinika u BiH", "20+ stručnjaka", "Rad u 2 smjene, 6 dana sedmično"]
+      "ctaSecondary": "Istražite dentalni turizam"
     },
     "stats": [
       { "value": "20+", "label": "Doktora i stručnjaka" },

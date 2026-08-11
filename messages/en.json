@@ -32,13 +32,12 @@
   },
   "home": {
     "hero": {
-      "kicker": "Poliklinika Bandić · Sarajevo",
-      "titleLine1": "A confident smile,",
-      "titleLine2": "engineered in gold standard care.",
-      "subtitle": "One of Bosnia and Herzegovina's leading dental polyclinics — 20+ specialists, modern technology and two working shifts, trusted by patients across Europe for high-quality treatment at a fraction of Western prices.",
+      "headline1": "You came to Sarajevo.",
+      "headlineStatic": "You'll leave with",
+      "rotating": ["a smile.", "a healthier smile.", "a new confidence.", "a reason to smile."],
+      "subtitle": "Specialist care, modern technology and a city worth the trip — trusted by patients from across Europe.",
       "ctaPrimary": "Get your free quote",
-      "ctaSecondary": "Explore dental tourism",
-      "badges": ["Top 5 rated clinic in BiH", "20+ specialists", "Open 2 shifts, 6 days a week"]
+      "ctaSecondary": "Explore dental tourism"
     },
     "stats": [
       { "value": "20+", "label": "Doctors & specialists" },
