@@ -67,13 +67,13 @@ export default function HomeHero() {
           <span className="block text-4xl sm:text-5xl lg:text-6xl">{t("headline1")}</span>
           <span className="mt-3 block text-4xl sm:text-5xl lg:text-6xl">{t("headlineStatic")}</span>
           <span className="relative mt-3 block text-4xl sm:text-5xl lg:text-6xl">
-            <AnimatePresence mode="wait">
+            <AnimatePresence mode="popLayout">
               <motion.span
                 key={index}
-                initial={{ opacity: 0, y: 16 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -16 }}
-                transition={{ duration: 0.75, ease: EASE }}
+                initial={{ opacity: 0, y: 14, filter: "blur(6px)" }}
+                animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+                exit={{ opacity: 0, y: -14, filter: "blur(6px)" }}
+                transition={{ duration: 0.9, ease: EASE }}
                 className="gold-text block"
               >
                 {rotating[index]}
