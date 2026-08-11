@@ -5,6 +5,7 @@ import Reveal from "@/components/Reveal";
 import HomeHero from "@/components/HomeHero";
 import TrustSection from "@/components/TrustSection";
 import WhyBandicSection from "@/components/WhyBandicSection";
+import TourismSection from "@/components/TourismSection";
 
 const whyIcons = [Users, ShieldCheck, Award, Clock, Globe2, ReceiptText];
 
@@ -122,39 +123,7 @@ export default async function Home({ params }) {
         </div>
       </section>
 
-      {/* TOURISM BANNER */}
-      <section className="relative py-24 bg-ink-950 text-white overflow-hidden noise-overlay">
-        <div
-          className="absolute inset-0"
-          style={{
-            background:
-              "radial-gradient(50% 60% at 90% 10%, rgba(184,144,63,0.3), transparent 60%), radial-gradient(40% 40% at 10% 90%, rgba(184,144,63,0.18), transparent 60%)",
-          }}
-        />
-        <div className="relative mx-auto max-w-7xl px-5 lg:px-8 grid lg:grid-cols-2 gap-14 items-center">
-          <Reveal>
-            <p className="text-xs font-bold tracking-[0.3em] uppercase text-gold-300">{t("home.tourism.kicker")}</p>
-            <h2 className="mt-4 font-display text-3xl sm:text-4xl font-semibold leading-tight">{t("home.tourism.title")}</h2>
-            <p className="mt-6 text-white/70 leading-relaxed text-lg">{t("home.tourism.text")}</p>
-            <Link
-              href="/dental-tourism"
-              className="mt-8 inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-gold-300 to-gold-500 text-ink-950 font-bold px-7 py-4 hover:opacity-90 transition-opacity"
-            >
-              {t("home.tourism.cta")} <ArrowRight size={18} />
-            </Link>
-          </Reveal>
-          <Reveal delay={0.1} className="grid gap-4">
-            {[t("home.tourism.point1"), t("home.tourism.point2"), t("home.tourism.point3")].map((p, i) => (
-              <div key={i} className="flex items-start gap-4 rounded-2xl bg-white/5 border border-white/10 p-5 backdrop-blur-sm">
-                <span className="w-8 h-8 shrink-0 rounded-full bg-gold-400/20 text-gold-300 flex items-center justify-center font-bold text-sm">
-                  {i + 1}
-                </span>
-                <p className="text-white/85 leading-relaxed">{p}</p>
-              </div>
-            ))}
-          </Reveal>
-        </div>
-      </section>
+      <TourismSection />
 
       {/* TEAM PREVIEW */}
       <section className="py-24 bg-cream">
