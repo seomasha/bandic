@@ -12,11 +12,11 @@ export default function FinalCtaSection() {
   const stats = t.raw("home.stats");
 
   return (
-    <section className="relative overflow-hidden bg-ink-950 py-28 text-center text-white noise-overlay lg:py-36">
+    <section className="relative overflow-hidden bg-white py-28 text-center lg:py-36">
       <div
         className="absolute inset-0"
         style={{
-          background: "radial-gradient(45% 50% at 50% 0%, rgba(224,186,108,0.16), transparent 65%)",
+          background: "radial-gradient(45% 50% at 50% 0%, rgba(224,186,108,0.12), transparent 65%)",
         }}
       />
 
@@ -27,17 +27,17 @@ export default function FinalCtaSection() {
           viewport={{ once: true, margin: "-80px 0px" }}
           transition={{ duration: 0.8, ease: EASE }}
         >
-          <div className="flex justify-center gap-1 text-gold-400">
+          <div className="flex justify-center gap-1 text-gold-500">
             {[...Array(5)].map((_, i) => (
               <Star key={i} size={16} fill="currentColor" strokeWidth={0} />
             ))}
           </div>
-          <p className="mt-3 text-xs font-semibold uppercase tracking-[0.25em] text-white/50">
+          <p className="mt-3 text-xs font-semibold uppercase tracking-[0.25em] text-ink-500">
             {stats[3].value} · {stats[3].label}
           </p>
 
-          <h2 className="mt-6 font-display text-3xl sm:text-4xl font-semibold">{t("home.finalCta.title")}</h2>
-          <p className="mx-auto mt-5 max-w-xl text-lg leading-relaxed text-white/65">{t("home.finalCta.text")}</p>
+          <h2 className="mt-6 font-display text-3xl sm:text-4xl font-semibold text-ink-950">{t("home.finalCta.title")}</h2>
+          <p className="mx-auto mt-5 max-w-xl text-lg leading-relaxed text-ink-600">{t("home.finalCta.text")}</p>
 
           <div className="mt-10 flex flex-wrap justify-center gap-4">
             <Link
@@ -48,7 +48,7 @@ export default function FinalCtaSection() {
             </Link>
             <a
               href="tel:+38733642648"
-              className="rounded-full border-2 border-white/20 px-8 py-4 font-semibold transition-colors hover:border-gold-300"
+              className="rounded-full border-2 border-ink-900/15 px-8 py-4 font-semibold text-ink-800 transition-colors hover:border-gold-400"
             >
               {t("home.finalCta.cta2")}
             </a>
@@ -58,7 +58,7 @@ export default function FinalCtaSection() {
             href="https://www.facebook.com/profile.php?id=100064060389558"
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-8 inline-block text-sm font-medium text-white/40 underline decoration-white/20 underline-offset-4 transition-colors hover:text-gold-300"
+            className="mt-8 inline-block text-sm font-medium text-ink-500 underline decoration-ink-900/20 underline-offset-4 transition-colors hover:text-gold-600"
           >
             {t("home.trustCta")}
           </a>
