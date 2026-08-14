@@ -52,7 +52,11 @@ export default function Navbar() {
                 key={l.to}
                 href={l.to}
                 className={`text-[0.9rem] font-semibold tracking-wide transition-colors ${
-                  isActive ? "text-gold-600" : "text-ink-700 hover:text-gold-600"
+                  isActive
+                    ? "text-gold-600"
+                    : scrolled || open
+                      ? "text-ink-700 hover:text-gold-600"
+                      : "text-white/90 hover:text-gold-300"
                 }`}
               >
                 {l.label}
@@ -62,7 +66,7 @@ export default function Navbar() {
         </nav>
 
         <div className="hidden lg:flex items-center gap-4">
-          <LanguageSwitcher />
+          <LanguageSwitcher dark={!scrolled && !open} />
           <Link
             href="/dental-tourism#quote"
             className="rounded-full bg-ink-900 text-white text-sm font-semibold px-5 py-2.5 hover:bg-gold-600 transition-colors"
