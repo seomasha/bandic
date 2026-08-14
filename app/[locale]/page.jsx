@@ -4,7 +4,6 @@ import TrustSection from "@/components/TrustSection";
 import AboutSection from "@/components/AboutSection";
 import ServicesSection from "@/components/ServicesSection";
 import TourismSection from "@/components/TourismSection";
-import TeamSection from "@/components/TeamSection";
 import FinalCtaSection from "@/components/FinalCtaSection";
 
 export default async function Home({ params }) {
@@ -18,7 +17,6 @@ export default async function Home({ params }) {
       <AboutSection />
       <ServicesSection />
       <TourismSection />
-      <TeamSection />
       <FinalCtaSection />
     </div>
   );
