@@ -16,11 +16,11 @@ export default function Footer() {
 
   return (
     <footer className="bg-ink-950 text-white/80 noise-overlay">
-      <div className="mx-auto max-w-7xl px-5 lg:px-8 py-20 grid gap-12 grid-cols-1 lg:grid-cols-[1.3fr_1fr_1fr] lg:gap-8">
+      <div className="mx-auto max-w-7xl px-5 lg:px-8 py-20 grid gap-12 grid-cols-1 lg:grid-cols-3 lg:gap-8">
         <div>
           <div className="flex items-center gap-4">
             <Logo variant="footer" />
-            <p className="text-sm leading-relaxed text-white/60 max-w-[13rem]">{t("footer.tagline")}</p>
+            <p className="flex-1 text-sm leading-relaxed text-white/60">{t("footer.tagline")}</p>
           </div>
           <div className="mt-6 flex flex-wrap items-center gap-2.5">
             {SOCIALS.map(({ label, href, Icon }) => (
