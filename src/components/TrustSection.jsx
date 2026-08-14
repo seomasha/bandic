@@ -7,7 +7,7 @@ import { Globe2, ReceiptText, Layers, ShieldCheck } from "lucide-react";
 
 const EASE = [0.16, 1, 0.3, 1];
 
-function CountUp({ value, suffix = "", duration = 1.4 }) {
+function CountUp({ value, suffix = "", duration = 2.4 }) {
   const reduceMotion = useReducedMotion();
   const [display, setDisplay] = useState(0);
   const startedRef = useRef(false);
@@ -111,7 +111,7 @@ export default function TrustSection() {
                 style={{ background: "radial-gradient(60% 70% at 50% 0%, rgba(224,186,108,0.25), transparent 70%)" }}
               />
               <p className="relative font-display text-7xl sm:text-8xl font-semibold leading-none text-cream">
-                <CountUp value={20} duration={1.8} />
+                <CountUp value={20} duration={3} />
                 <span className="gold-text">+</span>
               </p>
               <p className="relative mt-4 text-lg font-semibold text-cream">{t("home.impact.dominantLabel")}</p>
@@ -133,7 +133,7 @@ export default function TrustSection() {
           <Reveal from="up" delay={0.16}>
             <div className="group flex h-full flex-col items-center justify-center rounded-3xl border border-gold-300/40 bg-gold-50 px-6 py-10 text-center shadow-sm shadow-ink-900/5 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-gold-900/10">
               <p className="font-display text-5xl font-semibold text-ink-950 transition-colors duration-300 group-hover:text-gold-600">
-                <CountUp value={2} />
+                <CountUp value={2} duration={1.6} />
               </p>
               <p className="mt-2 text-sm font-medium text-ink-500">{t("home.impact.shiftsLabel")}</p>
               <p className="mt-2 text-xs font-semibold tracking-wide text-gold-600">07:00–21:00</p>
@@ -144,7 +144,7 @@ export default function TrustSection() {
           <Reveal from="up" delay={0.22}>
             <div className="group flex h-full flex-col items-center justify-center rounded-3xl border border-ink-900/10 bg-white px-6 py-10 text-center shadow-sm shadow-ink-900/5 transition-all duration-300 hover:-translate-y-1 hover:border-gold-300 hover:shadow-lg hover:shadow-gold-900/10">
               <p className="font-display text-5xl font-semibold text-ink-950 transition-colors duration-300 group-hover:text-gold-600">
-                <CountUp value={6} duration={1} /> {t("home.impact.daysUnit")}
+                <CountUp value={6} duration={1.8} /> {t("home.impact.daysUnit")}
               </p>
               <p className="mt-2 text-sm font-medium text-ink-500">{t("home.impact.daysLabel")}</p>
             </div>
