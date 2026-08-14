@@ -62,7 +62,7 @@ export default function HomeHero() {
           initial={{ opacity: 0, y: 34 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.1, ease: EASE }}
-          className="font-display font-semibold leading-[1.08] text-cream drop-shadow-[0_2px_20px_rgba(0,0,0,0.55)] pb-2 sm:pb-4 lg:pb-6"
+          className="font-display font-semibold leading-[1.08] text-cream [text-shadow:0_2px_20px_rgba(0,0,0,0.55)]"
         >
           <span className="block text-4xl sm:text-5xl lg:text-6xl">{t("headline1")}</span>
           <span className="mt-3 block text-4xl sm:text-5xl lg:text-6xl">{t("headlineStatic")}</span>
