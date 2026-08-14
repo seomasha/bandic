@@ -14,7 +14,7 @@ function SavingsPanel({ label }) {
       whileInView={{ opacity: 1, scale: 1 }}
       viewport={{ once: true, margin: "-80px 0px" }}
       transition={{ duration: 0.8, ease: EASE }}
-      className="relative mx-auto flex w-full max-w-sm flex-col items-center justify-center overflow-hidden rounded-3xl border border-gold-300/50 bg-gradient-to-br from-cream via-gold-100 to-gold-300 px-8 py-14 text-center shadow-sm shadow-ink-900/5 lg:mx-0 lg:h-full lg:max-w-none lg:min-h-[560px]"
+      className="relative mx-auto flex w-full max-w-sm flex-col items-center justify-center overflow-hidden rounded-3xl border border-gold-300/50 bg-gradient-to-br from-cream via-gold-100 to-gold-300 px-8 py-14 text-center shadow-sm shadow-ink-900/5"
     >
       <p className="font-display text-7xl font-semibold leading-none text-ink-950 sm:text-8xl">
         50<span className="text-gold-700">–</span>75<span className="text-gold-700">%</span>
@@ -112,7 +112,7 @@ export default function TourismSection() {
             </motion.div>
           </div>
 
-          <div className="lg:col-span-5">
+          <div className="flex items-center justify-center lg:col-span-5">
             <SavingsPanel label={t("savingsLabel")} />
           </div>
         </div>
