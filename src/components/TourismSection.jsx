@@ -104,10 +104,10 @@ function RouteMap({ caption }) {
               x={o.x + o.labelDx}
               y={o.y + o.labelDy}
               textAnchor="middle"
-              className="fill-ink-900"
+              className="fill-white"
               style={{ fontSize: 9, fontWeight: 700, letterSpacing: "0.08em" }}
               initial={{ opacity: 0 }}
-              whileInView={{ opacity: 0.55 }}
+              whileInView={{ opacity: 0.7 }}
               viewport={{ once: true, margin: "-100px 0px" }}
               transition={{ duration: 0.5, delay: 0.3 + 0.15 * i, ease: EASE }}
             >
@@ -150,7 +150,7 @@ function RouteMap({ caption }) {
           viewport={{ once: true, margin: "-100px 0px" }}
           transition={{ duration: 0.6, delay: 1.2, ease: EASE }}
         >
-          <text x="338" y="278" textAnchor="middle" className="fill-ink-900" style={{ fontSize: 11, fontWeight: 700, letterSpacing: "0.1em" }}>
+          <text x="338" y="278" textAnchor="middle" className="fill-white" style={{ fontSize: 11, fontWeight: 700, letterSpacing: "0.1em" }}>
             SARAJEVO
           </text>
         </motion.g>
@@ -177,7 +177,7 @@ function RouteMap({ caption }) {
         whileInView={{ opacity: 1 }}
         viewport={{ once: true, margin: "-100px 0px" }}
         transition={{ duration: 0.6, delay: 2, ease: EASE }}
-        className="absolute bottom-6 left-1/2 -translate-x-1/2 whitespace-nowrap text-center text-[0.65rem] font-bold uppercase tracking-[0.2em] text-gold-600"
+        className="absolute bottom-6 left-1/2 -translate-x-1/2 whitespace-nowrap text-center text-[0.65rem] font-bold uppercase tracking-[0.2em] text-gold-300"
       >
         {caption}
       </motion.p>
@@ -191,14 +191,20 @@ export default function TourismSection() {
   const points = [t("point1"), t("point2"), t("point3")];
 
   return (
-    <section className="relative bg-cream py-28 lg:py-40 overflow-hidden">
-      <span
-        aria-hidden
-        className="pointer-events-none absolute -left-32 top-10 h-[32rem] w-[32rem] rounded-full border border-gold-400/10 hidden lg:block"
+    <section className="relative overflow-hidden bg-ink-950 py-28 text-white noise-overlay lg:py-40">
+      <div
+        className="pointer-events-none absolute inset-0"
+        style={{
+          background: "radial-gradient(55% 55% at 85% 10%, rgba(184,144,63,0.28), transparent 60%), radial-gradient(45% 45% at 5% 95%, rgba(184,144,63,0.14), transparent 60%)",
+        }}
       />
       <span
         aria-hidden
-        className="pointer-events-none absolute -left-16 top-32 h-80 w-80 rounded-full border border-gold-400/10 hidden lg:block"
+        className="pointer-events-none absolute -left-32 top-10 h-[32rem] w-[32rem] rounded-full border border-gold-400/15 hidden lg:block"
+      />
+      <span
+        aria-hidden
+        className="pointer-events-none absolute -left-16 top-32 h-80 w-80 rounded-full border border-gold-400/15 hidden lg:block"
       />
 
       <div className="relative mx-auto max-w-7xl px-5 lg:px-8">
@@ -209,14 +215,14 @@ export default function TourismSection() {
           transition={{ duration: 0.85, ease: EASE }}
           className="max-w-3xl"
         >
-          <p className="flex items-center gap-2 text-xs font-bold tracking-[0.3em] uppercase text-gold-600">
+          <p className="flex items-center gap-2 text-xs font-bold tracking-[0.3em] uppercase text-gold-300">
             <PlaneTakeoff size={14} />
             {t("kicker")}
           </p>
-          <h2 className="mt-5 font-display text-5xl sm:text-6xl lg:text-7xl font-semibold leading-[1.03] text-ink-950">
+          <h2 className="mt-5 font-display text-5xl sm:text-6xl lg:text-7xl font-semibold leading-[1.03] text-cream">
             {line1}.
             <br />
-            <span className="gold-text">{line2}</span>
+            <span className="text-gold-300">{line2}</span>
           </h2>
         </motion.div>
 
@@ -227,7 +233,7 @@ export default function TourismSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-60px 0px" }}
               transition={{ duration: 0.7, delay: 0.1, ease: EASE }}
-              className="max-w-xl text-lg leading-relaxed text-ink-600"
+              className="max-w-xl text-lg leading-relaxed text-white/65"
             >
               {t("text")}
             </motion.p>
@@ -242,10 +248,10 @@ export default function TourismSection() {
                   transition={{ duration: 0.6, delay: 0.15 * i, ease: EASE }}
                 >
                   <div className="flex items-start gap-6 py-6">
-                    <span className="shrink-0 font-display text-3xl font-semibold gold-text">0{i + 1}</span>
-                    <p className="pt-1 text-base sm:text-lg leading-relaxed text-ink-800">{p}</p>
+                    <span className="shrink-0 font-display text-3xl font-semibold text-gold-300">0{i + 1}</span>
+                    <p className="pt-1 text-base sm:text-lg leading-relaxed text-white/80">{p}</p>
                   </div>
-                  {i < points.length - 1 && <div className="h-px w-full bg-ink-900/10" />}
+                  {i < points.length - 1 && <div className="h-px w-full bg-white/10" />}
                 </motion.div>
               ))}
             </div>
@@ -258,7 +264,7 @@ export default function TourismSection() {
             >
               <Link
                 href="/dental-tourism"
-                className="group mt-12 inline-flex items-center gap-3 rounded-full bg-ink-950 px-8 py-4 font-semibold uppercase tracking-wide text-white transition-colors hover:bg-gold-600"
+                className="group mt-12 inline-flex items-center gap-3 rounded-full bg-gradient-to-r from-gold-300 to-gold-500 px-8 py-4 font-bold uppercase tracking-wide text-ink-950 transition-opacity hover:opacity-90"
               >
                 {t("cta")}
                 <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />
