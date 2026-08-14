@@ -7,7 +7,7 @@ import { Link } from "@/i18n/navigation";
 
 const EASE = [0.16, 1, 0.3, 1];
 
-function SavingsPanel({ kicker, label, text }) {
+function SavingsPanel({ short }) {
   return (
     <motion.div
       initial={{ opacity: 0, scale: 0.96 }}
@@ -16,29 +16,10 @@ function SavingsPanel({ kicker, label, text }) {
       transition={{ duration: 0.8, ease: EASE }}
       className="relative mx-auto flex w-full max-w-sm flex-col items-center justify-center overflow-hidden rounded-3xl border border-gold-300/50 bg-gradient-to-br from-cream via-gold-100 to-gold-300 px-8 py-14 text-center shadow-sm shadow-ink-900/5 lg:mx-0 lg:h-full lg:max-w-none lg:min-h-[560px]"
     >
-      <p className="text-xs font-bold uppercase tracking-[0.3em] text-gold-700">{kicker}</p>
-
-      <p className="mt-6 font-display text-7xl font-semibold leading-none text-ink-950 sm:text-8xl">
+      <p className="font-display text-7xl font-semibold leading-none text-ink-950 sm:text-8xl">
         50<span className="text-gold-700">–</span>75<span className="text-gold-700">%</span>
       </p>
-
-      <p className="mt-6 text-xl font-semibold text-ink-950">{label}</p>
-      <p className="mt-3 max-w-xs text-sm leading-relaxed text-ink-700">{text}</p>
-
-      <div className="mt-9 flex flex-wrap items-center justify-center gap-2">
-        {["DE", "AT", "CH", "UK"].map((code, i) => (
-          <motion.span
-            key={code}
-            initial={{ opacity: 0, y: 8 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-80px 0px" }}
-            transition={{ duration: 0.5, delay: 0.3 + i * 0.08, ease: EASE }}
-            className="rounded-full border border-gold-400/40 bg-white/70 px-3.5 py-1.5 text-xs font-bold tracking-wide text-ink-700"
-          >
-            {code}
-          </motion.span>
-        ))}
-      </div>
+      <p className="mt-5 text-xl font-semibold text-ink-950">{short}</p>
     </motion.div>
   );
 }
@@ -125,7 +106,7 @@ export default function TourismSection() {
           </div>
 
           <div className="lg:col-span-5">
-            <SavingsPanel kicker={t("savingsKicker")} label={t("savingsLabel")} text={t("savingsText")} />
+            <SavingsPanel short={t("savingsShort")} />
           </div>
         </div>
       </div>
