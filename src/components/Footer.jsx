@@ -2,7 +2,6 @@ import { useTranslations } from "next-intl";
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
 import { Link } from "../i18n/navigation";
 import Logo from "./Logo";
-import LanguageSwitcher from "./LanguageSwitcher";
 import { Facebook, Instagram, Threads, LinkedIn, TikTok } from "./SocialIcons";
 
 const SOCIALS = [
@@ -38,7 +37,7 @@ export default function Footer() {
                 href={href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full border border-white/15 flex items-center justify-center hover:border-gold-400 hover:text-gold-300 transition-colors"
+                className="w-10 h-10 rounded-full border border-white/25 text-white/90 flex items-center justify-center hover:border-gold-400 hover:text-gold-300 transition-colors"
                 aria-label={label}
               >
                 <Icon size={17} />
@@ -98,13 +97,10 @@ export default function Footer() {
 
       <div className="border-t border-white/10">
         <div className="mx-auto max-w-7xl px-5 lg:px-8 py-6 flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
-          <p className="text-xs text-white/40 order-2 lg:order-1">
+          <p className="text-xs text-white/40">
             © {new Date().getFullYear()} Poliklinika Bandić. {t("footer.rights")}
           </p>
-          <p className="max-w-xl text-xs text-white/40 order-3 lg:order-2">{t("footer.disclaimer")}</p>
-          <div className="order-1 lg:order-3 shrink-0">
-            <LanguageSwitcher dark />
-          </div>
+          <p className="max-w-xl text-xs text-white/40">{t("footer.disclaimer")}</p>
         </div>
       </div>
     </footer>
