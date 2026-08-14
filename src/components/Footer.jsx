@@ -1,6 +1,5 @@
 import { useTranslations } from "next-intl";
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
-import { Link } from "../i18n/navigation";
 import Logo from "./Logo";
 import { Facebook, Instagram, Threads, LinkedIn, TikTok } from "./SocialIcons";
 
@@ -15,18 +14,9 @@ const SOCIALS = [
 export default function Footer() {
   const t = useTranslations();
 
-  const links = [
-    { to: "/", label: t("nav.home") },
-    { to: "/dental-tourism", label: t("nav.tourism") },
-    { to: "/services", label: t("nav.services") },
-    { to: "/team", label: t("nav.team") },
-    { to: "/prices", label: t("nav.prices") },
-    { to: "/contact", label: t("nav.contact") },
-  ];
-
   return (
     <footer className="bg-ink-950 text-white/80 noise-overlay">
-      <div className="mx-auto max-w-7xl px-5 lg:px-8 py-20 grid gap-12 md:grid-cols-2 lg:grid-cols-[1.3fr_1fr_1fr_1fr] lg:gap-8">
+      <div className="mx-auto max-w-7xl px-5 lg:px-8 py-20 grid gap-12 md:grid-cols-2 lg:grid-cols-[1.3fr_1fr_1fr] lg:gap-8">
         <div>
           <Logo variant="footer" />
           <p className="mt-5 text-sm leading-relaxed text-white/60 max-w-xs">{t("footer.tagline")}</p>
@@ -44,19 +34,6 @@ export default function Footer() {
               </a>
             ))}
           </div>
-        </div>
-
-        <div>
-          <p className="text-white text-sm font-semibold tracking-wide uppercase mb-5">{t("footer.quickLinks")}</p>
-          <ul className="space-y-3">
-            {links.map((l) => (
-              <li key={l.to}>
-                <Link href={l.to} className="text-sm text-white/60 hover:text-gold-300 transition-colors">
-                  {l.label}
-                </Link>
-              </li>
-            ))}
-          </ul>
         </div>
 
         <div>
