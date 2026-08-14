@@ -19,7 +19,14 @@ function SavingsPanel({ label }) {
       <p className="font-display text-7xl font-semibold leading-none text-ink-950 sm:text-8xl">
         50<span className="text-gold-700">–</span>75<span className="text-gold-700">%</span>
       </p>
-      <p className="mt-5 text-xl font-semibold text-ink-950">{label}</p>
+      <motion.span
+        initial={{ scaleX: 0 }}
+        whileInView={{ scaleX: 1 }}
+        viewport={{ once: true, margin: "-80px 0px" }}
+        transition={{ duration: 0.7, delay: 0.3, ease: EASE }}
+        className="mt-8 block h-px w-14 bg-gold-600"
+      />
+      <p className="mt-6 text-sm font-bold uppercase tracking-[0.2em] text-ink-800">{label}</p>
     </motion.div>
   );
 }
