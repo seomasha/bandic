@@ -8,17 +8,44 @@ import { Link } from "@/i18n/navigation";
 const EASE = [0.16, 1, 0.3, 1];
 
 const ORIGINS = [
-  { x: 40, y: 92, path: "M40,92 Q200,58 338,298" },
-  { x: 142, y: 38, path: "M142,38 Q262,76 338,298" },
-  { x: 108, y: 142, path: "M108,142 Q252,138 338,298" },
-  { x: 88, y: 192, path: "M88,192 Q244,222 338,298" },
-  { x: 152, y: 202, path: "M152,202 Q262,244 338,298" },
+  { code: "DE", x: 40, y: 92, path: "M40,92 Q200,58 338,298", labelDx: -12, labelDy: -8 },
+  { code: "AT", x: 142, y: 38, path: "M142,38 Q262,76 338,298", labelDx: 0, labelDy: -12 },
+  { code: "CH", x: 108, y: 142, path: "M108,142 Q252,138 338,298", labelDx: -18, labelDy: 4 },
+  { code: "UK", x: 88, y: 192, path: "M88,192 Q244,222 338,298", labelDx: -18, labelDy: 4 },
+  { code: "SCA", x: 152, y: 202, path: "M152,202 Q262,244 338,298", labelDx: 0, labelDy: -12 },
 ];
 
 function RouteMap({ caption }) {
   return (
-    <div className="relative mx-auto aspect-square w-full max-w-sm lg:mx-0 lg:aspect-auto lg:h-full lg:w-auto lg:max-w-none lg:min-h-[560px]">
+    <div className="relative mx-auto aspect-square w-full max-w-sm lg:mx-0 lg:aspect-auto lg:max-w-none lg:h-full lg:min-h-[560px]">
       <svg viewBox="0 0 420 420" className="absolute inset-0 h-full w-full">
+        <defs>
+          <radialGradient id="destGrad">
+            <stop offset="0%" stopColor="#f5d99a" />
+            <stop offset="100%" stopColor="#b8903f" />
+          </radialGradient>
+          <filter id="routeGlow" x="-60%" y="-60%" width="220%" height="220%">
+            <feGaussianBlur stdDeviation="1.6" result="blur" />
+            <feMerge>
+              <feMergeNode in="blur" />
+              <feMergeNode in="SourceGraphic" />
+            </feMerge>
+          </filter>
+          <filter id="cometGlow" x="-200%" y="-200%" width="500%" height="500%">
+            <feGaussianBlur stdDeviation="3.2" result="blur" />
+            <feMerge>
+              <feMergeNode in="blur" />
+              <feMergeNode in="blur" />
+              <feMergeNode in="SourceGraphic" />
+            </feMerge>
+          </filter>
+        </defs>
+
+        {/* faint concentric rings for a "radar" backdrop */}
+        {[70, 115, 160].map((r) => (
+          <circle key={r} cx="338" cy="298" r={r} fill="none" stroke="#b8903f" strokeWidth="0.6" opacity="0.08" />
+        ))}
+
         {ORIGINS.map((o, i) => (
           <motion.path
             key={i}
@@ -28,6 +55,7 @@ function RouteMap({ caption }) {
             strokeWidth="1.4"
             strokeLinecap="round"
             strokeDasharray="1 7"
+            filter="url(#routeGlow)"
             initial={{ pathLength: 0, opacity: 0 }}
             whileInView={{ pathLength: 1, opacity: 0.7 }}
             viewport={{ once: true, margin: "-100px 0px" }}
@@ -35,20 +63,60 @@ function RouteMap({ caption }) {
           />
         ))}
 
+        {/* travelling comet along each route, looping */}
         {ORIGINS.map((o, i) => (
           <motion.circle
-            key={`o-${i}`}
-            cx={o.x}
-            cy={o.y}
-            r="3.5"
-            fill="#9c7830"
-            initial={{ opacity: 0, scale: 0 }}
-            whileInView={{ opacity: 0.6, scale: 1 }}
+            key={`comet-${i}`}
+            r="4.5"
+            fill="#fff6e0"
+            filter="url(#cometGlow)"
+            initial={{ opacity: 0 }}
+            style={{ offsetPath: `path("${o.path}")` }}
+            whileInView={{
+              opacity: [0, 1, 1, 0],
+              offsetDistance: ["0%", "0%", "100%", "100%"],
+            }}
             viewport={{ once: true, margin: "-100px 0px" }}
-            transition={{ duration: 0.5, delay: 0.15 * i, ease: EASE }}
+            transition={{
+              duration: 3.2,
+              delay: 1.8 + i * 0.6,
+              repeat: Infinity,
+              repeatDelay: (ORIGINS.length - 1) * 0.6 + 1.6,
+              ease: EASE,
+              times: [0, 0.05, 0.85, 1],
+            }}
           />
         ))}
 
+        {ORIGINS.map((o, i) => (
+          <g key={`o-${i}`}>
+            <motion.circle
+              cx={o.x}
+              cy={o.y}
+              r="3.5"
+              fill="#9c7830"
+              initial={{ opacity: 0, scale: 0 }}
+              whileInView={{ opacity: 0.7, scale: 1 }}
+              viewport={{ once: true, margin: "-100px 0px" }}
+              transition={{ duration: 0.5, delay: 0.15 * i, ease: EASE }}
+            />
+            <motion.text
+              x={o.x + o.labelDx}
+              y={o.y + o.labelDy}
+              textAnchor="middle"
+              className="fill-ink-900"
+              style={{ fontSize: 9, fontWeight: 700, letterSpacing: "0.08em" }}
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 0.55 }}
+              viewport={{ once: true, margin: "-100px 0px" }}
+              transition={{ duration: 0.5, delay: 0.3 + 0.15 * i, ease: EASE }}
+            >
+              {o.code}
+            </motion.text>
+          </g>
+        ))}
+
+        {/* continuous arrival pulse at Sarajevo */}
         <motion.circle
           cx="338"
           cy="298"
@@ -59,24 +127,22 @@ function RouteMap({ caption }) {
           initial={{ opacity: 0, scale: 0.5 }}
           whileInView={{ opacity: [0, 0.5, 0], scale: [0.6, 1.6, 2.1] }}
           viewport={{ once: true, margin: "-100px 0px" }}
-          transition={{ duration: 2.2, delay: 1, ease: "easeOut" }}
+          transition={{ duration: 2.2, delay: 1, repeat: Infinity, repeatDelay: 1.6, ease: "easeOut" }}
         />
         <motion.circle
           cx="338"
           cy="298"
           r="6.5"
           fill="url(#destGrad)"
+          filter="url(#routeGlow)"
           initial={{ opacity: 0, scale: 0 }}
-          whileInView={{ opacity: 1, scale: 1 }}
+          whileInView={{ opacity: 1, scale: [1, 1.12, 1] }}
           viewport={{ once: true, margin: "-100px 0px" }}
-          transition={{ duration: 0.5, delay: 0.95, ease: EASE }}
+          transition={{
+            opacity: { duration: 0.5, delay: 0.95, ease: EASE },
+            scale: { duration: 2.6, delay: 1.4, repeat: Infinity, ease: "easeInOut" },
+          }}
         />
-        <defs>
-          <radialGradient id="destGrad">
-            <stop offset="0%" stopColor="#f5d99a" />
-            <stop offset="100%" stopColor="#b8903f" />
-          </radialGradient>
-        </defs>
 
         <motion.g
           initial={{ opacity: 0, y: 6 }}
