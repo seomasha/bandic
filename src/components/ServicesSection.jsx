@@ -47,13 +47,15 @@ export default function ServicesSection() {
                   onClick={() => setActive(isActive ? -1 : i)}
                   className="group flex w-full cursor-pointer items-baseline gap-6 border-t border-ink-900/10 py-7 text-left last:border-b"
                 >
-                  <span
-                    className={`font-display text-2xl font-semibold shrink-0 transition-colors duration-300 ${
+                  <motion.span
+                    animate={{ scale: isActive ? 1.15 : 1 }}
+                    transition={{ type: "spring", stiffness: 420, damping: 14 }}
+                    className={`inline-block font-display text-2xl font-semibold shrink-0 transition-colors duration-300 ${
                       isActive ? "gold-text" : "text-ink-900/25 group-hover:text-gold-400"
                     }`}
                   >
                     0{i + 1}
-                  </span>
+                  </motion.span>
                   <div className="min-w-0 flex-1">
                     <p
                       className={`font-display text-2xl sm:text-3xl font-semibold transition-colors duration-300 ${
