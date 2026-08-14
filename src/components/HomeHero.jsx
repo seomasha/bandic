@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { motion, AnimatePresence, useReducedMotion } from "framer-motion";
 import { ArrowRight, PlaneTakeoff } from "lucide-react";
 import { Link } from "@/i18n/navigation";
@@ -42,9 +42,11 @@ function HeroVideoBackground({ reduceMotion }) {
 
 export default function HomeHero() {
   const t = useTranslations("home.hero");
+  const locale = useLocale();
   const rotating = t.raw("rotating");
   const reduceMotion = useReducedMotion();
   const [index, setIndex] = useState(0);
+  const headlineSize = locale === "de" ? "text-3xl sm:text-4xl lg:text-5xl" : "text-4xl sm:text-5xl lg:text-6xl";
 
   useEffect(() => {
     if (reduceMotion) return;
@@ -64,9 +66,9 @@ export default function HomeHero() {
           transition={{ duration: 1.1, ease: EASE }}
           className="font-display font-semibold leading-[1.2] text-cream [text-shadow:0_2px_20px_rgba(0,0,0,0.55)]"
         >
-          <span className="block text-4xl sm:text-5xl lg:text-6xl">{t("headline1")}</span>
-          <span className="mt-3 block text-4xl sm:text-5xl lg:text-6xl">{t("headlineStatic")}</span>
-          <span className="relative mt-3 block text-4xl sm:text-5xl lg:text-6xl">
+          <span className={`block ${headlineSize}`}>{t("headline1")}</span>
+          <span className={`mt-3 block ${headlineSize}`}>{t("headlineStatic")}</span>
+          <span className={`relative mt-3 block ${headlineSize}`}>
             <AnimatePresence mode="popLayout">
               <motion.span
                 key={index}
@@ -74,7 +76,7 @@ export default function HomeHero() {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -14 }}
                 transition={{ duration: 0.9, ease: EASE }}
-                className="block text-gold-300"
+                className="block whitespace-pre-line text-gold-300"
               >
                 {rotating[index]}
               </motion.span>
