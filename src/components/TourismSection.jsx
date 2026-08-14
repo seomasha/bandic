@@ -17,7 +17,7 @@ const ORIGINS = [
 
 function RouteMap({ caption }) {
   return (
-    <div className="relative aspect-[4/5] w-full lg:aspect-auto lg:h-full lg:min-h-[560px]">
+    <div className="relative mx-auto aspect-square w-full max-w-sm lg:mx-0 lg:aspect-auto lg:h-full lg:w-auto lg:max-w-none lg:min-h-[560px]">
       <svg viewBox="0 0 420 420" className="absolute inset-0 h-full w-full">
         {ORIGINS.map((o, i) => (
           <motion.path
