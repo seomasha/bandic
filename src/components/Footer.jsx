@@ -16,8 +16,8 @@ export default function Footer() {
 
   return (
     <footer className="bg-ink-950 text-white/80 noise-overlay">
-      <div className="mx-auto max-w-7xl px-5 lg:px-8 py-20 grid gap-12 grid-cols-1 lg:grid-cols-3 lg:gap-8">
-        <div>
+      <div className="mx-auto max-w-7xl px-5 lg:px-8 py-20 flex flex-col gap-12 lg:flex-row lg:justify-between lg:gap-8">
+        <div className="lg:max-w-xs">
           <div className="flex items-center gap-4">
             <Logo variant="footer" />
             <p className="flex-1 text-sm leading-relaxed text-white/60">{t("footer.tagline")}</p>
@@ -38,7 +38,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div>
+        <div className="lg:max-w-xs">
           <p className="text-white text-sm font-semibold tracking-wide uppercase mb-5">{t("footer.getInTouch")}</p>
           <ul className="space-y-3.5 text-sm text-white/60">
             <li className="flex gap-3">
@@ -60,7 +60,7 @@ export default function Footer() {
           </ul>
         </div>
 
-        <div>
+        <div className="lg:max-w-xs">
           <p className="text-white text-sm font-semibold tracking-wide uppercase mb-5">{t("common.workingHours")}</p>
           <ul className="space-y-3.5 text-sm text-white/60">
             <li className="flex gap-3">
