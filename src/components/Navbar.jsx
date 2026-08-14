@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { useTranslations } from "next-intl";
-import { Menu, X, Phone } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { Link, usePathname } from "../i18n/navigation";
 import Logo from "./Logo";
 import LanguageSwitcher from "./LanguageSwitcher";
@@ -62,10 +62,6 @@ export default function Navbar() {
         </nav>
 
         <div className="hidden lg:flex items-center gap-4">
-          <a href="tel:+38733642648" className="flex items-center gap-2 text-sm font-semibold text-ink-700 hover:text-gold-600">
-            <Phone size={16} />
-            {t("common.phone")}
-          </a>
           <LanguageSwitcher />
           <Link
             href="/dental-tourism#quote"
