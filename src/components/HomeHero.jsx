@@ -76,7 +76,7 @@ export default function HomeHero() {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -14 }}
                 transition={{ duration: 0.9, ease: EASE }}
-                className="block whitespace-pre-line text-gold-300"
+                className="block whitespace-pre-line text-gold-300 sm:whitespace-normal"
               >
                 {rotating[index]}
               </motion.span>
