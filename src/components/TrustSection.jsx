@@ -3,7 +3,7 @@
 import { useRef, useState } from "react";
 import { useTranslations } from "next-intl";
 import { motion, useScroll, useTransform, useReducedMotion, animate } from "framer-motion";
-import { Globe2, ReceiptText, Layers } from "lucide-react";
+import { Globe2, ReceiptText, Layers, ShieldCheck } from "lucide-react";
 
 const EASE = [0.16, 1, 0.3, 1];
 
@@ -70,16 +70,10 @@ export default function TrustSection() {
   const brands = why[2];
   const pricing = why[5];
   const international = why[4];
+  const certifiedImplants = why[1];
 
   return (
     <section ref={sectionRef} className="relative bg-cream py-24 lg:py-36 overflow-hidden">
-      {/* faint watermark numeral — editorial flourish, not a stat */}
-      <span
-        aria-hidden
-        className="pointer-events-none select-none absolute -right-10 -top-10 font-display text-[26rem] leading-none text-ink-900/[0.035] hidden lg:block"
-      >
-        20
-      </span>
       <div className="absolute inset-0 noise-overlay opacity-60" />
 
       <div className="relative mx-auto max-w-7xl px-5 lg:px-8">
@@ -148,9 +142,20 @@ export default function TrustSection() {
             </div>
           </Reveal>
 
+          {/* registered, certified implants */}
+          <Reveal from="up" delay={0.28} className="h-full">
+            <div className="group flex h-full flex-col items-center rounded-3xl border border-ink-900/10 bg-white px-6 py-8 text-center shadow-sm shadow-ink-900/5 transition-all duration-300 hover:-translate-y-1 hover:border-gold-300 hover:shadow-lg hover:shadow-gold-900/10">
+              <span className="flex h-11 w-11 items-center justify-center rounded-full bg-gold-100 transition-transform duration-300 group-hover:scale-110">
+                <ShieldCheck size={20} className="text-gold-600" />
+              </span>
+              <p className="mt-4 text-lg font-semibold text-ink-950 leading-snug">{certifiedImplants.title}</p>
+              <p className="mt-2 text-sm leading-relaxed text-ink-500">{certifiedImplants.text}</p>
+            </div>
+          </Reveal>
+
           {/* international patients */}
-          <motion.div style={{ y: parallaxA }} className="col-span-2 sm:col-span-1">
-            <Reveal from="up" delay={0.28} className="h-full">
+          <motion.div style={{ y: parallaxA }}>
+            <Reveal from="up" delay={0.32} className="h-full">
               <div className="group flex h-full flex-col items-center rounded-3xl border border-ink-900/10 bg-white px-6 py-8 text-center shadow-sm shadow-ink-900/5 transition-all duration-300 hover:-translate-y-1 hover:border-gold-300 hover:shadow-lg hover:shadow-gold-900/10">
                 <span className="flex h-11 w-11 items-center justify-center rounded-full bg-gold-100 transition-transform duration-300 group-hover:scale-110">
                   <Globe2 size={20} className="text-gold-600" />
@@ -162,8 +167,8 @@ export default function TrustSection() {
           </motion.div>
 
           {/* transparent pricing */}
-          <motion.div style={{ y: parallaxB }} className="col-span-2 sm:col-span-1">
-            <Reveal from="up" delay={0.34} className="h-full">
+          <motion.div style={{ y: parallaxB }}>
+            <Reveal from="up" delay={0.36} className="h-full">
               <div className="group flex h-full flex-col items-center rounded-3xl border border-ink-900/10 bg-white px-6 py-8 text-center shadow-sm shadow-ink-900/5 transition-all duration-300 hover:-translate-y-1 hover:border-gold-300 hover:shadow-lg hover:shadow-gold-900/10">
                 <span className="flex h-11 w-11 items-center justify-center rounded-full bg-gold-100 transition-transform duration-300 group-hover:scale-110">
                   <ReceiptText size={20} className="text-gold-600" />
