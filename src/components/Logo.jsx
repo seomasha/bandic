@@ -3,7 +3,7 @@ import logoMark from "../../public/brand/logo-mark.png";
 
 const SIZES = {
   nav: "h-12 w-auto sm:h-14",
-  footer: "h-20 w-auto",
+  footer: "h-12 w-auto",
 };
 
 export default function Logo({ variant = "nav", className = "" }) {

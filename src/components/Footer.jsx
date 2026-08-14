@@ -16,21 +16,23 @@ export default function Footer() {
 
   return (
     <footer className="bg-ink-950 text-white/80 noise-overlay">
-      <div className="mx-auto max-w-7xl px-5 lg:px-8 py-20 grid gap-12 md:grid-cols-2 lg:grid-cols-[1.3fr_1fr_1fr] lg:gap-8">
+      <div className="mx-auto max-w-7xl px-5 lg:px-8 py-20 grid gap-12 grid-cols-1 lg:grid-cols-[1.3fr_1fr_1fr] lg:gap-8">
         <div>
-          <Logo variant="footer" />
-          <p className="mt-5 text-sm leading-relaxed text-white/60 max-w-xs">{t("footer.tagline")}</p>
-          <div className="mt-6 flex flex-wrap items-center gap-3">
+          <div className="flex items-center gap-4">
+            <Logo variant="footer" />
+            <p className="text-sm leading-relaxed text-white/60 max-w-[13rem]">{t("footer.tagline")}</p>
+          </div>
+          <div className="mt-6 flex flex-wrap items-center gap-2.5">
             {SOCIALS.map(({ label, href, Icon }) => (
               <a
                 key={label}
                 href={href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full border border-white/25 text-white/90 flex items-center justify-center hover:border-gold-400 hover:text-gold-300 transition-colors"
+                className="w-8 h-8 rounded-full border border-white/25 text-white/90 flex items-center justify-center hover:border-gold-400 hover:text-gold-300 transition-colors"
                 aria-label={label}
               >
-                <Icon size={17} />
+                <Icon size={13} />
               </a>
             ))}
           </div>

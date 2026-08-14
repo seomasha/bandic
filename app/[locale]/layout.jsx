@@ -5,7 +5,6 @@ import { Cormorant_Garamond, Manrope } from "next/font/google";
 import { routing } from "@/i18n/routing";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import FloatingActions from "@/components/FloatingActions";
 import "../globals.css";
 
 const cormorant = Cormorant_Garamond({
@@ -61,7 +60,6 @@ export default async function LocaleLayout({ children, params }) {
           <Navbar />
           <main className="flex-1">{children}</main>
           <Footer />
-          <FloatingActions />
         </NextIntlClientProvider>
       </body>
     </html>
