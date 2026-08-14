@@ -62,7 +62,7 @@ export default function HomeHero() {
           initial={{ opacity: 0, y: 34 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.1, ease: EASE }}
-          className="font-display font-semibold leading-[1.08] text-cream [text-shadow:0_2px_20px_rgba(0,0,0,0.55)]"
+          className="font-display font-semibold leading-[1.2] text-cream [text-shadow:0_2px_20px_rgba(0,0,0,0.55)]"
         >
           <span className="block text-4xl sm:text-5xl lg:text-6xl">{t("headline1")}</span>
           <span className="mt-3 block text-4xl sm:text-5xl lg:text-6xl">{t("headlineStatic")}</span>
@@ -74,7 +74,7 @@ export default function HomeHero() {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -14 }}
                 transition={{ duration: 0.9, ease: EASE }}
-                className="gold-text block"
+                className="block text-gold-300"
               >
                 {rotating[index]}
               </motion.span>
