@@ -52,6 +52,7 @@
       "specialistsLabel": "Specijalista",
       "shiftsLabel": "Smjene dnevno",
       "daysValue": "6 dana",
+      "daysUnit": "dana",
       "daysLabel": "Otvoreno ponedjeljak–subota"
     },
     "whyBandic": {

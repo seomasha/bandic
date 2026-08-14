@@ -27,7 +27,14 @@ function CountUp({ value, suffix = "", duration = 1.4 }) {
   };
 
   return (
-    <motion.span onViewportEnter={start} viewport={{ once: true, margin: "-80px 0px" }}>
+    <motion.span
+      onViewportEnter={start}
+      viewport={{ once: true, margin: "-80px 0px" }}
+      initial={{ opacity: 0, scale: 0.8 }}
+      whileInView={{ opacity: 1, scale: 1 }}
+      transition={{ duration: 0.5, ease: EASE }}
+      className="inline-block"
+    >
       {display}
       {suffix}
     </motion.span>
@@ -104,7 +111,8 @@ export default function TrustSection() {
                 style={{ background: "radial-gradient(60% 70% at 50% 0%, rgba(224,186,108,0.25), transparent 70%)" }}
               />
               <p className="relative font-display text-7xl sm:text-8xl font-semibold leading-none text-cream">
-                20<span className="gold-text">+</span>
+                <CountUp value={20} duration={1.8} />
+                <span className="gold-text">+</span>
               </p>
               <p className="relative mt-4 text-lg font-semibold text-cream">{t("home.impact.dominantLabel")}</p>
               <p className="relative mt-2 max-w-xs text-sm leading-relaxed text-white/60">{t("home.impact.dominantText")}</p>
@@ -136,7 +144,7 @@ export default function TrustSection() {
           <Reveal from="up" delay={0.22}>
             <div className="group flex h-full flex-col items-center justify-center rounded-3xl border border-ink-900/10 bg-white px-6 py-10 text-center shadow-sm shadow-ink-900/5 transition-all duration-300 hover:-translate-y-1 hover:border-gold-300 hover:shadow-lg hover:shadow-gold-900/10">
               <p className="font-display text-5xl font-semibold text-ink-950 transition-colors duration-300 group-hover:text-gold-600">
-                {t("home.impact.daysValue")}
+                <CountUp value={6} duration={1} /> {t("home.impact.daysUnit")}
               </p>
               <p className="mt-2 text-sm font-medium text-ink-500">{t("home.impact.daysLabel")}</p>
             </div>

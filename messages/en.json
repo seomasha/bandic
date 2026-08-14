@@ -52,6 +52,7 @@
       "specialistsLabel": "Specialists",
       "shiftsLabel": "Daily shifts",
       "daysValue": "6 days",
+      "daysUnit": "days",
       "daysLabel": "Open Monday–Saturday"
     },
     "whyBandic": {
