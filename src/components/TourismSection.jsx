@@ -7,7 +7,7 @@ import { Link } from "@/i18n/navigation";
 
 const EASE = [0.16, 1, 0.3, 1];
 
-function SavingsPanel({ short }) {
+function SavingsPanel({ label }) {
   return (
     <motion.div
       initial={{ opacity: 0, scale: 0.96 }}
@@ -19,7 +19,7 @@ function SavingsPanel({ short }) {
       <p className="font-display text-7xl font-semibold leading-none text-ink-950 sm:text-8xl">
         50<span className="text-gold-700">–</span>75<span className="text-gold-700">%</span>
       </p>
-      <p className="mt-5 text-xl font-semibold text-ink-950">{short}</p>
+      <p className="mt-5 text-xl font-semibold text-ink-950">{label}</p>
     </motion.div>
   );
 }
@@ -106,7 +106,7 @@ export default function TourismSection() {
           </div>
 
           <div className="lg:col-span-5">
-            <SavingsPanel short={t("savingsShort")} />
+            <SavingsPanel label={t("savingsLabel")} />
           </div>
         </div>
       </div>
