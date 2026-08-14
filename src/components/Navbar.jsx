@@ -76,8 +76,12 @@ export default function Navbar() {
         </div>
 
         <div className="flex items-center gap-3 lg:hidden">
-          <LanguageSwitcher />
-          <button onClick={() => setOpen((o) => !o)} className="p-2 text-ink-900" aria-label="Menu">
+          <LanguageSwitcher dark={!scrolled && !open} />
+          <button
+            onClick={() => setOpen((o) => !o)}
+            className={`p-2 transition-colors ${scrolled || open ? "text-ink-900" : "text-white"}`}
+            aria-label="Menu"
+          >
             {open ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>

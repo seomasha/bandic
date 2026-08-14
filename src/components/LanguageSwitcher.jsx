@@ -34,7 +34,7 @@ export default function LanguageSwitcher({ dark = false }) {
         onClick={() => setOpen((o) => !o)}
         className={`flex items-center gap-1.5 px-3 py-1.5 rounded-full border text-sm font-semibold transition-colors cursor-pointer ${
           dark
-            ? "border-white/20 text-white hover:border-gold-300/70"
+            ? "border-white/30 bg-white/10 text-white backdrop-blur-sm hover:border-gold-300/70"
             : "border-ink-900/10 text-ink-900 hover:border-gold-400/60"
         }`}
         aria-label="Change language"
