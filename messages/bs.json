@@ -90,7 +90,10 @@
       "point2": "Besplatan plan terapije na osnovu OPG snimka / RTG-a prije putovanja",
       "point3": "Jedan koordinator, od prve poruke do povratnog leta",
       "cta": "Pogledajte cijene i isplanirajte posjetu",
-      "routeCaption": "Evropa → Sarajevo → vaš osmijeh"
+      "routeCaption": "Evropa → Sarajevo → vaš osmijeh",
+      "savingsKicker": "Ušteda",
+      "savingsLabel": "Stvarna ušteda",
+      "savingsText": "Obično 50–75% jeftinije nego uporedivo privatno liječenje u Njemačkoj, Austriji, Švicarskoj ili Velikoj Britaniji."
     },
     "teamKicker": "Upoznajte stručnjake",
     "teamTitle": "Tim iza svakog osmijeha",
