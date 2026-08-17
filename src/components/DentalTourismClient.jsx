@@ -14,6 +14,7 @@ import {
   CalendarDays,
   CheckCircle2,
   TrendingDown,
+  AlertCircle,
 } from "lucide-react";
 import Reveal from "@/components/Reveal";
 import FileDropzone from "@/components/FileDropzone";
@@ -33,6 +34,8 @@ export default function DentalTourismClient() {
 
   const [files, setFiles] = useState([]);
   const [sent, setSent] = useState(false);
+  const [sending, setSending] = useState(false);
+  const [error, setError] = useState(false);
   const [form, setForm] = useState({
     name: "",
     email: "",
@@ -49,19 +52,24 @@ export default function DentalTourismClient() {
     setForm({ ...form, [name]: type === "checkbox" ? checked : value });
   };
 
-  const onSubmit = (e) => {
+  const onSubmit = async (e) => {
     e.preventDefault();
-    const fileNote =
-      files.length > 0
-        ? `\n\nFiles selected (please attach manually — ${files.length}):\n${files.map((f) => "- " + f.name).join("\n")}`
-        : "";
-    const body = encodeURIComponent(
-      `Name: ${form.name}\nPhone: ${form.phone}\nCountry: ${form.country}\nTreatment: ${form.treatment}\nPreferred dates: ${form.dates}\n\nMessage:\n${form.message}${fileNote}`
-    );
-    window.location.href = `mailto:info@doc-bandic.com?subject=${encodeURIComponent(
-      "Free quote request — " + form.name
-    )}&body=${body}`;
-    setSent(true);
+    setSending(true);
+    setError(false);
+
+    const data = new FormData();
+    Object.entries(form).forEach(([key, value]) => data.append(key, String(value)));
+    files.forEach((f) => data.append("files", f));
+
+    try {
+      const res = await fetch("/api/quote", { method: "POST", body: data });
+      if (!res.ok) throw new Error("request failed");
+      setSent(true);
+    } catch {
+      setError(true);
+    } finally {
+      setSending(false);
+    }
   };
 
   return (
@@ -338,11 +346,20 @@ export default function DentalTourismClient() {
                     {t("tourism.form.fields.consent")}
                   </label>
 
+                  {error && (
+                    <p className="flex items-start gap-2.5 rounded-xl bg-red-50 px-4 py-3 text-sm text-red-700">
+                      <AlertCircle size={16} className="mt-0.5 shrink-0" />
+                      {t("tourism.form.error")}
+                    </p>
+                  )}
+
                   <button
                     type="submit"
-                    className="w-full inline-flex items-center justify-center gap-2 rounded-full bg-ink-950 text-white font-semibold px-7 py-4 hover:bg-gold-600 transition-colors"
+                    disabled={sending}
+                    className="w-full inline-flex items-center justify-center gap-2 rounded-full bg-ink-950 text-white font-semibold px-7 py-4 hover:bg-gold-600 transition-colors disabled:cursor-not-allowed disabled:opacity-60"
                   >
-                    {t("tourism.form.fields.submit")} <ArrowRight size={18} />
+                    {sending ? t("common.sending") : t("tourism.form.fields.submit")}
+                    {!sending && <ArrowRight size={18} />}
                   </button>
                 </form>
               )}

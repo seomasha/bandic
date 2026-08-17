@@ -389,7 +389,7 @@
         "message": "Recite nam nešto o vašem slučaju",
         "messagePlaceholder": "Npr. nedostaje zub dolje lijevo, slomila se krunica, želim potpunu promjenu osmijeha…",
         "upload": "Učitajte OPG / RTG / snimke / fotografije",
-        "uploadHint": "JPG, PNG, PDF ili DICOM — do 10 fajlova, po 15 MB",
+        "uploadHint": "JPG, PNG ili PDF — do 5 fajlova, ukupno do 4 MB",
         "uploadDrag": "Prevucite fajlove ovdje ili kliknite za odabir",
         "consent": "Slažem se da me Poliklinika Bandić kontaktira povodom mog upita i dajem saglasnost da se moji podaci i fajlovi obrađuju isključivo u tu svrhu.",
         "submit": "Pošaljite slučaj za besplatnu ponudu"
@@ -646,7 +646,8 @@
       "email": "E-mail",
       "phone": "Telefon",
       "message": "Poruka",
-      "submit": "Pošaljite poruku"
+      "submit": "Pošaljite poruku",
+      "error": "Došlo je do greške prilikom slanja poruke. Pokušajte ponovo ili nam pišite direktno na info@doc-bandic.com."
     },
     "infoTitle": "Informacije o klinici",
     "getDirections": "Pogledajte lokaciju"

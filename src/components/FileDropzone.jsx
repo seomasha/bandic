@@ -3,8 +3,9 @@
 import { useRef, useState } from "react";
 import { UploadCloud, File as FileIcon, X } from "lucide-react";
 
-const MAX_FILES = 10;
-const MAX_SIZE = 15 * 1024 * 1024;
+const MAX_FILES = 5;
+const MAX_FILE_SIZE = 4 * 1024 * 1024;
+const MAX_TOTAL_SIZE = 4 * 1024 * 1024;
 
 export default function FileDropzone({ files, setFiles, label, hint, dragLabel }) {
   const inputRef = useRef(null);
@@ -12,10 +13,13 @@ export default function FileDropzone({ files, setFiles, label, hint, dragLabel }
 
   const addFiles = (list) => {
     const next = [...files];
+    let total = next.reduce((sum, f) => sum + f.size, 0);
     for (const f of Array.from(list)) {
       if (next.length >= MAX_FILES) break;
-      if (f.size > MAX_SIZE) continue;
+      if (f.size > MAX_FILE_SIZE) continue;
+      if (total + f.size > MAX_TOTAL_SIZE) continue;
       next.push(f);
+      total += f.size;
     }
     setFiles(next);
   };

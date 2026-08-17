@@ -389,7 +389,7 @@
         "message": "Erzählen Sie uns von Ihrem Fall",
         "messagePlaceholder": "Z. B. fehlender Zahn unten links, Krone abgebrochen, komplette Lächeln-Erneuerung gewünscht…",
         "upload": "OPG / Röntgenbild / Scans / Fotos hochladen",
-        "uploadHint": "JPG, PNG, PDF oder DICOM — bis zu 10 Dateien, je 15 MB",
+        "uploadHint": "JPG, PNG oder PDF — bis zu 5 Dateien, insgesamt 4 MB",
         "uploadDrag": "Dateien hierher ziehen oder klicken zum Auswählen",
         "consent": "Ich stimme zu, von der Poliklinika Bandić bezüglich meiner Anfrage kontaktiert zu werden, und willige ein, dass meine Daten und Dateien ausschließlich zu diesem Zweck verarbeitet werden.",
         "submit": "Fall für kostenloses Angebot senden"
@@ -646,7 +646,8 @@
       "email": "E-Mail",
       "phone": "Telefon",
       "message": "Nachricht",
-      "submit": "Nachricht senden"
+      "submit": "Nachricht senden",
+      "error": "Beim Senden Ihrer Nachricht ist ein Fehler aufgetreten. Bitte versuchen Sie es erneut oder schreiben Sie uns direkt an info@doc-bandic.com."
     },
     "infoTitle": "Klinikinformationen",
     "getDirections": "Route anzeigen"

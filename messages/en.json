@@ -389,7 +389,7 @@
         "message": "Tell us about your case",
         "messagePlaceholder": "E.g. missing tooth on lower left, had a crown break, want a full smile makeover…",
         "upload": "Upload OPG / X-ray / scans / photos",
-        "uploadHint": "JPG, PNG, PDF or DICOM — up to 10 files, 15 MB each",
+        "uploadHint": "JPG, PNG or PDF — up to 5 files, 4 MB total",
         "uploadDrag": "Drag & drop files here, or click to browse",
         "consent": "I agree to be contacted by Poliklinika Bandić about my enquiry and consent to my data and files being processed for this purpose only.",
         "submit": "Send my case for a free quote"
@@ -646,7 +646,8 @@
       "email": "Email",
       "phone": "Phone",
       "message": "Message",
-      "submit": "Send message"
+      "submit": "Send message",
+      "error": "Something went wrong while sending your message. Please try again or email us directly at info@doc-bandic.com."
     },
     "infoTitle": "Clinic information",
     "getDirections": "Get directions"

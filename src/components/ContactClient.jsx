@@ -2,26 +2,37 @@
 
 import { useState } from "react";
 import { useTranslations } from "next-intl";
-import { MapPin, Phone, Mail, Clock, MessageCircle, Send, CheckCircle2 } from "lucide-react";
+import { MapPin, Phone, Mail, Clock, MessageCircle, Send, CheckCircle2, AlertCircle } from "lucide-react";
 import PageHero from "@/components/PageHero";
 import Reveal from "@/components/Reveal";
 
 export default function ContactClient() {
   const t = useTranslations();
   const [sent, setSent] = useState(false);
+  const [sending, setSending] = useState(false);
+  const [error, setError] = useState(false);
   const [form, setForm] = useState({ name: "", email: "", phone: "", message: "" });
 
   const onChange = (e) => setForm({ ...form, [e.target.name]: e.target.value });
 
-  const onSubmit = (e) => {
+  const onSubmit = async (e) => {
     e.preventDefault();
-    const body = encodeURIComponent(
-      `${t("contact.form.name")}: ${form.name}\n${t("contact.form.phone")}: ${form.phone}\n\n${form.message}`
-    );
-    window.location.href = `mailto:info@doc-bandic.com?subject=${encodeURIComponent(
-      "Website enquiry — " + form.name
-    )}&body=${body}`;
-    setSent(true);
+    setSending(true);
+    setError(false);
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(form),
+      });
+      if (!res.ok) throw new Error("request failed");
+      setSent(true);
+    } catch {
+      setError(true);
+    } finally {
+      setSending(false);
+    }
   };
 
   const mapSrc = "https://www.google.com/maps?q=Antuna+Branka+Simica+2+Sarajevo&output=embed";
@@ -130,11 +141,20 @@ export default function ContactClient() {
                       className="mt-2 w-full rounded-xl border border-ink-900/10 bg-white px-4 py-3 outline-none focus:border-gold-400 focus:ring-2 focus:ring-gold-200"
                     />
                   </div>
+                  {error && (
+                    <p className="flex items-start gap-2.5 rounded-xl bg-red-50 px-4 py-3 text-sm text-red-700">
+                      <AlertCircle size={16} className="mt-0.5 shrink-0" />
+                      {t("contact.form.error")}
+                    </p>
+                  )}
+
                   <button
                     type="submit"
-                    className="w-full inline-flex items-center justify-center gap-2 rounded-full bg-ink-950 text-white font-semibold px-7 py-4 hover:bg-gold-600 transition-colors"
+                    disabled={sending}
+                    className="w-full inline-flex items-center justify-center gap-2 rounded-full bg-ink-950 text-white font-semibold px-7 py-4 hover:bg-gold-600 transition-colors disabled:cursor-not-allowed disabled:opacity-60"
                   >
-                    {t("contact.form.submit")} <Send size={16} />
+                    {sending ? t("common.sending") : t("contact.form.submit")}
+                    {!sending && <Send size={16} />}
                   </button>
                 </form>
               )}
