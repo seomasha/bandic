@@ -23,7 +23,7 @@ function HeroVideoBackground({ reduceMotion }) {
     <div className="absolute inset-0">
       <video
         ref={videoRef}
-        className="absolute inset-0 h-full w-full object-cover lg:object-contain"
+        className="absolute inset-0 h-full w-full object-cover lg:object-contain lg:scale-125"
         src="/hero1.MP4"
         autoPlay
         muted

@@ -22,7 +22,9 @@ export default async function Home({ params }) {
       <ServicesSection />
       <SectionDivider className="bg-cream py-2" />
       <TourismSection />
+      <SectionDivider className="bg-cream py-2" />
       <TestimonialsSection />
+      <SectionDivider className="bg-white py-2" />
       <FinalCtaSection />
     </div>
   );
