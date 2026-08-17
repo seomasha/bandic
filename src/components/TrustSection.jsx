@@ -186,14 +186,19 @@ export default function TrustSection() {
               <Layers size={15} className="text-gold-500" />
               {brands.title}
             </span>
-            <div className="flex flex-wrap items-center justify-center gap-3">
-              {["Straumann", "Neodent", "Bredent"].map((brand) => (
-                <span
-                  key={brand}
-                  className="rounded-full border border-gold-300/50 bg-gold-50 px-5 py-2 font-display text-base text-ink-800 transition-colors duration-300 hover:border-gold-400 hover:bg-gold-100 hover:text-gold-700"
-                >
-                  {brand}
-                </span>
+            <div className="flex flex-wrap items-center justify-center gap-x-10 gap-y-6">
+              {[
+                { src: "/brand/straumann.png", alt: "Straumann", h: "h-6 sm:h-7" },
+                { src: "/brand/neodent.png", alt: "Neodent", h: "h-7 sm:h-8" },
+                { src: "/brand/bredent.jpeg", alt: "bredent group", h: "h-7 sm:h-8" },
+              ].map((brand) => (
+                // eslint-disable-next-line @next/next/no-img-element
+                <img
+                  key={brand.alt}
+                  src={brand.src}
+                  alt={brand.alt}
+                  className={`${brand.h} w-auto object-contain grayscale opacity-70 transition-all duration-300 hover:grayscale-0 hover:opacity-100`}
+                />
               ))}
             </div>
           </div>
