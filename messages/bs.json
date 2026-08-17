@@ -1,5 +1,8 @@
 {
-  "meta": { "clinicName": "Poliklinika Bandić", "clinicFullName": "Dental Ortodont Centar dr Bandić" },
+  "meta": {
+    "clinicName": "Poliklinika Bandić",
+    "clinicFullName": "Dental Ortodont Centar dr Bandić"
+  },
   "nav": {
     "home": "Početna",
     "tourism": "Dentalni turizam",
@@ -34,19 +37,40 @@
     "hero": {
       "headline1": "Dođite u Sarajevo.",
       "headlineStatic": "Vratite se kući sa…",
-      "rotating": ["osmijehom vrijednim putovanja.", "samopouzdanjem koje se vidi.", "razlogom više za\nosmijeh."],
+      "rotating": [
+        "osmijehom vrijednim putovanja.",
+        "samopouzdanjem koje se vidi.",
+        "razlogom više za\nosmijeh."
+      ],
       "subtitle": "Stručna njega, moderna tehnologija i grad vrijedan posjete — uz povjerenje pacijenata iz cijele Evrope.",
       "ctaPrimary": "Zatražite besplatnu ponudu",
       "ctaSecondary": "Istražite dentalni turizam"
     },
     "stats": [
-      { "value": "20+", "label": "Doktora i stručnjaka" },
-      { "value": "11", "label": "Specijalista u timu" },
-      { "value": "2", "label": "Smjene rada, 07–21h" },
-      { "value": "Top 5", "label": "Ocijenjena klinika u BiH" }
+      {
+        "value": "20+",
+        "label": "Doktora i stručnjaka"
+      },
+      {
+        "value": "11",
+        "label": "Specijalista u timu"
+      },
+      {
+        "value": "2",
+        "label": "Smjene rada, 07–21h"
+      },
+      {
+        "value": "Top 5",
+        "label": "Ocijenjena klinika u BiH"
+      }
     ],
     "impact": {
-      "words": ["Iskustvo", "Stručnost", "Tehnologija", "Povjerenje"],
+      "words": [
+        "Iskustvo",
+        "Stručnost",
+        "Tehnologija",
+        "Povjerenje"
+      ],
       "dominantLabel": "Dentalnih stručnjaka",
       "dominantText": "Ortodoncija, oralna hirurgija, implantologija i protetika — specijalistička njega na jednom mjestu, ne opći doktori koji pokrivaju sve oblasti.",
       "specialistsLabel": "Specijalista",
@@ -61,24 +85,54 @@
       "headlineLine2": "Kompletno iskustvo.",
       "text": "Od napredne dijagnostike i specijalističke njege do transparentnog planiranja terapije — sve što vam treba za osmijeh, na jednom mjestu.",
       "reasons": [
-        { "title": "Specijalisti", "text": "11 specijalista iz različitih oblasti stomatologije." },
-        { "title": "Napredna tehnologija", "text": "Moderna dijagnostika, radiologija i savremena stomatološka tehnologija." },
-        { "title": "Transparentna njega", "text": "Jasno planiranje terapije i transparentne cijene." },
-        { "title": "Međunarodni pacijenti", "text": "Kompletno iskustvo dentalnog turizma za pacijente koji dolaze iz inostranstva." }
+        {
+          "title": "Specijalisti",
+          "text": "11 specijalista iz različitih oblasti stomatologije."
+        },
+        {
+          "title": "Napredna tehnologija",
+          "text": "Moderna dijagnostika, radiologija i savremena stomatološka tehnologija."
+        },
+        {
+          "title": "Transparentna njega",
+          "text": "Jasno planiranje terapije i transparentne cijene."
+        },
+        {
+          "title": "Međunarodni pacijenti",
+          "text": "Kompletno iskustvo dentalnog turizma za pacijente koji dolaze iz inostranstva."
+        }
       ]
     },
     "aboutKicker": "O poliklinici",
     "aboutTitle": "Moderna stomatologija u srcu Sarajeva",
-    "aboutText": "Poliklinika Bandić — Dental Ortodont Centar dr Bandić — jedan je od najmodernije opremljenih stomatoloških centara u Bosni i Hercegovini i regiji. Naš tim od preko 20 stručnjaka, uključujući specijaliste oralne hirurgije, implantologije, ortodoncije i protetike, radi u dvije dnevne smjene kako biste termin mogli dobiti rano ujutro ili nakon posla — od ponedjeljka do subote.",
+    "aboutText": "Poliklinika Bandić je jedna od najmodernije opremljenih stomatoloških klinika u Bosni i Hercegovini — mjesto gdje se ozbiljna njega ne podrazumijeva, nego dokazuje. Preko 20 specijalista, od oralne hirurgije do implantologije, ortodoncije i protetike, radi pod jednim krovom, u dvije smjene, od ponedjeljka do subote — tako da termin pronađete kad vama odgovara, a ne obrnuto.",
     "whyKicker": "Zašto nam pacijenti vjeruju",
     "whyTitle": "Njega zasnovana na preciznosti i povjerenju",
     "why": [
-      { "title": "Tim specijalista", "text": "11 specijalista u kući — ortodoncija, oralna hirurgija, implantologija i protetika — ne opći doktori koji pokrivaju sve oblasti." },
-      { "title": "Registrirani implantati s certifikatom", "text": "Svaki ugrađeni implantat registriran je kod Agencije za lijekove i medicinska sredstva BiH. Pacijenti dobijaju međunarodni pasoš implantata." },
-      { "title": "Svjetski priznati brendovi", "text": "Radimo sa globalno priznatim implant sistemima uključujući Straumann, Neodent i Bredent." },
-      { "title": "Dvije smjene, šest dana sedmično", "text": "Otvoreni ponedjeljak–petak 07:00–21:00 i subotom 08:00–16:00, prilagođeno onima koji ne mogu odsustvovati s posla u standardno radno vrijeme." },
-      { "title": "Zaista međunarodni pristup", "text": "U klinici se govori engleski i njemački jezik, a cijeli proces prilagođen je pacijentima koji dolaze iz inostranstva." },
-      { "title": "Transparentne cijene", "text": "Jasan, objavljen cjenovnik i besplatna personalizirana ponuda prije nego što uopće rezervišete let." }
+      {
+        "title": "Tim specijalista",
+        "text": "11 specijalista u kući — ortodoncija, oralna hirurgija, implantologija i protetika — ne opći doktori koji pokrivaju sve oblasti."
+      },
+      {
+        "title": "Registrirani implantati s certifikatom",
+        "text": "Svaki ugrađeni implantat registriran je kod Agencije za lijekove i medicinska sredstva BiH. Pacijenti dobijaju međunarodni pasoš implantata."
+      },
+      {
+        "title": "Svjetski priznati brendovi",
+        "text": "Radimo sa globalno priznatim implant sistemima uključujući Straumann, Neodent i Bredent."
+      },
+      {
+        "title": "Dvije smjene, šest dana sedmično",
+        "text": "Otvoreni ponedjeljak–petak 07:00–21:00 i subotom 08:00–16:00, prilagođeno onima koji ne mogu odsustvovati s posla u standardno radno vrijeme."
+      },
+      {
+        "title": "Zaista međunarodni pristup",
+        "text": "U klinici se govori engleski i njemački jezik, a cijeli proces prilagođen je pacijentima koji dolaze iz inostranstva."
+      },
+      {
+        "title": "Transparentne cijene",
+        "text": "Jasan, objavljen cjenovnik i besplatna personalizirana ponuda prije nego što uopće rezervišete let."
+      }
     ],
     "servicesKicker": "Šta liječimo",
     "servicesTitle": "Kompletna stomatološka njega na jednom mjestu",
@@ -158,25 +212,73 @@
     "why": {
       "title": "Zašto pacijenti dolaze u Sarajevo na liječenje zuba",
       "items": [
-        { "title": "Stvarna ušteda", "text": "Obično 50–75% jeftinije nego uporedivo privatno liječenje u Njemačkoj, Austriji, Švicarskoj ili Velikoj Britaniji — pogledajte poređenje ispod." },
-        { "title": "Materijali priznati u EU", "text": "Implantati i keramika od međunarodno certificiranih brendova (Straumann, Neodent, Bredent), registrirani kod Agencije za lijekove i medicinska sredstva BiH." },
-        { "title": "Bez jezične barijere", "text": "Konsultacije dostupne na engleskom i njemačkom jeziku, uz jasno objašnjenu svu dokumentaciju prije nego što se na bilo šta obavežete." },
-        { "title": "Kratko i jednostavno putovanje", "text": "Direktni ili jednopresjedni letovi iz većine evropskih čvorišta; ulazak bez vize za građane EU, Velike Britanije, SAD-a, Švicarske i većine evropskih zemalja." },
-        { "title": "Grad vrijedan posjete", "text": "Sarajevo spaja šarm osmanske čaršije, austrougarsku arhitekturu i zaista niske troškove života — mnogi pacijenti liječenje pretvore u kratki odmor." },
-        { "title": "Jedna kontakt osoba", "text": "Posvećeni koordinator vodi vašu ponudu, zakazivanje i sva pitanja od prve poruke do povratnog leta." }
+        {
+          "title": "Stvarna ušteda",
+          "text": "Obično 50–75% jeftinije nego uporedivo privatno liječenje u Njemačkoj, Austriji, Švicarskoj ili Velikoj Britaniji — pogledajte poređenje ispod."
+        },
+        {
+          "title": "Materijali priznati u EU",
+          "text": "Implantati i keramika od međunarodno certificiranih brendova (Straumann, Neodent, Bredent), registrirani kod Agencije za lijekove i medicinska sredstva BiH."
+        },
+        {
+          "title": "Bez jezične barijere",
+          "text": "Konsultacije dostupne na engleskom i njemačkom jeziku, uz jasno objašnjenu svu dokumentaciju prije nego što se na bilo šta obavežete."
+        },
+        {
+          "title": "Kratko i jednostavno putovanje",
+          "text": "Direktni ili jednopresjedni letovi iz većine evropskih čvorišta; ulazak bez vize za građane EU, Velike Britanije, SAD-a, Švicarske i većine evropskih zemalja."
+        },
+        {
+          "title": "Grad vrijedan posjete",
+          "text": "Sarajevo spaja šarm osmanske čaršije, austrougarsku arhitekturu i zaista niske troškove života — mnogi pacijenti liječenje pretvore u kratki odmor."
+        },
+        {
+          "title": "Jedna kontakt osoba",
+          "text": "Posvećeni koordinator vodi vašu ponudu, zakazivanje i sva pitanja od prve poruke do povratnog leta."
+        }
       ]
     },
     "comparison": {
       "kicker": "Poređenje cijena",
       "title": "Sarajevo naspram zapadne Evrope",
       "subtitle": "Okvirne cijene za najčešće tretmane. Tačna cijena zavisi od individualne dijagnoze — zatražite besplatnu personaliziranu ponudu za tačan iznos.",
-      "headers": { "treatment": "Tretman", "sarajevo": "Poliklinika Bandić (Sarajevo)", "europe": "Zapadna Evropa (prosjek)*", "savings": "Ušteda do" },
+      "headers": {
+        "treatment": "Tretman",
+        "sarajevo": "Poliklinika Bandić (Sarajevo)",
+        "europe": "Zapadna Evropa (prosjek)*",
+        "savings": "Ušteda do"
+      },
       "rows": [
-        { "treatment": "Stomatološki pregled i konsultacija", "sarajevo": "30 KM (~15 €)", "europe": "50 – 80 €", "savings": "70%" },
-        { "treatment": "Jedan zubni implant (od)", "sarajevo": "800 KM (~410 €)", "europe": "1.400 – 3.500 €", "savings": "75%" },
-        { "treatment": "Nemetalna keramička krunica (Emax)", "sarajevo": "450 KM (~230 €)", "europe": "500 – 900 €", "savings": "60%" },
-        { "treatment": "Fiksni metalokeramički aparatić, cijela terapija", "sarajevo": "~2.000 KM (~1.020 €)", "europe": "2.500 – 5.000 €", "savings": "70%" },
-        { "treatment": "Profesionalno ordinacijsko izbjeljivanje zuba", "sarajevo": "300 – 400 KM (~155 – 205 €)", "europe": "400 – 900 €", "savings": "60%" }
+        {
+          "treatment": "Stomatološki pregled i konsultacija",
+          "sarajevo": "30 KM (~15 €)",
+          "europe": "50 – 80 €",
+          "savings": "70%"
+        },
+        {
+          "treatment": "Jedan zubni implant (od)",
+          "sarajevo": "800 KM (~410 €)",
+          "europe": "1.400 – 3.500 €",
+          "savings": "75%"
+        },
+        {
+          "treatment": "Nemetalna keramička krunica (Emax)",
+          "sarajevo": "450 KM (~230 €)",
+          "europe": "500 – 900 €",
+          "savings": "60%"
+        },
+        {
+          "treatment": "Fiksni metalokeramički aparatić, cijela terapija",
+          "sarajevo": "~2.000 KM (~1.020 €)",
+          "europe": "2.500 – 5.000 €",
+          "savings": "70%"
+        },
+        {
+          "treatment": "Profesionalno ordinacijsko izbjeljivanje zuba",
+          "sarajevo": "300 – 400 KM (~155 – 205 €)",
+          "europe": "400 – 900 €",
+          "savings": "60%"
+        }
       ],
       "footnote": "* Cijene za Sarajevo preuzete su iz aktuelnog cjenovnika Poliklinike Bandić (2026). Iznosi za zapadnu Evropu su okvirni prosjeci sastavljeni iz objavljenih izvora za Njemačku, Austriju i Veliku Britaniju, prikazani isključivo radi orijentacije — stvarne cijene klinika variraju. Preračunato po fiksnom kursu 1 EUR = 1,95583 KM."
     },
@@ -185,23 +287,68 @@
       "title": "Koliko dugo treba da ostanete?",
       "subtitle": "Opći vodič — vaš stomatolog potvrdiće tačno vrijeme čim plan terapije bude gotov.",
       "items": [
-        { "title": "Pregled, čišćenje i manje plombe", "duration": "1 – 2 dana", "visits": "1 posjeta", "text": "Dijagnostika i terapija obično se mogu obaviti u jednoj kratkoj posjeti." },
-        { "title": "Izbjeljivanje zuba", "duration": "1 dan", "visits": "1 posjeta", "text": "Ordinacijsko izbjeljivanje se završava u jednom terminu." },
-        { "title": "Krunice, mostovi i ljuskice", "duration": "5 – 7 dana", "visits": "1 posjeta", "text": "Vrijeme potrebno za pripremu, precizno postavljanje i eventualni laboratorijski rad između termina." },
-        { "title": "Zubni implantati", "duration": "3 – 5 dana, zatim 3 – 6 mjeseci zarastanja, pa 3 – 5 dana", "visits": "2 posjete", "text": "Prva posjeta: pregled i ugradnja implantata. Nakon što kost zaraste kod kuće, kratka druga posjeta za finalnu krunicu ili most." },
-        { "title": "Kompletna rehabilitacija zuba", "duration": "7 – 10 dana, plus kontrolna posjeta od 5 – 7 dana", "visits": "2 posjete", "text": "Složeni slučajevi s više zuba planiraju se kroz dvije posjete uz period zarastanja između njih." },
-        { "title": "Ortodoncija (aparatići)", "duration": "2 – 3 dana za postavljanje, zatim periodične kontrole", "visits": "Kontinuirano, svakih 6 – 10 sedmica", "text": "Najpogodnije za pacijente koji mogu redovno dolaziti, ili u kombinaciji s praćenjem na daljinu između kontrola." }
+        {
+          "title": "Pregled, čišćenje i manje plombe",
+          "duration": "1 – 2 dana",
+          "visits": "1 posjeta",
+          "text": "Dijagnostika i terapija obično se mogu obaviti u jednoj kratkoj posjeti."
+        },
+        {
+          "title": "Izbjeljivanje zuba",
+          "duration": "1 dan",
+          "visits": "1 posjeta",
+          "text": "Ordinacijsko izbjeljivanje se završava u jednom terminu."
+        },
+        {
+          "title": "Krunice, mostovi i ljuskice",
+          "duration": "5 – 7 dana",
+          "visits": "1 posjeta",
+          "text": "Vrijeme potrebno za pripremu, precizno postavljanje i eventualni laboratorijski rad između termina."
+        },
+        {
+          "title": "Zubni implantati",
+          "duration": "3 – 5 dana, zatim 3 – 6 mjeseci zarastanja, pa 3 – 5 dana",
+          "visits": "2 posjete",
+          "text": "Prva posjeta: pregled i ugradnja implantata. Nakon što kost zaraste kod kuće, kratka druga posjeta za finalnu krunicu ili most."
+        },
+        {
+          "title": "Kompletna rehabilitacija zuba",
+          "duration": "7 – 10 dana, plus kontrolna posjeta od 5 – 7 dana",
+          "visits": "2 posjete",
+          "text": "Složeni slučajevi s više zuba planiraju se kroz dvije posjete uz period zarastanja između njih."
+        },
+        {
+          "title": "Ortodoncija (aparatići)",
+          "duration": "2 – 3 dana za postavljanje, zatim periodične kontrole",
+          "visits": "Kontinuirano, svakih 6 – 10 sedmica",
+          "text": "Najpogodnije za pacijente koji mogu redovno dolaziti, ili u kombinaciji s praćenjem na daljinu između kontrola."
+        }
       ]
     },
     "process": {
       "kicker": "Kako funkcioniše",
       "title": "Od prve poruke do novog osmijeha",
       "steps": [
-        { "title": "Pošaljite RTG snimak i fotografije", "text": "Učitajte OPG / panoramski snimak, eventualne CT snimke i nekoliko fotografija osmijeha putem forme ispod — termin još nije potreban." },
-        { "title": "Dobijte besplatan plan terapije", "text": "Naši specijalisti pregledaju vaš slučaj i odgovaraju s pisanim planom, vremenskim okvirom i cijenom — obično u roku od 1–2 radna dana." },
-        { "title": "Rezervišite termin", "text": "Kada budete zadovoljni planom, pomažemo vam odabrati datume putovanja i dijelimo praktične savjete o letovima i smještaju." },
-        { "title": "Liječenje u Sarajevu", "text": "Vaš koordinator dočekuje vas u klinici, vodi vas kroz svaki termin i pobrinut će se da ništa ne bude nepoznato." },
-        { "title": "Njega nakon terapije, gdje god bili", "text": "Odlazite s kompletnom dokumentacijom, pasošem implantata gdje je primjenjivo i direktnom linijom s vašim stomatologom za sva naknadna pitanja." }
+        {
+          "title": "Pošaljite RTG snimak i fotografije",
+          "text": "Učitajte OPG / panoramski snimak, eventualne CT snimke i nekoliko fotografija osmijeha putem forme ispod — termin još nije potreban."
+        },
+        {
+          "title": "Dobijte besplatan plan terapije",
+          "text": "Naši specijalisti pregledaju vaš slučaj i odgovaraju s pisanim planom, vremenskim okvirom i cijenom — obično u roku od 1–2 radna dana."
+        },
+        {
+          "title": "Rezervišite termin",
+          "text": "Kada budete zadovoljni planom, pomažemo vam odabrati datume putovanja i dijelimo praktične savjete o letovima i smještaju."
+        },
+        {
+          "title": "Liječenje u Sarajevu",
+          "text": "Vaš koordinator dočekuje vas u klinici, vodi vas kroz svaki termin i pobrinut će se da ništa ne bude nepoznato."
+        },
+        {
+          "title": "Njega nakon terapije, gdje god bili",
+          "text": "Odlazite s kompletnom dokumentacijom, pasošem implantata gdje je primjenjivo i direktnom linijom s vašim stomatologom za sva naknadna pitanja."
+        }
       ]
     },
     "form": {
@@ -224,18 +371,41 @@
         "consent": "Slažem se da me Poliklinika Bandić kontaktira povodom mog upita i dajem saglasnost da se moji podaci i fajlovi obrađuju isključivo u tu svrhu.",
         "submit": "Pošaljite slučaj za besplatnu ponudu"
       },
-      "treatments": ["Zubni implantati", "Krunice / mostovi / ljuskice", "Ortodoncija / aparatići", "Kompletna rehabilitacija zuba", "Izbjeljivanje zuba", "Opći pregled", "Još nisam siguran/na"],
+      "treatments": [
+        "Zubni implantati",
+        "Krunice / mostovi / ljuskice",
+        "Ortodoncija / aparatići",
+        "Kompletna rehabilitacija zuba",
+        "Izbjeljivanje zuba",
+        "Opći pregled",
+        "Još nisam siguran/na"
+      ],
       "success": "Hvala vam — vaš upit je zaprimljen. Specijalista će vam odgovoriti u roku od 1–2 radna dana.",
       "error": "Došlo je do greške prilikom slanja upita. Pokušajte ponovo ili nam pišite direktno na info@doc-bandic.com."
     },
     "faq": {
       "title": "Često postavljana pitanja",
       "items": [
-        { "q": "Da li je početna ponuda zaista besplatna?", "a": "Da. Pošaljite RTG, snimke ili fotografije, a naši specijalisti će pregledati vaš slučaj i poslati pisani plan terapije s cijenom, potpuno besplatno i bez obaveze zakazivanja." },
-        { "q": "Šta ako još nemam OPG ili RTG snimak?", "a": "U redu je — opišite svoju situaciju u polju za poruku koliko god možete, ili planirajte pregled i snimanje uživo prvog dana u klinici." },
-        { "q": "Da li se govori engleski ili njemački jezik?", "a": "Da, oba jezika se govore u klinici, a svi planovi terapije i dokumentacija mogu se dostaviti na engleskom ili njemačkom jeziku." },
-        { "q": "Možete li pomoći sa smještajem ili prevozom?", "a": "Naš koordinator dijeli preporuke za hotele u blizini klinike i može savjetovati oko transfera sa aerodroma, iako rezervacije pacijent obavlja samostalno." },
-        { "q": "Kako se plaća?", "a": "U klinici se prihvata plaćanje karticom i gotovinom. Detalji plaćanja za vaš konkretan plan terapije potvrđuju se zajedno s ponudom." }
+        {
+          "q": "Da li je početna ponuda zaista besplatna?",
+          "a": "Da. Pošaljite RTG, snimke ili fotografije, a naši specijalisti će pregledati vaš slučaj i poslati pisani plan terapije s cijenom, potpuno besplatno i bez obaveze zakazivanja."
+        },
+        {
+          "q": "Šta ako još nemam OPG ili RTG snimak?",
+          "a": "U redu je — opišite svoju situaciju u polju za poruku koliko god možete, ili planirajte pregled i snimanje uživo prvog dana u klinici."
+        },
+        {
+          "q": "Da li se govori engleski ili njemački jezik?",
+          "a": "Da, oba jezika se govore u klinici, a svi planovi terapije i dokumentacija mogu se dostaviti na engleskom ili njemačkom jeziku."
+        },
+        {
+          "q": "Možete li pomoći sa smještajem ili prevozom?",
+          "a": "Naš koordinator dijeli preporuke za hotele u blizini klinike i može savjetovati oko transfera sa aerodroma, iako rezervacije pacijent obavlja samostalno."
+        },
+        {
+          "q": "Kako se plaća?",
+          "a": "U klinici se prihvata plaćanje karticom i gotovinom. Detalji plaćanja za vaš konkretan plan terapije potvrđuju se zajedno s ponudom."
+        }
       ]
     }
   },
@@ -246,13 +416,41 @@
       "subtitle": "Poliklinika Bandić okuplja specijaliste ortodoncije, oralne hirurgije, implantologije i protetike — koji rade u dvije dnevne smjene kako bi specijalistička njega uvijek bila dostupna."
     },
     "doctors": [
-      { "name": "Amela Bandić", "title": "Direktorica · Specijalista čeljusne ortopedije i ortodoncije", "text": "Vodi ortodontski program klinike, od ranog usmjeravanja rasta vilice kod djece do fiksnih i estetskih aparatića za odrasle." },
-      { "name": "Prim. mr. sc. dr. Slobodan Trninić", "title": "Specijalista oralne hirurgije", "text": "Iskusni oralni hirurg koji rukovodi složenim ekstrakcijama, vađenjem umnjaka i hirurškom pripremom pred implantaciju." },
-      { "name": "Jasmin Neimarlija", "title": "Specijalista oralne hirurgije i implantologije", "text": "Fokusiran na ugradnju implantata i hirurško planiranje, radi sa sistemima Straumann, Neodent i Bredent." },
-      { "name": "Olivera Popović", "title": "Specijalista stomatološke protetike", "text": "Kreira fiksna i mobilna protetska rješenja, od pojedinačnih krunica do potpune rehabilitacije zuba." },
-      { "name": "Nermana Mašić", "title": "Specijalista stomatološke protetike", "text": "Blisko sarađuje s timom implantologa na izradi preciznih krunica i mostova prirodnog izgleda." },
-      { "name": "Jasmina Kozadra", "title": "Specijalista ortodoncije", "text": "Planira i prati ortodontsku terapiju kod mlađih pacijenata i odraslih." },
-      { "name": "Srđan Dizdarević", "title": "Doktor stomatologije", "text": "Pruža svakodnevnu konzervativnu i opću stomatološku njegu pacijentima svih uzrasta." }
+      {
+        "name": "Amela Bandić",
+        "title": "Direktorica · Specijalista čeljusne ortopedije i ortodoncije",
+        "text": "Vodi ortodontski program klinike, od ranog usmjeravanja rasta vilice kod djece do fiksnih i estetskih aparatića za odrasle."
+      },
+      {
+        "name": "Prim. mr. sc. dr. Slobodan Trninić",
+        "title": "Specijalista oralne hirurgije",
+        "text": "Iskusni oralni hirurg koji rukovodi složenim ekstrakcijama, vađenjem umnjaka i hirurškom pripremom pred implantaciju."
+      },
+      {
+        "name": "Jasmin Neimarlija",
+        "title": "Specijalista oralne hirurgije i implantologije",
+        "text": "Fokusiran na ugradnju implantata i hirurško planiranje, radi sa sistemima Straumann, Neodent i Bredent."
+      },
+      {
+        "name": "Olivera Popović",
+        "title": "Specijalista stomatološke protetike",
+        "text": "Kreira fiksna i mobilna protetska rješenja, od pojedinačnih krunica do potpune rehabilitacije zuba."
+      },
+      {
+        "name": "Nermana Mašić",
+        "title": "Specijalista stomatološke protetike",
+        "text": "Blisko sarađuje s timom implantologa na izradi preciznih krunica i mostova prirodnog izgleda."
+      },
+      {
+        "name": "Jasmina Kozadra",
+        "title": "Specijalista ortodoncije",
+        "text": "Planira i prati ortodontsku terapiju kod mlađih pacijenata i odraslih."
+      },
+      {
+        "name": "Srđan Dizdarević",
+        "title": "Doktor stomatologije",
+        "text": "Pruža svakodnevnu konzervativnu i opću stomatološku njegu pacijentima svih uzrasta."
+      }
     ],
     "note": "Naš kompletan tim broji 11 stomatoloških specijalista i više od 20 uposlenika ukupno, uključujući specijalizirane stomatološke sestre i koordinatore, koji rade u dvije smjene kako bi termini bili dostupni od ranog jutra do večeri."
   },
@@ -267,56 +465,158 @@
       {
         "title": "Konzervativna stomatologija",
         "items": [
-          { "name": "Pregled i konsultacija", "price": "30 KM", "eur": "~15 €" },
-          { "name": "Specijalistička konsultacija", "price": "80 KM", "eur": "~41 €" },
-          { "name": "Lokalna anestezija", "price": "10 KM", "eur": "~5 €" },
-          { "name": "Hitna stomatološka intervencija", "price": "30 KM", "eur": "~15 €" },
-          { "name": "Jednopovršinska plomba", "price": "50 KM", "eur": "~26 €" },
-          { "name": "Dvopovršinska plomba", "price": "60 KM", "eur": "~31 €" }
+          {
+            "name": "Pregled i konsultacija",
+            "price": "30 KM",
+            "eur": "~15 €"
+          },
+          {
+            "name": "Specijalistička konsultacija",
+            "price": "80 KM",
+            "eur": "~41 €"
+          },
+          {
+            "name": "Lokalna anestezija",
+            "price": "10 KM",
+            "eur": "~5 €"
+          },
+          {
+            "name": "Hitna stomatološka intervencija",
+            "price": "30 KM",
+            "eur": "~15 €"
+          },
+          {
+            "name": "Jednopovršinska plomba",
+            "price": "50 KM",
+            "eur": "~26 €"
+          },
+          {
+            "name": "Dvopovršinska plomba",
+            "price": "60 KM",
+            "eur": "~31 €"
+          }
         ]
       },
       {
         "title": "Ortodoncija",
         "items": [
-          { "name": "Specijalistički pregled i ortodontska konsultacija", "price": "50 KM", "eur": "~26 €" },
-          { "name": "Mobilni aparatić (aktivna pločica)", "price": "400 KM", "eur": "~205 €" },
-          { "name": "Funkcionalni aparatić", "price": "350 KM", "eur": "~179 €" },
-          { "name": "Konvencionalni fiksni aparatić (po vilici)", "price": "1.000 KM", "eur": "~511 €" },
-          { "name": "Mini bracket fiksni aparatić (po vilici)", "price": "1.500 KM", "eur": "~767 €" },
-          { "name": "Estetski keramički aparatić (po vilici)", "price": "1.750 KM", "eur": "~895 €" },
-          { "name": "Samoligirajući aparatić (po vilici)", "price": "2.000 KM", "eur": "~1.023 €" },
-          { "name": "Samoligirajući estetski aparatić (po vilici)", "price": "2.250 KM", "eur": "~1.150 €" },
-          { "name": "Teže funkcionalne nepravilnosti (obje vilice)", "price": "6.000 KM", "eur": "~3.068 €" }
+          {
+            "name": "Specijalistički pregled i ortodontska konsultacija",
+            "price": "50 KM",
+            "eur": "~26 €"
+          },
+          {
+            "name": "Mobilni aparatić (aktivna pločica)",
+            "price": "400 KM",
+            "eur": "~205 €"
+          },
+          {
+            "name": "Funkcionalni aparatić",
+            "price": "350 KM",
+            "eur": "~179 €"
+          },
+          {
+            "name": "Konvencionalni fiksni aparatić (po vilici)",
+            "price": "1.000 KM",
+            "eur": "~511 €"
+          },
+          {
+            "name": "Mini bracket fiksni aparatić (po vilici)",
+            "price": "1.500 KM",
+            "eur": "~767 €"
+          },
+          {
+            "name": "Estetski keramički aparatić (po vilici)",
+            "price": "1.750 KM",
+            "eur": "~895 €"
+          },
+          {
+            "name": "Samoligirajući aparatić (po vilici)",
+            "price": "2.000 KM",
+            "eur": "~1.023 €"
+          },
+          {
+            "name": "Samoligirajući estetski aparatić (po vilici)",
+            "price": "2.250 KM",
+            "eur": "~1.150 €"
+          },
+          {
+            "name": "Teže funkcionalne nepravilnosti (obje vilice)",
+            "price": "6.000 KM",
+            "eur": "~3.068 €"
+          }
         ]
       },
       {
         "title": "Implantologija",
         "items": [
-          { "name": "Prvi pregled i pisani plan terapije", "price": "50 KM", "eur": "~26 €" },
-          { "name": "Zubni implant — standard", "price": "800 KM", "eur": "~410 €" },
-          { "name": "Zubni implant — napredni", "price": "1.000 KM", "eur": "~511 €" },
-          { "name": "Zubni implant — premium", "price": "1.200 KM", "eur": "~613 €" },
-          { "name": "Nadogradnja implantata", "price": "od 200 KM", "eur": "~102 €" }
+          {
+            "name": "Prvi pregled i pisani plan terapije",
+            "price": "50 KM",
+            "eur": "~26 €"
+          },
+          {
+            "name": "Zubni implant — standard",
+            "price": "800 KM",
+            "eur": "~410 €"
+          },
+          {
+            "name": "Zubni implant — napredni",
+            "price": "1.000 KM",
+            "eur": "~511 €"
+          },
+          {
+            "name": "Zubni implant — premium",
+            "price": "1.200 KM",
+            "eur": "~613 €"
+          },
+          {
+            "name": "Nadogradnja implantata",
+            "price": "od 200 KM",
+            "eur": "~102 €"
+          }
         ]
       },
       {
         "title": "Protetika",
         "items": [
-          { "name": "Nemetalna keramička krunica (Emax)", "price": "450 KM", "eur": "~230 €" }
+          {
+            "name": "Nemetalna keramička krunica (Emax)",
+            "price": "450 KM",
+            "eur": "~230 €"
+          }
         ]
       },
       {
         "title": "Estetska stomatologija",
         "items": [
-          { "name": "Ordinacijsko (power) izbjeljivanje", "price": "300 KM", "eur": "~153 €", "note": "promotivna cijena, redovno 500 KM" },
-          { "name": "Izbjeljivanje lampom", "price": "400 KM", "eur": "~205 €", "note": "promotivna cijena, redovno 700 KM" }
+          {
+            "name": "Ordinacijsko (power) izbjeljivanje",
+            "price": "300 KM",
+            "eur": "~153 €",
+            "note": "promotivna cijena, redovno 500 KM"
+          },
+          {
+            "name": "Izbjeljivanje lampom",
+            "price": "400 KM",
+            "eur": "~205 €",
+            "note": "promotivna cijena, redovno 700 KM"
+          }
         ]
       }
     ],
-    "cta": { "title": "Ne vidite svoj tretman na listi?", "text": "Cijene variraju u zavisnosti od složenosti slučaja i korištenih materijala. Pošaljite nam podatke za besplatnu, personaliziranu ponudu.", "button": "Zatražite besplatnu ponudu" }
+    "cta": {
+      "title": "Ne vidite svoj tretman na listi?",
+      "text": "Cijene variraju u zavisnosti od složenosti slučaja i korištenih materijala. Pošaljite nam podatke za besplatnu, personaliziranu ponudu.",
+      "button": "Zatražite besplatnu ponudu"
+    }
   },
   "contact": {
-    "hero": { "kicker": "Kontakt", "title": "Razgovarajmo o vašem osmijehu", "subtitle": "Pozovite, pišite nam na WhatsApp/Viber ili pošaljite upit — naš tim odgovara brzo." },
+    "hero": {
+      "kicker": "Kontakt",
+      "title": "Razgovarajmo o vašem osmijehu",
+      "subtitle": "Pozovite, pišite nam na WhatsApp/Viber ili pošaljite upit — naš tim odgovara brzo."
+    },
     "form": {
       "title": "Pošaljite nam poruku",
       "name": "Ime i prezime",

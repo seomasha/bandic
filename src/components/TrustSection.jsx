@@ -2,7 +2,7 @@
 
 import { useRef, useState } from "react";
 import { useTranslations } from "next-intl";
-import { motion, useScroll, useTransform, useReducedMotion, animate } from "framer-motion";
+import { motion, useReducedMotion, animate } from "framer-motion";
 import { Globe2, ReceiptText, Layers, ShieldCheck } from "lucide-react";
 
 const EASE = [0.16, 1, 0.3, 1];
@@ -33,7 +33,7 @@ function CountUp({ value, suffix = "", duration = 2.4 }) {
       initial={{ opacity: 0, scale: 0.8 }}
       whileInView={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.5, ease: EASE }}
-      className="inline-block"
+      className="inline-block lining-nums tabular-nums"
     >
       {display}
       {suffix}
@@ -68,19 +68,13 @@ export default function TrustSection() {
   const why = t.raw("home.why");
   const words = t.raw("home.impact.words");
 
-  const sectionRef = useRef(null);
-  const reduceMotion = useReducedMotion();
-  const { scrollYProgress } = useScroll({ target: sectionRef, offset: ["start end", "end start"] });
-  const parallaxA = useTransform(scrollYProgress, [0, 1], reduceMotion ? [0, 0] : [-16, 16]);
-  const parallaxB = useTransform(scrollYProgress, [0, 1], reduceMotion ? [0, 0] : [14, -14]);
-
   const brands = why[2];
   const pricing = why[5];
   const international = why[4];
   const certifiedImplants = why[1];
 
   return (
-    <section ref={sectionRef} className="relative bg-cream py-24 lg:py-36 overflow-hidden">
+    <section className="relative bg-cream py-24 lg:py-36 overflow-hidden">
       <div className="absolute inset-0 noise-overlay opacity-60" />
 
       <div className="relative mx-auto max-w-7xl px-5 lg:px-8">
@@ -144,9 +138,10 @@ export default function TrustSection() {
           <Reveal from="up" delay={0.22}>
             <div className="group flex h-full flex-col items-center justify-center rounded-3xl border border-ink-900/10 bg-white px-6 py-10 text-center shadow-sm shadow-ink-900/5 transition-all duration-300 hover:-translate-y-1 hover:border-gold-300 hover:shadow-lg hover:shadow-gold-900/10">
               <p className="font-display text-5xl font-semibold text-ink-950 transition-colors duration-300 group-hover:text-gold-600">
-                <CountUp value={6} duration={1.8} /> {t("home.impact.daysUnit")}
+                <CountUp value={6} duration={1.8} />
               </p>
-              <p className="mt-2 text-sm font-medium text-ink-500">{t("home.impact.daysLabel")}</p>
+              <p className="mt-2 text-sm font-medium text-ink-500">{t("home.impact.daysUnit")}</p>
+              <p className="mt-2 text-xs font-semibold tracking-wide text-gold-600">{t("home.impact.daysLabel")}</p>
             </div>
           </Reveal>
 
@@ -162,30 +157,26 @@ export default function TrustSection() {
           </Reveal>
 
           {/* international patients */}
-          <motion.div style={{ y: parallaxA }}>
-            <Reveal from="up" delay={0.32} className="h-full">
-              <div className="group flex h-full flex-col items-center rounded-3xl border border-ink-900/10 bg-white px-6 py-8 text-center shadow-sm shadow-ink-900/5 transition-all duration-300 hover:-translate-y-1 hover:border-gold-300 hover:shadow-lg hover:shadow-gold-900/10">
-                <span className="flex h-11 w-11 items-center justify-center rounded-full bg-gold-100 transition-transform duration-300 group-hover:scale-110">
-                  <Globe2 size={20} className="text-gold-600" />
-                </span>
-                <p className="mt-4 text-lg font-semibold text-ink-950 leading-snug">{international.title}</p>
-                <p className="mt-2 text-sm leading-relaxed text-ink-500">{international.text}</p>
-              </div>
-            </Reveal>
-          </motion.div>
+          <Reveal from="up" delay={0.32} className="h-full">
+            <div className="group flex h-full flex-col items-center rounded-3xl border border-ink-900/10 bg-white px-6 py-8 text-center shadow-sm shadow-ink-900/5 transition-all duration-300 hover:-translate-y-1 hover:border-gold-300 hover:shadow-lg hover:shadow-gold-900/10">
+              <span className="flex h-11 w-11 items-center justify-center rounded-full bg-gold-100 transition-transform duration-300 group-hover:scale-110">
+                <Globe2 size={20} className="text-gold-600" />
+              </span>
+              <p className="mt-4 text-lg font-semibold text-ink-950 leading-snug">{international.title}</p>
+              <p className="mt-2 text-sm leading-relaxed text-ink-500">{international.text}</p>
+            </div>
+          </Reveal>
 
           {/* transparent pricing */}
-          <motion.div style={{ y: parallaxB }}>
-            <Reveal from="up" delay={0.36} className="h-full">
-              <div className="group flex h-full flex-col items-center rounded-3xl border border-ink-900/10 bg-white px-6 py-8 text-center shadow-sm shadow-ink-900/5 transition-all duration-300 hover:-translate-y-1 hover:border-gold-300 hover:shadow-lg hover:shadow-gold-900/10">
-                <span className="flex h-11 w-11 items-center justify-center rounded-full bg-gold-100 transition-transform duration-300 group-hover:scale-110">
-                  <ReceiptText size={20} className="text-gold-600" />
-                </span>
-                <p className="mt-4 text-lg font-semibold text-ink-950 leading-snug">{pricing.title}</p>
-                <p className="mt-2 text-sm leading-relaxed text-ink-500">{pricing.text}</p>
-              </div>
-            </Reveal>
-          </motion.div>
+          <Reveal from="up" delay={0.36} className="h-full">
+            <div className="group flex h-full flex-col items-center rounded-3xl border border-ink-900/10 bg-white px-6 py-8 text-center shadow-sm shadow-ink-900/5 transition-all duration-300 hover:-translate-y-1 hover:border-gold-300 hover:shadow-lg hover:shadow-gold-900/10">
+              <span className="flex h-11 w-11 items-center justify-center rounded-full bg-gold-100 transition-transform duration-300 group-hover:scale-110">
+                <ReceiptText size={20} className="text-gold-600" />
+              </span>
+              <p className="mt-4 text-lg font-semibold text-ink-950 leading-snug">{pricing.title}</p>
+              <p className="mt-2 text-sm leading-relaxed text-ink-500">{pricing.text}</p>
+            </div>
+          </Reveal>
         </div>
 
         {/* brands — centered badge row */}
