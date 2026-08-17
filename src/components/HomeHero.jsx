@@ -101,7 +101,7 @@ export default function HomeHero() {
         >
           <Link
             href="/dental-tourism#quote"
-            className="group inline-flex items-center gap-2 rounded-full bg-cream text-ink-950 font-semibold px-7 py-4 hover:bg-white transition-colors"
+            className="btn-glow group inline-flex items-center gap-2 rounded-full bg-cream text-ink-950 font-semibold px-7 py-4 hover:bg-white transition-colors"
           >
             {t("ctaPrimary")}
             <ArrowRight size={18} className="text-gold-600 group-hover:translate-x-1 transition-transform" />
@@ -114,6 +114,15 @@ export default function HomeHero() {
             {t("ctaSecondary")}
           </Link>
         </motion.div>
+
+        <motion.p
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.8, delay: 1.05, ease: EASE }}
+          className="mt-5 text-xs font-medium tracking-wide text-white/50"
+        >
+          {t("ctaNote")}
+        </motion.p>
       </div>
 
       {/* scroll indicator */}

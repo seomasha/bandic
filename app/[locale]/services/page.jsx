@@ -30,7 +30,8 @@ export default async function Services({ params }) {
             return (
               <Reveal key={s.slug} delay={i * 0.04}>
                 <div
-                  className={`grid lg:grid-cols-[0.9fr_1.3fr] gap-8 items-center rounded-3xl border border-ink-900/5 p-8 lg:p-10 hover:border-gold-300 transition-colors ${
+                  id={s.slug}
+                  className={`grid scroll-mt-28 lg:grid-cols-[0.9fr_1.3fr] gap-8 items-center rounded-3xl border border-ink-900/5 p-8 lg:p-10 hover:border-gold-300 transition-colors ${
                     reverse ? "bg-cream" : "bg-white"
                   }`}
                 >

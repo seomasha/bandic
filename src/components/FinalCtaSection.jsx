@@ -42,7 +42,7 @@ export default function FinalCtaSection() {
           <div className="mt-10 flex flex-wrap justify-center gap-4">
             <Link
               href="/dental-tourism#quote"
-              className="rounded-full bg-gradient-to-r from-gold-300 to-gold-500 px-8 py-4 font-bold text-ink-950 transition-opacity hover:opacity-90"
+              className="btn-glow rounded-full bg-gradient-to-r from-gold-300 to-gold-500 px-8 py-4 font-bold text-ink-950 transition-opacity hover:opacity-90"
             >
               {t("home.finalCta.cta1")}
             </Link>
@@ -53,6 +53,8 @@ export default function FinalCtaSection() {
               {t("home.finalCta.cta2")}
             </a>
           </div>
+
+          <p className="mt-5 text-xs font-medium tracking-wide text-ink-400">{t("home.finalCta.ctaNote")}</p>
 
           <a
             href="https://www.facebook.com/profile.php?id=100064060389558"

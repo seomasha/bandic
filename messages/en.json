@@ -44,7 +44,8 @@
       ],
       "subtitle": "Specialist care, modern technology and a city worth the trip — trusted by patients from across Europe.",
       "ctaPrimary": "Get your free quote",
-      "ctaSecondary": "Explore dental tourism"
+      "ctaSecondary": "Explore dental tourism",
+      "ctaNote": "Response within 24h · No obligation"
     },
     "stats": [
       {
@@ -161,7 +162,29 @@
       "title": "Ready to talk about your smile?",
       "text": "Send us a photo, an X-ray, or just a question. Our team replies with a real answer — not a sales script.",
       "cta1": "Get a free quote",
-      "cta2": "Call +387 33 642 648"
+      "cta2": "Call +387 33 642 648",
+      "ctaNote": "No obligation · Response within 24h"
+    },
+    "testimonials": {
+      "kicker": "Patient experiences",
+      "title": "What our patients say",
+      "items": [
+        {
+          "quote": "The whole process was clear from the first message to the flight home — exactly as promised.",
+          "name": "K.",
+          "location": "Germany"
+        },
+        {
+          "quote": "I felt safe and informed every step of the way, and the result exceeded expectations.",
+          "name": "M.",
+          "location": "Austria"
+        },
+        {
+          "quote": "The savings were significant, but what surprised me most was the level of care and professionalism.",
+          "name": "S.",
+          "location": "Switzerland"
+        }
+      ]
     }
   },
   "serviceCategories": [

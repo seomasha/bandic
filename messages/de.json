@@ -44,7 +44,8 @@
       ],
       "subtitle": "Fachärztliche Betreuung, moderne Technologie und eine Stadt, die die Reise wert ist — das Vertrauen von Patienten aus ganz Europa.",
       "ctaPrimary": "Kostenloses Angebot anfordern",
-      "ctaSecondary": "Zahntourismus entdecken"
+      "ctaSecondary": "Zahntourismus entdecken",
+      "ctaNote": "Antwort innerhalb von 24 Stunden · Unverbindlich"
     },
     "stats": [
       {
@@ -161,7 +162,29 @@
       "title": "Bereit, über Ihr Lächeln zu sprechen?",
       "text": "Schicken Sie uns ein Foto, ein Röntgenbild oder einfach eine Frage. Unser Team antwortet Ihnen persönlich — nicht mit einem Verkaufsskript.",
       "cta1": "Kostenloses Angebot anfordern",
-      "cta2": "Anrufen: +387 33 642 648"
+      "cta2": "Anrufen: +387 33 642 648",
+      "ctaNote": "Unverbindlich · Antwort innerhalb von 24 Stunden"
+    },
+    "testimonials": {
+      "kicker": "Patientenerfahrungen",
+      "title": "Das sagen unsere Patienten",
+      "items": [
+        {
+          "quote": "Der gesamte Ablauf war von der ersten Nachricht bis zum Rückflug klar — genau wie versprochen.",
+          "name": "K.",
+          "location": "Deutschland"
+        },
+        {
+          "quote": "Ich fühlte mich in jedem Schritt sicher und gut informiert, und das Ergebnis übertraf die Erwartungen.",
+          "name": "M.",
+          "location": "Österreich"
+        },
+        {
+          "quote": "Die Ersparnis war beträchtlich, aber am meisten überrascht hat mich die Sorgfalt und Professionalität.",
+          "name": "S.",
+          "location": "Schweiz"
+        }
+      ]
     }
   },
   "serviceCategories": [

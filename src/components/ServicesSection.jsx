@@ -66,15 +66,22 @@ export default function ServicesSection() {
                     </p>
                     <AnimatePresence>
                       {isActive && (
-                        <motion.p
+                        <motion.div
                           initial={{ opacity: 0, height: 0 }}
                           animate={{ opacity: 1, height: "auto" }}
                           exit={{ opacity: 0, height: 0 }}
                           transition={{ duration: 0.35, ease: EASE }}
                           className="overflow-hidden text-base leading-relaxed text-ink-600"
                         >
-                          <span className="mt-3 block max-w-2xl">{s.text}</span>
-                        </motion.p>
+                          <p className="mt-3 max-w-2xl">{s.text}</p>
+                          <Link
+                            href={`/services#${s.slug}`}
+                            onClick={(e) => e.stopPropagation()}
+                            className="gold-underline mt-4 inline-flex items-center gap-2 text-sm font-semibold text-gold-700 hover:text-gold-600"
+                          >
+                            {t("common.learnMore")} <ArrowRight size={14} />
+                          </Link>
+                        </motion.div>
                       )}
                     </AnimatePresence>
                   </div>

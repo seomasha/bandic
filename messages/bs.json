@@ -44,7 +44,8 @@
       ],
       "subtitle": "Stručna njega, moderna tehnologija i grad vrijedan posjete — uz povjerenje pacijenata iz cijele Evrope.",
       "ctaPrimary": "Zatražite besplatnu ponudu",
-      "ctaSecondary": "Istražite dentalni turizam"
+      "ctaSecondary": "Istražite dentalni turizam",
+      "ctaNote": "Odgovor u roku 24h · Bez obaveze"
     },
     "stats": [
       {
@@ -161,7 +162,29 @@
       "title": "Spremni da razgovaramo o vašem osmijehu?",
       "text": "Pošaljite nam fotografiju, RTG snimak ili samo pitanje. Naš tim odgovara konkretno — ne šablonski.",
       "cta1": "Zatražite besplatnu ponudu",
-      "cta2": "Pozovite +387 33 642 648"
+      "cta2": "Pozovite +387 33 642 648",
+      "ctaNote": "Bez obaveze · Odgovor u roku 24h"
+    },
+    "testimonials": {
+      "kicker": "Iskustva pacijenata",
+      "title": "Šta kažu naši pacijenti",
+      "items": [
+        {
+          "quote": "Cijeli proces bio je jasan od prve poruke do povratka kući — tačno onako kako je i obećano.",
+          "name": "K.",
+          "location": "Njemačka"
+        },
+        {
+          "quote": "Osjećao sam se sigurno i informisano u svakom koraku, a rezultat je premašio očekivanja.",
+          "name": "M.",
+          "location": "Austrija"
+        },
+        {
+          "quote": "Ušteda je bila značajna, ali ono što me najviše iznenadilo je nivo pažnje i profesionalizma.",
+          "name": "S.",
+          "location": "Švicarska"
+        }
+      ]
     }
   },
   "serviceCategories": [

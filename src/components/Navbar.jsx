@@ -69,7 +69,7 @@ export default function Navbar() {
           <LanguageSwitcher dark={!scrolled && !open} />
           <Link
             href="/dental-tourism#quote"
-            className="rounded-full bg-ink-900 text-white text-sm font-semibold px-5 py-2.5 hover:bg-gold-600 transition-colors"
+            className="btn-glow rounded-full bg-ink-900 text-white text-sm font-semibold px-5 py-2.5 hover:bg-gold-600 transition-colors"
           >
             {t("nav.bookNow")}
           </Link>

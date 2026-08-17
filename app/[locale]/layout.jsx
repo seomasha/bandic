@@ -5,6 +5,7 @@ import { Cormorant_Garamond, Manrope } from "next/font/google";
 import { routing } from "@/i18n/routing";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import FloatingContact from "@/components/FloatingContact";
 import "../globals.css";
 
 const cormorant = Cormorant_Garamond({
@@ -43,6 +44,23 @@ export async function generateMetadata({ params }) {
       icon: "/favicon.png",
       apple: "/apple-touch-icon.png",
     },
+    openGraph: {
+      title: `${t("clinicName")} — Dental Clinic Sarajevo`,
+      description:
+        "A modern dental clinic in Sarajevo. Implants, orthodontics, prosthetics & aesthetic dentistry — a trusted dental tourism destination for patients from across Europe.",
+      url: `https://doc-bandic.com/${locale}`,
+      siteName: t("clinicName"),
+      images: [{ url: "/brand/logo-badge.jpg", width: 340, height: 340, alt: t("clinicName") }],
+      locale,
+      type: "website",
+    },
+    twitter: {
+      card: "summary",
+      title: `${t("clinicName")} — Dental Clinic Sarajevo`,
+      description:
+        "A modern dental clinic in Sarajevo. Implants, orthodontics, prosthetics & aesthetic dentistry — a trusted dental tourism destination for patients from across Europe.",
+      images: ["/brand/logo-badge.jpg"],
+    },
   };
 }
 
@@ -60,6 +78,7 @@ export default async function LocaleLayout({ children, params }) {
           <Navbar />
           <main className="flex-1">{children}</main>
           <Footer />
+          <FloatingContact />
         </NextIntlClientProvider>
       </body>
     </html>
