@@ -49,7 +49,7 @@ function Carousel({ items }) {
     <div className="relative">
       <div
         ref={trackRef}
-        className="no-scrollbar grid grid-flow-col auto-cols-[100%] gap-5 overflow-x-auto scroll-smooth snap-x snap-mandatory pb-2 sm:auto-cols-[calc(50%-10px)] lg:auto-cols-[calc(33.333%-14px)]"
+        className="no-scrollbar grid grid-flow-col auto-cols-[100%] gap-5 overflow-x-auto overflow-y-hidden overscroll-y-none scroll-smooth snap-x snap-mandatory pb-2 sm:auto-cols-[calc(50%-10px)] lg:auto-cols-[calc(33.333%-14px)]"
       >
         {items.map((item, i) => (
           <motion.div
