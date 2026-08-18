@@ -58,7 +58,7 @@ function Carousel({ items }) {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-60px 0px" }}
             transition={{ duration: 0.9, delay: i * 0.08, ease: [0.16, 1, 0.3, 1] }}
-            className="group flex h-full snap-start flex-col rounded-3xl border border-ink-900/10 bg-white p-8 shadow-sm shadow-ink-900/5 transition-all duration-500 hover:-translate-y-0.5 hover:border-gold-300 hover:shadow-lg hover:shadow-gold-900/10"
+            className="group flex h-full snap-start flex-col rounded-3xl border border-ink-900/10 bg-white p-8 shadow-sm shadow-ink-900/5 transition-colors duration-500 hover:border-gold-300"
           >
             <Quote size={28} className="text-gold-400" />
 
