@@ -10,20 +10,32 @@ const ROTATE_MS = 3200;
 const EASE = [0.16, 1, 0.3, 1];
 
 function HeroVideoBackground({ reduceMotion }) {
-  const videoRef = useRef(null);
+  const containerRef = useRef(null);
 
   useEffect(() => {
-    const v = videoRef.current;
-    if (!v) return;
-    if (reduceMotion) v.pause();
-    else v.play().catch(() => {});
+    const videos = containerRef.current?.querySelectorAll("video") ?? [];
+    videos.forEach((v) => {
+      if (reduceMotion) v.pause();
+      else v.play().catch(() => {});
+    });
   }, [reduceMotion]);
 
   return (
-    <div className="absolute inset-0">
+    <div ref={containerRef} className="absolute inset-0 overflow-hidden">
+      {/* blurred, full-bleed backdrop: hides the pillarbox edges the portrait
+          video would otherwise show on wide desktop viewports */}
       <video
-        ref={videoRef}
-        className="absolute inset-0 h-full w-full object-cover lg:object-contain lg:scale-125 lg:[mask-image:radial-gradient(ellipse_62%_62%_at_50%_45%,black_58%,transparent_92%)] lg:[-webkit-mask-image:radial-gradient(ellipse_62%_62%_at_50%_45%,black_58%,transparent_92%)]"
+        className="absolute inset-0 hidden h-full w-full scale-[1.4] object-cover opacity-[0.55] blur-[80px] saturate-[1.2] lg:block"
+        src="/hero1.MP4"
+        autoPlay
+        muted
+        loop
+        playsInline
+        preload="auto"
+        aria-hidden="true"
+      />
+      <video
+        className="absolute inset-0 h-full w-full object-cover lg:object-contain lg:scale-125 lg:[mask-image:linear-gradient(to_right,transparent_0%,transparent_27%,black_37%,black_63%,transparent_73%,transparent_100%)] lg:[-webkit-mask-image:linear-gradient(to_right,transparent_0%,transparent_27%,black_37%,black_63%,transparent_73%,transparent_100%)]"
         src="/hero1.MP4"
         autoPlay
         muted
