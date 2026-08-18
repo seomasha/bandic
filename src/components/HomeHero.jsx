@@ -25,7 +25,7 @@ function HeroVideoBackground({ reduceMotion }) {
       {/* blurred, full-bleed backdrop: hides the pillarbox edges the portrait
           video would otherwise show on wide desktop viewports */}
       <video
-        className="absolute inset-0 hidden h-full w-full scale-[1.4] object-cover opacity-[0.55] blur-[80px] saturate-[1.2] lg:block"
+        className="absolute inset-0 hidden h-full w-full scale-[1.4] object-cover opacity-[0.55] blur-[80px] saturate-[0.5] brightness-[0.4] lg:block"
         src="/hero1.MP4"
         autoPlay
         muted
