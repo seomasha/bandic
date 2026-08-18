@@ -54,10 +54,10 @@ function Carousel({ items }) {
         {items.map((item, i) => (
           <motion.div
             key={i}
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
+            initial={{ opacity: 0, y: 16 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-60px 0px" }}
-            transition={{ duration: 1.2, delay: i * 0.1, ease: "easeOut" }}
+            transition={{ duration: 0.9, delay: i * 0.08, ease: [0.16, 1, 0.3, 1] }}
             className="group flex h-full w-full shrink-0 snap-start flex-col rounded-3xl border border-ink-900/10 bg-white p-8 shadow-sm shadow-ink-900/5 transition-all duration-500 hover:-translate-y-0.5 hover:border-gold-300 hover:shadow-lg hover:shadow-gold-900/10 sm:w-[calc(50%-10px)] lg:w-[calc(33.333%-14px)]"
           >
             <Quote size={28} className="text-gold-400" />
@@ -115,10 +115,10 @@ export default function TestimonialsSection() {
 
       <div className="relative mx-auto max-w-7xl px-5 lg:px-8">
         <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
+          initial={{ opacity: 0, y: 16 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-80px 0px" }}
-          transition={{ duration: 1.2, ease: "easeOut" }}
+          transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
           className="mx-auto max-w-2xl text-center"
         >
           <p className="text-xs font-bold tracking-[0.3em] uppercase text-gold-700">{t("kicker")}</p>

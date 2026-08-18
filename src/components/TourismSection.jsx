@@ -43,10 +43,10 @@ function SavingsPanel({ label }) {
 
   return (
     <motion.div
-      initial={{ opacity: 0, scale: 0.96 }}
-      whileInView={{ opacity: 1, scale: 1 }}
+      initial={{ opacity: 0, y: 16 }}
+      whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-80px 0px" }}
-      transition={{ duration: 0.8, ease: EASE }}
+      transition={{ duration: 0.9, ease: EASE }}
       className="relative mx-auto w-full max-w-sm"
     >
       <motion.div
@@ -101,10 +101,10 @@ export default function TourismSection() {
 
       <div className="relative mx-auto max-w-7xl px-5 lg:px-8">
         <motion.div
-          initial={{ opacity: 0, y: 26 }}
+          initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-80px 0px" }}
-          transition={{ duration: 0.85, ease: EASE }}
+          transition={{ duration: 0.9, ease: EASE }}
           className="max-w-3xl"
         >
           <p className="flex items-center gap-2 text-xs font-bold tracking-[0.3em] uppercase text-gold-600">
@@ -121,10 +121,10 @@ export default function TourismSection() {
         <div className="mt-16 grid gap-16 lg:grid-cols-12 lg:gap-10">
           <div className="lg:col-span-7">
             <motion.p
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-60px 0px" }}
-              transition={{ duration: 0.7, delay: 0.1, ease: EASE }}
+              transition={{ duration: 0.8, delay: 0.1, ease: EASE }}
               className="max-w-xl text-lg leading-relaxed text-ink-600"
             >
               {t("text")}
@@ -134,10 +134,10 @@ export default function TourismSection() {
               {points.map((p, i) => (
                 <motion.div
                   key={i}
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
+                  initial={{ opacity: 0, y: 16 }}
+                  whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, margin: "-60px 0px" }}
-                  transition={{ duration: 0.6, delay: 0.15 * i, ease: EASE }}
+                  transition={{ duration: 0.8, delay: 0.1 * i, ease: EASE }}
                 >
                   <div className="flex items-start gap-6 py-6">
                     <span className="shrink-0 font-display text-3xl font-semibold text-gold-600">0{i + 1}</span>
@@ -152,7 +152,7 @@ export default function TourismSection() {
               initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-60px 0px" }}
-              transition={{ duration: 0.7, delay: 0.55, ease: EASE }}
+              transition={{ duration: 0.8, delay: 0.4, ease: EASE }}
             >
               <Link
                 href="/dental-tourism"

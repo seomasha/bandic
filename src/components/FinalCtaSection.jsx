@@ -22,10 +22,10 @@ export default function FinalCtaSection() {
 
       <div className="relative mx-auto max-w-3xl px-5 lg:px-8">
         <motion.div
-          initial={{ opacity: 0, y: 24 }}
+          initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-80px 0px" }}
-          transition={{ duration: 0.8, ease: EASE }}
+          transition={{ duration: 0.9, ease: EASE }}
         >
           <div className="flex justify-center gap-1 text-gold-500">
             {[...Array(5)].map((_, i) => (

@@ -2,12 +2,11 @@
 
 import { useEffect, useState } from "react";
 import { useTranslations } from "next-intl";
-import { motion, AnimatePresence, useReducedMotion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { MessageCircle } from "lucide-react";
 
 export default function FloatingContact() {
   const t = useTranslations("common");
-  const reduceMotion = useReducedMotion();
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
@@ -29,12 +28,9 @@ export default function FloatingContact() {
           animate={{ opacity: 1, scale: 1, y: 0 }}
           exit={{ opacity: 0, scale: 0.6, y: 20 }}
           transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
-          className="fixed bottom-6 right-6 z-30 flex h-14 w-14 items-center justify-center rounded-full bg-gradient-to-br from-gold-300 to-gold-500 text-ink-950 shadow-lg shadow-ink-900/25 transition-transform hover:scale-105 lg:bottom-8 lg:right-8"
+          className="fixed bottom-6 right-6 z-30 flex h-14 w-14 items-center justify-center rounded-full bg-gradient-to-br from-gold-300 to-gold-500 text-ink-950 shadow-lg shadow-ink-900/25 transition-all duration-500 hover:scale-105 hover:shadow-xl lg:bottom-8 lg:right-8"
         >
-          {!reduceMotion && (
-            <span className="absolute inset-0 rounded-full bg-gold-400/60 animate-ping" style={{ animationDuration: "2.4s" }} />
-          )}
-          <MessageCircle size={24} className="relative" strokeWidth={2.2} />
+          <MessageCircle size={24} strokeWidth={2.2} />
         </motion.a>
       )}
     </AnimatePresence>

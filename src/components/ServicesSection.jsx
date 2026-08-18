@@ -17,10 +17,10 @@ export default function ServicesSection() {
     <section className="bg-cream py-24 lg:py-32">
       <div className="mx-auto max-w-5xl px-5 lg:px-8">
         <motion.div
-          initial={{ opacity: 0, y: 24 }}
+          initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-80px 0px" }}
-          transition={{ duration: 0.8, ease: EASE }}
+          transition={{ duration: 0.9, ease: EASE }}
           className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between"
         >
           <div>
@@ -41,7 +41,7 @@ export default function ServicesSection() {
                 initial={{ opacity: 0, y: 16 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-60px 0px" }}
-                transition={{ duration: 0.6, delay: i * 0.05, ease: EASE }}
+                transition={{ duration: 0.8, delay: i * 0.05, ease: EASE }}
               >
                 <button
                   onClick={() => setActive(isActive ? -1 : i)}

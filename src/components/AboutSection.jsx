@@ -83,10 +83,10 @@ export default function AboutSection() {
     <section className="bg-white py-24 lg:py-32">
       <div className="mx-auto max-w-7xl px-5 lg:px-8">
         <motion.div
-          initial={{ opacity: 0, y: 24 }}
+          initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-80px 0px" }}
-          transition={{ duration: 0.85, ease: EASE }}
+          transition={{ duration: 0.9, ease: EASE }}
           className="max-w-3xl"
         >
           <p className="text-xs font-bold tracking-[0.3em] uppercase text-gold-600">{t("home.aboutKicker")}</p>
@@ -97,10 +97,10 @@ export default function AboutSection() {
 
         <div className="mt-10 grid gap-10 lg:grid-cols-12 lg:items-center lg:gap-16">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 16 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-60px 0px" }}
-            transition={{ duration: 0.8, delay: 0.1, ease: EASE }}
+            transition={{ duration: 0.9, delay: 0.1, ease: EASE }}
             className="lg:col-span-7"
           >
             <p className="text-lg leading-relaxed text-ink-600">{t("home.aboutText")}</p>
@@ -113,10 +113,10 @@ export default function AboutSection() {
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 16 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-60px 0px" }}
-            transition={{ duration: 0.8, delay: 0.18, ease: EASE }}
+            transition={{ duration: 0.9, delay: 0.18, ease: EASE }}
             className="lg:col-span-5"
           >
             <Carousel />
