@@ -32,8 +32,9 @@ function HeroVideoBackground({ reduceMotion }) {
         preload="auto"
         aria-hidden="true"
       />
-      <div className="absolute inset-0 bg-gradient-to-b from-ink-950/60 via-ink-950/15 to-ink-950/65" />
-      <div className="absolute inset-0 bg-[radial-gradient(60%_55%_at_50%_45%,rgba(0,0,0,0.05)_0%,rgba(0,0,0,0.4)_100%)]" />
+      <div className="absolute inset-0 bg-ink-950/45" />
+      <div className="absolute inset-0 bg-gradient-to-b from-ink-950/75 via-ink-950/30 to-ink-950/80" />
+      <div className="absolute inset-0 bg-[radial-gradient(60%_55%_at_50%_45%,rgba(0,0,0,0.08)_0%,rgba(0,0,0,0.5)_100%)]" />
       <div className="absolute inset-0 noise-overlay" />
     </div>
   );
