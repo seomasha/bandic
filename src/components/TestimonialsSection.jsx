@@ -5,8 +5,6 @@ import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
 import { Star, Quote, ChevronLeft, ChevronRight } from "lucide-react";
 
-const EASE = [0.16, 1, 0.3, 1];
-
 const FLAGS = {
   Germany: "🇩🇪", Njemačka: "🇩🇪", Deutschland: "🇩🇪",
   Austria: "🇦🇹", Austrija: "🇦🇹", Österreich: "🇦🇹",
@@ -56,11 +54,11 @@ function Carousel({ items }) {
         {items.map((item, i) => (
           <motion.div
             key={i}
-            initial={{ opacity: 0, y: 28 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
             viewport={{ once: true, margin: "-60px 0px" }}
-            transition={{ duration: 0.7, delay: (i % 3) * 0.12, ease: EASE }}
-            className="group flex h-full w-[85%] shrink-0 snap-start flex-col rounded-3xl border border-ink-900/10 bg-white p-8 shadow-sm shadow-ink-900/5 transition-all duration-300 hover:-translate-y-1 hover:border-gold-300 hover:shadow-lg hover:shadow-gold-900/10 sm:w-[calc(50%-10px)] lg:w-[calc(33.333%-14px)]"
+            transition={{ duration: 1.2, delay: i * 0.1, ease: "easeOut" }}
+            className="group flex h-full w-full shrink-0 snap-start flex-col rounded-3xl border border-ink-900/10 bg-white p-8 shadow-sm shadow-ink-900/5 transition-all duration-500 hover:-translate-y-0.5 hover:border-gold-300 hover:shadow-lg hover:shadow-gold-900/10 sm:w-[calc(50%-10px)] lg:w-[calc(33.333%-14px)]"
           >
             <Quote size={28} className="text-gold-400" />
 
@@ -90,7 +88,7 @@ function Carousel({ items }) {
         onClick={() => scrollByCard(-1)}
         disabled={!canPrev}
         aria-label="Previous testimonials"
-        className="absolute left-0 top-1/2 hidden h-11 w-11 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border border-gold-300/60 bg-white text-ink-900 shadow-md transition-all hover:bg-gold-50 disabled:pointer-events-none disabled:opacity-0 sm:flex"
+        className="absolute left-0 top-1/2 z-10 flex h-10 w-10 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border border-gold-300/60 bg-white text-ink-900 shadow-md transition-all duration-500 hover:bg-gold-50 disabled:pointer-events-none disabled:opacity-0 sm:h-11 sm:w-11"
       >
         <ChevronLeft size={20} />
       </button>
@@ -99,7 +97,7 @@ function Carousel({ items }) {
         onClick={() => scrollByCard(1)}
         disabled={!canNext}
         aria-label="Next testimonials"
-        className="absolute right-0 top-1/2 hidden h-11 w-11 -translate-y-1/2 translate-x-1/2 items-center justify-center rounded-full border border-gold-300/60 bg-white text-ink-900 shadow-md transition-all hover:bg-gold-50 disabled:pointer-events-none disabled:opacity-0 sm:flex"
+        className="absolute right-0 top-1/2 z-10 flex h-10 w-10 -translate-y-1/2 translate-x-1/2 items-center justify-center rounded-full border border-gold-300/60 bg-white text-ink-900 shadow-md transition-all duration-500 hover:bg-gold-50 disabled:pointer-events-none disabled:opacity-0 sm:h-11 sm:w-11"
       >
         <ChevronRight size={20} />
       </button>
@@ -117,10 +115,10 @@ export default function TestimonialsSection() {
 
       <div className="relative mx-auto max-w-7xl px-5 lg:px-8">
         <motion.div
-          initial={{ opacity: 0, y: 24 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
           viewport={{ once: true, margin: "-80px 0px" }}
-          transition={{ duration: 0.8, ease: EASE }}
+          transition={{ duration: 1.2, ease: "easeOut" }}
           className="mx-auto max-w-2xl text-center"
         >
           <p className="text-xs font-bold tracking-[0.3em] uppercase text-gold-700">{t("kicker")}</p>
