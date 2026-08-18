@@ -23,7 +23,7 @@ function HeroVideoBackground({ reduceMotion }) {
     <div className="absolute inset-0">
       <video
         ref={videoRef}
-        className="absolute inset-0 h-full w-full object-cover lg:object-contain lg:scale-125"
+        className="absolute inset-0 h-full w-full object-cover lg:object-contain lg:scale-125 lg:[mask-image:radial-gradient(ellipse_62%_62%_at_50%_45%,black_58%,transparent_92%)] lg:[-webkit-mask-image:radial-gradient(ellipse_62%_62%_at_50%_45%,black_58%,transparent_92%)]"
         src="/hero1.MP4"
         autoPlay
         muted
