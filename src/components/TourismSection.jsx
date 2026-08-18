@@ -164,7 +164,7 @@ export default function TourismSection() {
             </motion.div>
           </div>
 
-          <div className="flex items-center justify-center lg:col-span-5">
+          <div className="flex items-center justify-center lg:col-span-5 lg:items-start lg:pt-20">
             <SavingsPanel label={t("savingsLabel")} />
           </div>
         </div>

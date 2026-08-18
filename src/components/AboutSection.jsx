@@ -22,7 +22,7 @@ function Carousel() {
   }, [multi]);
 
   return (
-    <div className="relative aspect-[4/5] w-full overflow-hidden rounded-3xl shadow-lg shadow-ink-900/10">
+    <div className="relative aspect-[6/5] w-full overflow-hidden rounded-3xl shadow-lg shadow-ink-900/10">
       <AnimatePresence mode="wait">
         <motion.div
           key={index}
@@ -95,7 +95,7 @@ export default function AboutSection() {
           </h2>
         </motion.div>
 
-        <div className="mt-14 grid gap-14 lg:grid-cols-12 lg:items-center lg:gap-16">
+        <div className="mt-10 grid gap-10 lg:grid-cols-12 lg:items-center lg:gap-16">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
