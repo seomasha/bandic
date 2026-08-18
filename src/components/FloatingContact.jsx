@@ -10,10 +10,12 @@ export default function FloatingContact() {
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
-    const onScroll = () => setVisible(window.scrollY > 640);
+    const el = document.getElementById("scroll-root");
+    if (!el) return;
+    const onScroll = () => setVisible(el.scrollTop > 640);
     onScroll();
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
+    el.addEventListener("scroll", onScroll, { passive: true });
+    return () => el.removeEventListener("scroll", onScroll);
   }, []);
 
   return (

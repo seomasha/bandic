@@ -6,6 +6,7 @@ import { routing } from "@/i18n/routing";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import FloatingContact from "@/components/FloatingContact";
+import ScrollReset from "@/components/ScrollReset";
 import "../globals.css";
 
 const cormorant = Cormorant_Garamond({
@@ -73,11 +74,14 @@ export default async function LocaleLayout({ children, params }) {
 
   return (
     <html lang={locale} className={`${cormorant.variable} ${manrope.variable}`}>
-      <body className="min-h-screen flex flex-col">
+      <body className="h-dvh overflow-hidden">
         <NextIntlClientProvider>
+          <ScrollReset />
           <Navbar />
-          <main className="flex-1">{children}</main>
-          <Footer />
+          <div id="scroll-root" className="flex h-full flex-col overflow-y-auto overscroll-y-contain">
+            <main className="flex-1">{children}</main>
+            <Footer />
+          </div>
           <FloatingContact />
         </NextIntlClientProvider>
       </body>
